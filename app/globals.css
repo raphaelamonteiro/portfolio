@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-body {
-  font-family: var(--font-noto);
-}
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
