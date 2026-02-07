@@ -1,9 +1,12 @@
 'use client'
 
+import Loading from '@/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
 
 export default function About() {
-    const { t } = useTranslation()
+    const { t, isLoading } = useTranslation()
+    if (isLoading) return <Loading />
+
 
     return (
         <div style={{ padding: '50px', maxWidth: '800px', margin: '0 auto' }}>

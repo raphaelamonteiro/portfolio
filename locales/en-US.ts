@@ -6,7 +6,7 @@ export const enUS = {
         contact: "Contact"
     },
     home: {
-        greeting: "Hello, I'm",
+        greeting: "Hello World!",
         role: "Full Stack Developer",
         description: "Technology is not just what I do, it's who I am.",
         cta: "View Projects"

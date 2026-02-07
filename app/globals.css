@@ -17,8 +17,14 @@
 }
 
 body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   background: var(--background);
   font-family: "Noto Sans JP", sans-serif;
+}
+.main-content {
+  flex: 1;
 }
 
 /* Header */
@@ -94,6 +100,20 @@ body {
   background-color: var(--primary);
   color: var(--light);
 }
+
+
+.title-hero{
+    color: var(--primary-hover);
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.role-text {
+  color: var(--primary);
+  font-size: 32px;
+  font-weight: 700;
+}
+
 
 .footer {
   background-color: var(--header-bg);
@@ -185,3 +205,35 @@ body {
       padding: 6px 12px;
     }
   }
+
+
+    .loading-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+  
+    .loading-text {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--light);
+      letter-spacing: 0.05em;
+      animation: pulse 1.5s infinite;
+    }
+  
+    @keyframes pulse {
+      0% {
+        opacity: 0.4;
+      }
+  
+      50% {
+        opacity: 1;
+      }
+  
+      100% {
+        opacity: 0.4;
+      }
+    }

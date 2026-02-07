@@ -13,16 +13,15 @@ export default function Footer() {
                     {t.footer.rights}
                 </p>
 
-                {/* Redes sociais (opcional) */}
                 <div className="footer-social">
-                    <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://github.com/raphaelamonteiro" target="_blank" rel="noopener noreferrer" className="social-link">
                         GitHub
                     </a>
-                    <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://linkedin.com/in/raphaelamonteiro" target="_blank" rel="noopener noreferrer" className="social-link">
                         LinkedIn
                     </a>
-                    <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer" className="social-link">
-                        Contato
+                    <a href="mailto:raphaelabm.dev@gmail.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                        E-mail
                     </a>
                 </div>
             </div>

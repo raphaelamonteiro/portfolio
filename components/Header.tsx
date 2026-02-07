@@ -7,6 +7,7 @@ import { useTranslation } from '@/contexts/TranslationContext'
 export default function Header() {
     const { t, isLoading } = useTranslation()
 
+
     return (
         <header className="header">
             <Link href="/" className="header-name">
