@@ -8,7 +8,7 @@ export const ptBR = {
     home: {
         greeting: "Olá, eu sou",
         role: "Desenvolvedor Full Stack",
-        description: "Apaixonado por criar experiências digitais incríveis",
+        description: "Tecnologia não é apenas o que eu faço, é quem eu sou.",
         cta: "Ver Projetos"
     },
     about: {
@@ -29,6 +29,6 @@ export const ptBR = {
         send: "Enviar"
     },
     footer: {
-        rights: "Todos os direitos reservados"
+        rights: "© 2026 Raphaela Monteiro - Todos os direitos reservados."
     }
 }

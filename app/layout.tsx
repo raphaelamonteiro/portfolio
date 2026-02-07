@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header";
+import Header from "@/components/header";
 import { TranslationProvider } from "@/contexts/TranslationContext";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Raphaela Monteiro - Portfolio",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <main style={{ minHeight: 'calc(100vh - 80px)' }}>
             {children}
           </main>
+          <Footer />
         </TranslationProvider>
       </body>
     </html>

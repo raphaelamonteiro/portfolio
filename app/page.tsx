@@ -8,38 +8,20 @@ export default function Home() {
   if (isLoading) return <div>Carregando...</div>
 
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '80vh',
-      padding: '50px',
-      textAlign: 'center'
-    }}>
-      <h2 style={{ fontSize: '24px', color: '#666', marginBottom: '10px' }}>
+    <div>
+      <h2>
         {t.home.greeting}
       </h2>
-      <h1 style={{ fontSize: '48px', fontWeight: 'bold', marginBottom: '20px' }}>
+      <h1>
         Seu Nome
       </h1>
-      <h3 style={{ fontSize: '32px', color: '#0070f3', marginBottom: '30px' }}>
+      <h3>
         {t.home.role}
       </h3>
-      <p style={{ fontSize: '18px', color: '#666', maxWidth: '600px', marginBottom: '40px' }}>
+      <p>
         {t.home.description}
       </p>
-      <Link
-        href="/projects"
-        style={{
-          padding: '15px 40px',
-          backgroundColor: '#0070f3',
-          color: '#fff',
-          textDecoration: 'none',
-          borderRadius: '5px',
-          fontSize: '18px'
-        }}
-      >
+      <Link href="/projects">
         {t.home.cta}
       </Link>
     </div>

@@ -8,7 +8,7 @@ export const enUS = {
     home: {
         greeting: "Hello, I'm",
         role: "Full Stack Developer",
-        description: "Passionate about creating amazing digital experiences",
+        description: "Technology is not just what I do, it's who I am.",
         cta: "View Projects"
     },
     about: {
@@ -29,6 +29,6 @@ export const enUS = {
         send: "Send"
     },
     footer: {
-        rights: "All rights reserved"
+        rights: "© 2026 Raphaela Monteiro - All Rights Reserved"
     }
 }
