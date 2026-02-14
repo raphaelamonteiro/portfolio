@@ -8,8 +8,9 @@ export const enUS = {
     home: {
         greeting: "Hello World!",
         role: "Full Stack Developer",
-        description: "Technology is not just what I do, it's who I am.",
-        cta: "View Projects"
+        cta: "View Projects",
+        cv: "Download CV"
+
     },
     about: {
         title: "About Me",

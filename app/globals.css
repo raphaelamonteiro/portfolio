@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @import "tailwindcss";
 
+
+/* =====================
+   Variáveis globais
+===================== */
 :root {
   --background: #2A2F4F;
   --foreground: #A294F9;
@@ -8,26 +12,37 @@
   --primary: #655DBB;
   --primary-hover: #A294F9;
   --secondary: #FFD0EC;
-    --light: #FFE6E6;
+  --light: #FFE6E6;
 }
 
+/* ⚠️ Use isso só se estiver usando Tailwind v4 */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
 
+/* =====================
+   Base
+===================== */
+html,
 body {
-  height: 100%;
+  min-height: 100vh;
+}
+
+body {
   display: flex;
   flex-direction: column;
   background: var(--background);
   font-family: "Noto Sans JP", sans-serif;
 }
+
 .main-content {
   flex: 1;
 }
 
-/* Header */
+/* =====================
+   Header
+===================== */
 .header {
   display: flex;
   justify-content: space-between;
@@ -45,32 +60,32 @@ body {
   font-size: 24px;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.header-name:hover { 
+.header-name:hover {
   color: var(--secondary);
 }
 
 .navbar {
-  display: flex; 
+  display: flex;
   gap: 20px;
   align-items: center;
 }
 
 .navbar-link {
+  position: relative;
   text-decoration: none;
   color: var(--foreground);
   font-weight: 500;
-  transition: color 0.3s;
-  position: relative;
+  transition: color 0.3s ease;
 }
 
 .navbar-link:hover {
   color: var(--secondary);
 }
 
-.navbar-link::after { /* Cria elemento invisível embaixo do link */
+.navbar-link::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -78,8 +93,9 @@ body {
   width: 0;
   height: 2px;
   background-color: var(--secondary);
-  transition: width 0.3s;
+  transition: width 0.3s ease;
 }
+
 .navbar-link:hover::after {
   width: 100%;
 }
@@ -91,9 +107,9 @@ body {
   border: 2px solid var(--primary);
   border-radius: 8px;
   font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
 }
 
 .language-switcher:hover {
@@ -101,11 +117,13 @@ body {
   color: var(--light);
 }
 
-
-.title-hero{
-    color: var(--primary-hover);
-    font-size: 64px;
-    font-weight: 800;
+/* =====================
+   Hero / Conteúdo
+===================== */
+.title-hero {
+  color: var(--primary-hover);
+  font-size: 64px;
+  font-weight: 800;
 }
 
 .role-text {
@@ -114,7 +132,42 @@ body {
   font-weight: 700;
 }
 
+.cta-buttons {
+  display: flex;
+  /* FIX importante */
+  gap: 20px;
+  align-items: center;
+}
 
+.button-projects,
+.button-cv {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.button-projects {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
+.button-cv {
+  color: var(--foreground);
+  border: 2px solid var(--foreground);
+}
+
+.button-projects:hover,
+.button-cv:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* =====================
+   Footer
+===================== */
 .footer {
   background-color: var(--header-bg);
   padding: 20px 30px;
@@ -157,83 +210,81 @@ body {
   color: var(--light);
 }
 
-/* Responsivo - Mobile */
 
-@media (max-width: 768px) {
+.loading-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 
-    /* Header */
-    .header {
-      padding: 15px 20px;
-      flex-wrap: wrap;
-    }
+.loading-text {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--light);
+  letter-spacing: 0.05em;
+  animation: pulse 1.5s infinite;
+}
 
-    .header-name {
-      font-size: 20px;
-    }
-
-    .navbar {
-      width: 100%;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 15px;
-      padding-top: 15px;
-      border-top: 1px solid var(--secondary);
-    }
-
-    .navbar-link {
-      font-size: 14px;
-    }
-
-    /* Footer */
-    .footer {
-      padding: 24px 20px;
-      margin-top: 60px;
-    }
-
-    .footer-content {
-      flex-direction: column;
-      gap: 16px;
-      text-align: center;
-    }
-
-    .footer-text {
-      font-size: 13px;
-    }
-
-    .social-link {
-      font-size: 13px;
-      padding: 6px 12px;
-    }
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
   }
 
+  50% {
+    opacity: 1;
+  }
 
-    .loading-container {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-    }
-  
-    .loading-text {
-      font-size: 24px;
-      font-weight: 600;
-      color: var(--light);
-      letter-spacing: 0.05em;
-      animation: pulse 1.5s infinite;
-    }
-  
-    @keyframes pulse {
-      0% {
-        opacity: 0.4;
-      }
-  
-      50% {
-        opacity: 1;
-      }
-  
-      100% {
-        opacity: 0.4;
-      }
-    }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* =====================
+   Responsivo
+===================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  .header-name {
+    font-size: 20px;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--secondary);
+  }
+
+  .navbar-link {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 24px 20px;
+    margin-top: 60px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 13px;
+  }
+
+  .social-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}

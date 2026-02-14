@@ -8,8 +8,8 @@ export const ptBR = {
     home: {
         greeting: "Olá Mundo!",
         role: "Desenvolvedor Full Stack",
-        description: "Tecnologia não é apenas o que eu faço, é quem eu sou.",
-        cta: "Ver Projetos"
+        cta: "Ver Projetos",
+        cv: "Baixar Currículo"
     },
     about: {
         title: "Sobre Mim",

@@ -5,7 +5,7 @@ import "./globals.css";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Raphaela Monteiro - Portfolio",
+  title: "Raphaela Monteiro | Portfolio",
   description: "My personal portfolio website!",
 };
 
