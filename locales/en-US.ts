@@ -6,10 +6,10 @@ export const enUS = {
         contact: "Contact"
     },
     home: {
-        greeting: "Hello World!",
-        role: "Full Stack Developer",
+        greeting: "Full Stack Developer",
+        role: "Transforming ideas into intelligent and secure systems, with experience in full-stack development, data, and infrastructure.",
         cta: "View Projects",
-        cv: "Download CV"
+        contact: "Contact me"
 
     },
     about: {

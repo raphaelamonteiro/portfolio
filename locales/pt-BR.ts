@@ -6,14 +6,14 @@ export const ptBR = {
         contact: "Contato"
     },
     home: {
-        greeting: "Olá Mundo!",
-        role: "Desenvolvedor Full Stack",
+        greeting: "Desenvolvedora Full-Stack",
+        role: "Transformando ideias em sistemas inteligentes e seguros, com experiência em desenvolvimento fullstack, dados e infraestrutura.",
         cta: "Ver Projetos",
-        cv: "Baixar Currículo"
+        contact: "Entre em Contato"
     },
     about: {
         title: "Sobre Mim",
-        description: "Aqui você conta sua história...",
+        description: " Sou uma desenvolvedora fullstack apaixonada por dados, IA, segurança e infraestrutura. Adoro criar soluções elegantes e robustas, equilibrando profissionalismo com criatividade.",
         skills: "Habilidades"
     },
     projects: {

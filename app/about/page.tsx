@@ -2,35 +2,45 @@
 
 import Loading from '@/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
+import Image from 'next/image'
+import raphs from '@/public/assets/raphs.png'
 
 export default function About() {
     const { t, isLoading } = useTranslation()
     if (isLoading) return <Loading />
 
-
     return (
-        <div style={{ padding: '50px', maxWidth: '800px', margin: '0 auto' }}>
-            <h1 style={{ fontSize: '36px', marginBottom: '20px' }}>
-                {t.about.title}
-            </h1>
-            <p style={{ fontSize: '18px', lineHeight: '1.6', color: '#666' }}>
-                {t.about.description}
-            </p>
+        <section className="min-h-screen flex items-center justify-center px-4">
+            <div className="max-w-3xl text-center">
+                <Image
+                    src={raphs}
+                    alt="Raphs"
+                    className="mx-auto rounded-full mb-6 w-48 h-48 object-cover"
+                />
 
-            <h2 style={{ fontSize: '28px', marginTop: '40px', marginBottom: '20px' }}>
-                {t.about.skills}
-            </h2>
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-                <span style={{ padding: '8px 16px', backgroundColor: '#0070f3', color: '#fff', borderRadius: '5px' }}>
-                    React
-                </span>
-                <span style={{ padding: '8px 16px', backgroundColor: '#0070f3', color: '#fff', borderRadius: '5px' }}>
-                    Next.js
-                </span>
-                <span style={{ padding: '8px 16px', backgroundColor: '#0070f3', color: '#fff', borderRadius: '5px' }}>
-                    TypeScript
-                </span>
+                <h1 className="text-4xl font-bold mb-4">
+                    {t.about.title}
+                </h1>
+
+                <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                    {t.about.description}
+                </p>
+
+                <h2 className="text-2xl font-semibold mb-4">
+                    {t.about.skills}
+                </h2>
+
+                <div className="flex flex-wrap justify-center gap-3">
+                    {['React', 'Next.js', 'TypeScript'].map(skill => (
+                        <span
+                            key={skill}
+                            className="px-4 py-2 bg-blue-600 text-white rounded-md"
+                        >
+                            {skill}
+                        </span>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     )
 }

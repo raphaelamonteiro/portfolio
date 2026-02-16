@@ -2,28 +2,23 @@
 @import "tailwindcss";
 
 
-/* =====================
-   Variáveis globais
-===================== */
 :root {
-  --background: #2A2F4F;
+  --background: #17153B;
   --foreground: #A294F9;
-  --header-bg: #20243e;
-  --primary: #655DBB;
-  --primary-hover: #A294F9;
+  --header-bg: #2E236C;
+  --primary: #C8ACD6;
+  --primary-hover: #CDC1FF;
   --secondary: #FFD0EC;
   --light: #FFE6E6;
+  --text-main: #EDEBFF;
 }
 
-/* ⚠️ Use isso só se estiver usando Tailwind v4 */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
 
-/* =====================
-   Base
-===================== */
+
 html,
 body {
   min-height: 100vh;
@@ -60,7 +55,10 @@ body {
   font-size: 24px;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, 
+            background-color 0.3s ease, 
+            color 0.3s ease, 
+            box-shadow 0.3s ease;
 }
 
 .header-name:hover {
@@ -78,7 +76,11 @@ body {
   text-decoration: none;
   color: var(--foreground);
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease, 
+            background-color 0.3s ease, 
+            color 0.3s ease, 
+            box-shadow 0.3s ease;
+
 }
 
 .navbar-link:hover {
@@ -120,33 +122,39 @@ body {
 /* =====================
    Hero / Conteúdo
 ===================== */
+
 .title-hero {
   color: var(--primary-hover);
-  font-size: 64px;
+  font-size: clamp(30px, 5vw, 60px);
+  /* antes: 36px, 6vw, 72px */
   font-weight: 800;
 }
 
 .role-text {
   color: var(--primary);
-  font-size: 32px;
+  font-size: clamp(16px, 2.5vw, 26px);
+  /* antes: 18px, 3vw, 32px */
   font-weight: 700;
 }
 
 .cta-buttons {
   display: flex;
-  /* FIX importante */
-  gap: 20px;
+  gap: 15px;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .button-projects,
-.button-cv {
+.button-contactme {
   text-decoration: none;
-  font-size: 24px;
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: clamp(8px, 1.5vw, 10px) clamp(16px, 3vw, 20px);
+  border-radius: 16px;
   transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
 }
 
 .button-projects {
@@ -154,15 +162,20 @@ body {
   background-color: var(--foreground);
 }
 
-.button-cv {
+.button-contactme {
   color: var(--foreground);
   border: 2px solid var(--foreground);
+  background-color: transparent;
 }
 
 .button-projects:hover,
 .button-cv:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.about-photo{
+  width: 100px;
+  border-radius: 200%;
 }
 
 /* =====================
@@ -202,7 +215,10 @@ body {
   padding: 8px 16px;
   border: 1px solid var(--primary);
   border-radius: 20px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease,
+      box-shadow 0.3s ease;
 }
 
 .social-link:hover {
@@ -210,7 +226,9 @@ body {
   color: var(--light);
 }
 
-
+/* =====================
+   Loading
+===================== */
 .loading-container {
   min-height: 100vh;
   display: flex;
@@ -243,9 +261,25 @@ body {
 }
 
 /* =====================
-   Responsivo
+   Responsivo - Tablet
+===================== */
+@media (max-width: 1024px) {
+  .title-hero {
+    font-size: 48px;
+  }
+
+  .role-text {
+    font-size: 24px;
+  }
+
+}
+
+/* =====================
+   Responsivo - Mobile
 ===================== */
 @media (max-width: 768px) {
+
+  /* Header */
   .header {
     padding: 15px 20px;
     flex-wrap: wrap;
@@ -268,6 +302,31 @@ body {
     font-size: 14px;
   }
 
+  /* Hero Section */
+  .title-hero {
+    font-size: 36px;
+  }
+
+  .role-text {
+    font-size: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .button-projects,
+  .button-cv {
+    font-size: 18px;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Footer */
   .footer {
     padding: 24px 20px;
     margin-top: 60px;
@@ -283,8 +342,71 @@ body {
     font-size: 13px;
   }
 
+  .footer-social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .social-link {
     font-size: 13px;
     padding: 6px 12px;
+  }
+
+  /* Loading */
+  .loading-text {
+    font-size: 20px;
+  }
+}
+
+/* =====================
+   Responsivo - Mobile Pequeno
+===================== */
+@media (max-width: 480px) {
+  .header {
+    padding: 12px 15px;
+  }
+
+  .header-name {
+    font-size: 18px;
+  }
+
+  .navbar {
+    gap: 15px;
+  }
+
+  .navbar-link {
+    font-size: 13px;
+  }
+
+  .language-switcher {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .title-hero {
+    font-size: 28px;
+  }
+
+  .role-text {
+    font-size: 18px;
+  }
+
+  .button-projects,
+  .button-cv {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+
+  .social-link {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .loading-text {
+    font-size: 18px;
   }
 }
