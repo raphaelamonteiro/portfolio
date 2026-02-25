@@ -21,6 +21,7 @@ export default function Home() {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+
       <h1 className="title-hero">
         {t.home.greeting}
       </h1>
@@ -28,6 +29,16 @@ export default function Home() {
       <h2 className="role-text mt-2">
         {t.home.role}
       </h2>
+
+      <h3 className="sub-text mt-2">
+        {t.home.sub}
+      </h3>
+
+      {/* Tag azul */}
+      <span className="tag px-3 py-1 rounded-full text-xs font-medium mb-2 mt-3">
+        {t.home.tag}
+      </span>
+
 
       <div className="cta-buttons flex gap-4 pt-6">
         <Link href="/projects" className="button-projects">

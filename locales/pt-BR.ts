@@ -2,12 +2,15 @@ export const ptBR = {
     nav: {
         home: "Início",
         about: "Sobre",
+        services: "Serviços",
         projects: "Projetos",
         contact: "Contato"
     },
     home: {
-        greeting: "Desenvolvedora Full-Stack",
-        role: "Transformando ideias em sistemas inteligentes e seguros, com experiência em desenvolvimento fullstack, dados e infraestrutura.",
+        greeting: "Raphaela Monteiro",
+        role: "Desenvolvedora Full-Stack focada em arquitetura, performance e inovação.",
+        sub: "Sistemas escaláveis • Automação inteligente • IA • Dados • Segurança",
+        tag: "Disponível para projetos freelance e oportunidades na área tech.",
         cta: "Ver Projetos",
         contact: "Entre em Contato"
     },

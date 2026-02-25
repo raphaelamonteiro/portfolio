@@ -2,15 +2,17 @@ export const enUS = {
     nav: {
         home: "Home",
         about: "About",
+        services: "Services",
         projects: "Projects",
         contact: "Contact"
     },
     home: {
-        greeting: "Full Stack Developer",
-        role: "Transforming ideas into intelligent and secure systems, with experience in full-stack development, data, and infrastructure.",
+        greeting: "Raphaela Monteiro",
+        role: "Full-Stack Developer building scalable and well-architected digital systems.",
+        sub: "Web Development • Automation • Data • Security • Infrastructure",
+        tag: "Available for freelance projects and tech opportunities.",
         cta: "View Projects",
-        contact: "Contact me"
-
+        contact: "Get in Touch",
     },
     about: {
         title: "About Me",

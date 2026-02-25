@@ -21,6 +21,9 @@ export default function Header() {
                 <Link href="/about" className="navbar-link">
                     {t.nav.about}
                 </Link>
+                <Link href="/services" className="navbar-link">
+                    {t.nav.services}
+                </Link>
                 <Link href="/projects" className="navbar-link">
                     {t.nav.projects}
                 </Link>
