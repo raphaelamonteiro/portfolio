@@ -19,6 +19,10 @@ export const enUS = {
         description: "Here you tell your story...",
         skills: "Skills"
     },
+    work: {
+        title: "How I Can Help?",
+        description: " Sou uma desenvolvedora fullstack apaixonada por dados, IA, segurança e infraestrutura. Adoro criar soluções elegantes e robustas, equilibrando profissionalismo com criatividade.",
+    },
     projects: {
         title: "My Projects",
         viewProject: "View Project",

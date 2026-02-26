@@ -19,6 +19,10 @@ export const ptBR = {
         description: " Sou uma desenvolvedora fullstack apaixonada por dados, IA, segurança e infraestrutura. Adoro criar soluções elegantes e robustas, equilibrando profissionalismo com criatividade.",
         skills: "Habilidades"
     },
+    work: {
+        title: "Como Posso Ajudar?",
+        description: " Sou uma desenvolvedora fullstack apaixonada por dados, IA, segurança e infraestrutura. Adoro criar soluções elegantes e robustas, equilibrando profissionalismo com criatividade.",
+    },
     projects: {
         title: "Meus Projetos",
         viewProject: "Ver Projeto",
