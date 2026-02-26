@@ -21,34 +21,35 @@ export default function Home() {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <div className="hero-content">
+        <h1 className="title-hero">
+          {t.home.greeting}
+        </h1>
 
-      <h1 className="title-hero">
-        {t.home.greeting}
-      </h1>
+        <h2 className="role-text">
+          {t.home.role}
+        </h2>
 
-      <h2 className="role-text mt-2">
-        {t.home.role}
-      </h2>
+        <div className="sub-tag-container">
+          <h3 className="sub-text">
+            {t.home.sub}
+          </h3>
 
-      <h3 className="sub-text mt-2">
-        {t.home.sub}
-      </h3>
+          <span className="tag">
+            {t.home.tag}
+          </span>
+        </div>
 
-      {/* Tag azul */}
-      <span className="tag px-3 py-1 rounded-full text-xs font-medium mb-2 mt-3">
-        {t.home.tag}
-      </span>
+        <div className="cta-buttons flex gap-4 pt-3">
+          <Link href="/projects" className="button-projects">
+            {t.home.cta}
+          </Link>
 
-
-      <div className="cta-buttons flex gap-4 pt-6">
-        <Link href="/projects" className="button-projects">
-          {t.home.cta}
-        </Link>
-
-        <Link href="/contact"
-          className="button-contactme">
-          {t.home.contact}
-        </Link>
+          <Link href="/contact"
+            className="button-contactme">
+            {t.home.contact}
+          </Link>
+        </div>
       </div>
     </section>
   )
