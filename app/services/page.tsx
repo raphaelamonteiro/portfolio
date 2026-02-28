@@ -3,7 +3,7 @@
 import Loading from '@/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
 
-export default function Work() {
+export default function Services() {
     const { t, isLoading } = useTranslation()
     if (isLoading) return <Loading />
 

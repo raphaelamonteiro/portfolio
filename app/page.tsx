@@ -45,7 +45,7 @@ export default function Home() {
             {t.home.cta}
           </Link>
 
-          <Link href="/contact"
+          <Link href="/services"
             className="button-contactme">
             {t.home.contact}
           </Link>

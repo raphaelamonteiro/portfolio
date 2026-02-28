@@ -1,11 +1,9 @@
   /* ========================================
-    IMPORTS
     Importação de fontes e frameworks
     ======================================== */
+  @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
   @import "tailwindcss";
-
-
   /* ========================================
     VARIÁVEIS GLOBAIS
     Cores e valores reutilizáveis
@@ -23,7 +21,6 @@
 
   /* ========================================
     BASE
-    Configurações básicas do HTML e Body
     ======================================== */
   html,
   body {
@@ -46,10 +43,8 @@
     /* Cresce para empurrar footer pro final */
   }
 
-
   /* ========================================
     HEADER
-    Barra de navegação fixa no topo
     ======================================== */
   .header {
     display: flex;
@@ -65,7 +60,7 @@
   }
 
   .header-name {
-    color: var(--primary);
+    color: var(--primary-hover);
     font-size: 24px;
     font-weight: 600;
     text-decoration: none;
@@ -73,7 +68,7 @@
   }
 
   .header-name:hover {
-    color: var(--secondary);
+    color: var(--primary);
   }
 
   /* Container do menu de navegação */
@@ -90,11 +85,9 @@
     position: relative;
     /* Necessário para ::after funcionar */
     text-decoration: none;
-    /* Remove sublinhado */
     color: var(--foreground);
     font-weight: 500;
     transition: all 0.3s ease;
-    /* Animação suave */
   }
 
   .navbar-link:hover {
@@ -134,10 +127,8 @@
     color: var(--light);
   }
 
-
   /* ========================================
     HERO SECTION
-    Seção principal da página home
     ======================================== */
   /* Container principal do hero */
   .hero-content {
@@ -181,6 +172,11 @@
 
   /* Título principal (maior) */
   .title-hero {
+    .title-hero { text-shadow:
+          0 0 10px rgba(162, 148, 249, 0.6),
+          0 0 30px rgba(162, 148, 249, 0.3);
+        letter-spacing: 1px;
+      }
     color: var(--primary);
     font-size: clamp(40px, 7vw, 76px);
     font-weight: 800;
@@ -195,7 +191,6 @@
     margin-top: -4px;
   }
 
-
   /* Texto descritivo */
   .sub-text {
     color: var(--foreground);
@@ -207,19 +202,19 @@
     padding: 0 20px;
   }
 
-  /* Tag/Badge de destaque */
+  /* Tag de destaque */
   .tag {
-    background: var(--background);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 15px rgba(217, 148, 249, 0.055);
-    color: var(--primary-hover);
+    background: rgba(162, 148, 249, 0.08);
+    border: 1px solid rgba(162, 148, 249, 0.3);
+    color: var(--foreground);
     font-size: clamp(13px, 1.6vw, 16px);
     font-weight: 700;
     padding: 8px 16px;
-    border: 1px solid var(--primary-hover);
+    border: 1px solid var(--header-bg);
     border-radius: 20px;
     display: inline-block;
     margin-top: 3px;
+    
   }
 
   /* Estilos base dos botões */
@@ -254,10 +249,109 @@
   .button-contactme:hover {
     transform: translateY(-3px);
   }
+  
+/* ========================================
+ABOUT SECTION
+======================================== */
+.about-section {
+  padding: 60px 8% 100px;
+}
 
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+  /* altura total da viewport menos header */
+}
+
+/* imagem mais elegante */
+.profile-image {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 48px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+/* texto mais refinado */
+.about-text-content {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-text-content h1 {
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  color: var(--foreground)
+}
+
+.about-text-content p {
+  font-size: 20px;
+  opacity: 0.85;
+  max-width: 80ch;
+}
+
+/* ========================================
+TECH SECTION
+======================================== */
+.tech-section {
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-title {
+  margin-top: 60px;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 800px;
+  background: rgba(162, 148, 249, 0.06);
+  backdrop-filter: blur(8px);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.tech-item:hover {
+  background: rgba(162, 148, 249, 0.18);
+  transform: translateY(-4px);
+}
+
+.tech-icon {
+  font-size: 16px;
+}
+  
   /* ========================================
     FOOTER
-    Rodapé com links e informações
     ======================================== */
   .footer {
     background-color: var(--header-bg);
@@ -553,12 +647,10 @@
   @media (max-width: 360px) {
     .header-name {
       font-size: 16px;
-      /* Nome bem pequeno */
     }
 
     .navbar-link {
       font-size: 12px;
-      /* Links bem pequenos */
     }
 
     .button-projects,
