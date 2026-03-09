@@ -5,18 +5,8 @@ import { useTranslation } from '@/contexts/TranslationContext'
 import Link from 'next/link'
 
 export default function Home() {
-  const { t, locale, isLoading } = useTranslation()
+  const { t, isLoading } = useTranslation()
 
-  // Evite acentos no nome do arquivo para prevenir problemas de deploy
-  /*
-  const cvPath =
-    locale === 'pt-BR'
-      ? '/docs/Curriculo-Raphaela-Monteiro.pdf'
-      : '/docs/Resume-Raphaela-Monteiro.pdf'
-      --
-          href={cvPath}
-          download
-*/
   if (isLoading) return <Loading />
 
   return (

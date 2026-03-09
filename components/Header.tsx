@@ -3,10 +3,13 @@
 import Link from 'next/link'
 import LanguageSwitcher from './languageSwitcher'
 import { useTranslation } from '@/contexts/TranslationContext'
+import { LuArrowBigDownDash } from "react-icons/lu";
 
 export default function Header() {
-    const { t, isLoading } = useTranslation()
+    const { t, locale, isLoading } = useTranslation()
 
+    // Define qual CV baixar baseado no idioma
+    const cvPath = locale === 'pt-BR' ? 'docs/Currículo - Raphaela Monteiro.pdf' : 'docs/Resume - Raphaela Monteiro.pdf'
 
     return (
         <header className="header">
@@ -21,6 +24,10 @@ export default function Header() {
                 <Link href="/about" className="navbar-link">
                     {t.nav.about}
                 </Link>
+                <Link href="/academic" className="navbar-link">
+                    {t.nav.academic}
+                </Link>
+
                 <Link href="/projects" className="navbar-link">
                     {t.nav.projects}
                 </Link>
@@ -30,6 +37,11 @@ export default function Header() {
                 <Link href="/contact" className="navbar-link">
                     {t.nav.contact}
                 </Link>
+
+                <a href={cvPath} download className="button-cv">
+                    <LuArrowBigDownDash />
+                    {t.nav.cv}
+                </a>
 
                 <LanguageSwitcher />
             </nav>

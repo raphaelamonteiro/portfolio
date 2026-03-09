@@ -5,6 +5,7 @@ import { useTranslation } from '@/contexts/TranslationContext'
 import Image from 'next/image'
 import about from '@/public/assets/about.png'
 import { techStack } from '../data/techStack'
+import HobbiesCarousel from "@/components/hobbiesCarousel";
 
 export default function About() {
     const { t, isLoading } = useTranslation()
@@ -55,19 +56,14 @@ export default function About() {
                             )}
                         </div>
 
-                        <h3 className="tech-title" style={{ marginTop: '40px' }}>
-                            {t.about.extra}
-                        </h3>
+                        {//<h3 className="tech-title" style={{ marginTop: '40px' }}>
+                            //{t.about.extra}
+                            //</h3>
+                            //<div className="tech-grid">
+                            //<HobbiesCarousel items={t.about.hobbies[0].items} />
+                            // </div>//
+                        }
 
-                        <div className="tech-grid">
-                            {t.about.hobbies.map((group, groupIndex) =>
-                                group.items.map((item, index) => (
-                                    <div key={`hobby-${groupIndex}-${index}`} className="tech-item">
-                                        <span>{item}</span>
-                                    </div>
-                                ))
-                            )}
-                        </div>
                     </div>
                 </div>
             </div>
