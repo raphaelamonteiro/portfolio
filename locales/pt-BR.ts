@@ -85,7 +85,7 @@ export const ptBR = {
         ]
     },
     academic: {
-        title: "Pesquisa & Academia",
+        title: "Acadêmico",
     },
 
     projects: {

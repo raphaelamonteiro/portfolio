@@ -86,7 +86,7 @@ export const enUS = {
         ]
     },
     academic: {
-        title: "Research & Academia",
+        title: "Academic",
     },
     work: {
         title: "How I Can Help?",
