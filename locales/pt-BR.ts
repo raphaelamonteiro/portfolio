@@ -19,28 +19,24 @@ export const ptBR = {
     about: {
         title: "Sobre Mim",
         paragraphs: [
-            "Sou Desenvolvedora apaixonada por criar sistemas robustos, eficientes e escaláveis.",
+            "Sou Desenvolvedora e Pesquisadora focada na intersecção entre Arquitetura de Sistemas e Computação Inteligente. Atualmente, atuo em projetos de Alta Confiabilidade envolvendo Sistemas de Posicionamento e Ciência de Dados.",
 
-            "Encaro cada projeto como um organismo: cada decisão impacta desempenho e evolução. Busco usar as ferramentas e padrões mais adequados para cada desafio.",
+            "Encaro o software como uma infraestrutura crítica, onde cada decisão impacta o desempenho e a integridade. Minha abordagem une a agilidade do desenvolvimento Full Stack ao rigor da investigação científica para resolver problemas complexos.",
 
-            "Procuro entender o motivo por trás das decisões técnicas, questionar padrões quando necessário e criar soluções que gerem impacto real.",
+            "Seja arquitetando aplicações escaláveis ou pesquisando integridade de dados, meu objetivo é reduzir a complexidade e garantir resultados consistentes em ambientes onde a precisão é inegociável.",
 
-            "Tenho interesse em arquitetura de sistemas, infraestrutura, automação inteligente e aplicações que integrem dados, segurança e inteligência artificial.",
-
-            "Acredito que tecnologia bem feita reduz complexidade, amplia possibilidades e melhora a vida das pessoas.",
-
-            "Meu objetivo é crescer continuamente, participando de projetos desafiadores e contribuindo com visão técnica, responsabilidade e consistência."
+            "Movida pela excelência técnica, busco construir soluções que conectem a pesquisa avançada à engenharia de software prática e de alto impacto."
         ],
-        skills: "Habilidades",
+        skills: "Especialidades",
         techstack: "Tecnologias",
         skillsMap: [
             {
                 items: [
-                    "Padrões de Projeto",
-                    "Arquitetura Limpa",
-                    "Otimização de Performance",
-                    "Integração com IA (APIs de LLM)",
-                    "Scrum"
+                    "Arquitetura de Sistemas & Design Patterns",
+                    "Sistemas Críticos & Alta Confiabilidade",
+                    "Integração de IA & Data Science",
+                    "Arquitetura Limpa & SOLID",
+                    "Documentação Técnica & Rigor"
                 ]
             }
         ],

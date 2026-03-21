@@ -15,32 +15,27 @@ export const enUS = {
         tag: "Open to freelance projects and technical challenges that create real impact.",
         cta: "View Projects",
         contact: "Get in Touch",
-    },
-    about: {
+    }, about: {
         title: "About Me",
         paragraphs: [
-            "I'm a Developer passionate about building robust, efficient, and scalable systems.",
+            "I am a Developer and Researcher focused on the intersection of Systems Architecture and Intelligent Computing. Currently, I work on High-Reliability projects involving Positioning Systems and Data Science.",
 
-            "I approach each project like a living system: every decision impacts performance and growth. I strive to use the most suitable tools and design patterns for each challenge.",
+            "I view software as a mission-critical infrastructure where every decision impacts performance and integrity. My approach combines the agility of Full Stack development with the rigor of scientific investigation to solve complex problems.",
 
-            "I value understanding the reasoning behind technical decisions, questioning patterns when needed, and building solutions that create real impact.",
+            "Whether architecting scalable applications or researching data integrity, my goal is to reduce complexity and ensure consistent results in environments where precision is non-negotiable.",
 
-            "I have an interest in system architecture, infrastructure, intelligent automation, and applications that strategically integrate data, security, and AI.",
-
-            "I believe well-built technology reduces complexity, expands possibilities, and improves people's lives.",
-
-            "My goal is to continuously grow through challenging projects, contributing with technical insight, responsibility, and consistency."
+            "I am driven by technical excellence and a commitment to building solutions that bridge the gap between advanced research and practical, high-impact software engineering."
         ],
-        skills: "Skills",
+        skills: "Expertise",
         techstack: "Tech Stack",
         skillsMap: [
             {
                 items: [
-                    "Design Patterns",
-                    "Clean Architecture",
-                    "Performance Optimization",
-                    "AI Integration (LLM APIs)",
-                    "Scrum"
+                    "System Architecture & Design Patterns",
+                    "High-Reliability & Critical Software",
+                    "AI Integration & Data Science",
+                    "Clean Architecture & SOLID",
+                    "Technical Documentation & Rigor"
                 ]
             },
         ],

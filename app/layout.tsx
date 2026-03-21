@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
         <TranslationProvider>
           <Header />
-          <main style={{ minHeight: 'calc(100vh - 80px)' }}>
+          <main className="main-content">
             {children}
           </main>
           <Footer />

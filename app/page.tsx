@@ -30,13 +30,12 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="cta-buttons flex gap-4 pt-3">
+        <div className="cta-buttons">
           <Link href="/projects" className="button-projects">
             {t.home.cta}
           </Link>
 
-          <Link href="/services"
-            className="button-contactme">
+          <Link href="/services" className="button-contactme">
             {t.home.contact}
           </Link>
         </div>

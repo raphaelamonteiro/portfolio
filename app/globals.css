@@ -1,6 +1,5 @@
 /* ========================================
    IMPORTS
-   Importação de fontes e ícones
    ======================================== */
 @import url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
@@ -9,7 +8,6 @@
 
 /* ========================================
    VARIÁVEIS GLOBAIS
-   Cores e valores reutilizáveis
    ======================================== */
 :root {
   --background: #17153B;
@@ -22,8 +20,9 @@
   --text-main: #EDEBFF;
 }
 
+
 /* ========================================
-   Configurações básicas do HTML e Body
+   BASE
    ======================================== */
 html,
 body {
@@ -33,7 +32,6 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  /* Gradiente radial com efeito de luz */
   background: radial-gradient(circle at 20% 30%,
       rgba(162, 148, 249, 0.15), transparent 40%),
     radial-gradient(circle at 80% 70%,
@@ -45,13 +43,11 @@ body {
 
 .main-content {
   flex: 1;
-  /* Cresce para empurrar footer pro final */
 }
 
 
 /* ========================================
    HEADER
-   Barra de navegação fixa no topo
    ======================================== */
 .header {
   display: flex;
@@ -65,7 +61,6 @@ body {
   z-index: 100;
 }
 
-/* Logo/Nome no header */
 .header-name {
   color: var(--primary-hover);
   font-size: 24px;
@@ -78,14 +73,12 @@ body {
   color: var(--primary);
 }
 
-/* Container do menu de navegação */
 .navbar {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-/* Links do menu */
 .navbar-link {
   position: relative;
   text-decoration: none;
@@ -98,7 +91,6 @@ body {
   color: var(--secondary);
 }
 
-/* Linha animada que aparece embaixo do link */
 .navbar-link::after {
   content: '';
   position: absolute;
@@ -114,7 +106,6 @@ body {
   width: 100%;
 }
 
-/* Botões do header (CV e idioma) */
 .language-switcher,
 .button-cv {
   display: inline-flex;
@@ -139,7 +130,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Animação do ícone de download */
 .button-cv svg {
   transition: transform 0.2s ease;
 }
@@ -148,22 +138,52 @@ body {
   transform: translateY(2px);
 }
 
+/* Hambúrguer escondido no desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 101;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--foreground);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger span.open:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger span.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger span.open:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
 
 /* ========================================
    HERO SECTION
    ======================================== */
-
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
   width: 100%;
-    max-width: 1200px;
+  max-width: 1200px;
   animation: fadeUp 0.8s ease-out;
 }
 
-/* Animação de entrada */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -176,7 +196,6 @@ body {
   }
 }
 
-/* Container que junta sub-text + tag */
 .sub-tag-container {
   display: flex;
   align-items: center;
@@ -203,16 +222,13 @@ body {
   letter-spacing: 1px;
 }
 
-/* Subtítulo (cargo/função) */
 .role-text {
   color: var(--primary-hover);
   font-size: clamp(20px, 3vw, 25px);
   font-weight: 700;
   margin-top: -4px;
-  white-space: nowrap;
 }
 
-/* Texto descritivo */
 .sub-text {
   color: var(--foreground);
   font-size: clamp(14px, 2.2vw, 18px);
@@ -223,7 +239,6 @@ body {
   padding: 0 20px;
 }
 
-/* Tag de destaque com efeito glass */
 .tag {
   background: rgba(162, 148, 249, 0.08);
   border: 1px solid rgba(162, 148, 249, 0.3);
@@ -236,7 +251,6 @@ body {
   margin-top: 3px;
 }
 
-/* Container dos botões de ação */
 .cta-buttons {
   display: flex;
   gap: 16px;
@@ -247,7 +261,6 @@ body {
   margin-top: 8px;
 }
 
-/* Estilos base dos botões */
 .button-projects,
 .button-contactme {
   text-decoration: none;
@@ -261,20 +274,17 @@ body {
   min-width: 160px;
 }
 
-/* Botão primário (preenchido) */
 .button-projects {
   color: var(--background);
   background-color: var(--foreground);
 }
 
-/* Botão secundário (outline) */
 .button-contactme {
   color: var(--foreground);
   border: 2px solid var(--foreground);
   background-color: transparent;
 }
 
-/* Efeito hover nos botões */
 .button-projects:hover,
 .button-contactme:hover {
   transform: translateY(-3px);
@@ -290,7 +300,6 @@ body {
   animation: fadeUp 0.8s ease-out;
 }
 
-/* Grid com 2 colunas */
 .about-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -301,22 +310,20 @@ body {
   min-height: calc(100vh - 120px);
 }
 
-/* Imagem de perfil elegante */
 .profile-image {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 48px;
+  border-radius: 50px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
 }
 
-/* Container do texto sobre */
 .about-text-content {
-  max-width: 700px;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .about-text-content h1 {
@@ -331,7 +338,7 @@ body {
   font-size: 20px;
   opacity: 0.85;
   max-width: 80ch;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 
@@ -345,7 +352,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 0 8%;
+  padding: 0 5%;
 }
 
 .tech-title {
@@ -356,7 +363,6 @@ body {
   text-align: center;
 }
 
-/* Grid de tecnologias */
 .tech-grid {
   display: flex;
   flex-wrap: wrap;
@@ -365,7 +371,6 @@ body {
   align-items: center;
 }
 
-/* Cada item de tecnologia */
 .tech-item {
   display: inline-flex;
   align-items: center;
@@ -374,7 +379,7 @@ body {
   border-radius: 800px;
   background: rgba(162, 148, 249, 0.06);
   backdrop-filter: blur(8px);
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.5px;
   transition: all 0.25s ease;
   border: 1px solid rgba(162, 148, 249, 0.2);
@@ -382,13 +387,14 @@ body {
 
 .tech-item:hover {
   background: rgba(162, 148, 249, 0.18);
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(162, 148, 249, 0.2);
 }
 
 .tech-icon {
-  font-size: 16px;
+  font-size: 18px;
 }
+
 
 /* ========================================
    PROJECTS SECTION
@@ -415,12 +421,6 @@ body {
   display: inline-block;
   position: relative;
   color: var(--primary);
-}
-
-@media (min-width: 768px) {
-  .projects-title {
-    font-size: 3rem;
-  }
 }
 
 .projects-title-underline {
@@ -470,29 +470,12 @@ body {
   opacity: 0.7;
 }
 
-.filter-button:not(.active):hover {
-  opacity: 1;
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Project Card */
 .project-card {
   background-color: var(--header-bg);
   border-radius: 0.75rem;
@@ -571,6 +554,8 @@ body {
 .project-tag:hover {
   transform: scale(1.05);
 }
+
+
 /* ========================================
    FOOTER
    ======================================== */
@@ -581,7 +566,6 @@ body {
   border-top: 1px solid rgba(101, 93, 187, 0.2);
 }
 
-/* Container interno do footer */
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -590,21 +574,18 @@ body {
   align-items: center;
 }
 
-/* Texto de copyright */
 .footer-text {
   color: var(--foreground);
   font-size: 14px;
   opacity: 0.9;
 }
 
-/* Container dos links sociais */
 .footer-social {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-/* Links de redes sociais */
 .social-link {
   color: var(--foreground);
   text-decoration: none;
@@ -644,7 +625,6 @@ body {
   animation: pulse 1.5s infinite;
 }
 
-/* Animação de pulso */
 @keyframes pulse {
 
   0%,
@@ -657,91 +637,175 @@ body {
   }
 }
 
+
 /* ========================================
-   RESPONSIVO - MOBILE EXTRA PEQUENO (até 320px)
+   RESPONSIVO - MOBILE (até 768px)
    ======================================== */
-@media (max-width: 320px) {
+@media (max-width: 768px) {
   .header {
-    padding: 10px 12px;
+    padding: 15px 20px;
   }
 
   .header-name {
-    font-size: 15px;
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--header-bg);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 30px 30px;
+    gap: 20px;
+    border-left: 1px solid rgba(207, 131, 231, 0.485);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  .navbar-open {
+    right: 0;
   }
 
   .navbar-link {
-    font-size: 11px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .navbar-link::after {
+    display: none;
   }
 
   .button-cv,
   .language-switcher {
-    font-size: 11px;
-    padding: 5px 10px;
-    gap: 4px;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px 18px;
   }
 
-  .title-hero {
-    font-size: clamp(28px, 10vw, 40px);
+  .navbar-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
 
-  .role-text {
-    font-size: clamp(16px, 5vw, 20px);
+  .sub-tag-container {
+    flex-direction: column;
+    gap: 12px;
   }
 
-  .sub-text {
-    font-size: 13px;
-    padding: 0 15px;
-  }
-
-  .tag {
-    font-size: 10px;
-    padding: 5px 10px;
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
   }
 
   .button-projects,
   .button-contactme {
-    font-size: 13px;
-    padding: 9px 14px;
-    min-width: 120px;
+    width: 100%;
+  }
+
+  .about-section {
+    padding: 40px 6% 60px;
+  }
+
+  .about-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: auto;
   }
 
   .profile-image {
-    max-width: 220px;
-    border-radius: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 32px;
   }
 
-  .about-text-content h1 {
-    font-size: 28px;
+  .about-text-content {
+    text-align: center;
+    margin: 0 auto;
   }
 
   .about-text-content p {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .tech-title {
-    font-size: 24px;
+    margin-top: 40px;
+  }
+
+  .tech-grid {
+    gap: 12px;
   }
 
   .tech-item {
-    padding: 4px 8px;
-    font-size: 10px;
-    gap: 5px;
-  }
-
-  .tech-icon {
+    padding: 8px 16px;
     font-size: 12px;
   }
 
+  .projects-section {
+    padding: 3rem 1rem;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
   .footer {
-    padding: 16px 12px;
+    padding: 20px;
+    margin-top: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
   }
 
   .footer-text {
-    font-size: 11px;
+    font-size: 13px;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 
   .social-link {
-    font-size: 11px;
-    padding: 5px 10px;
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
