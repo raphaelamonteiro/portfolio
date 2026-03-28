@@ -24,7 +24,7 @@ export default function About() {
                 </div>
 
                 <div className="about-text-content">
-                    <h1>{t.about.title}</h1>
+                    <h1 className="title-about">{t.about.title}</h1>
 
                     {t.about.paragraphs.map((text, index) => (
                         <p key={index}>{text}</p>

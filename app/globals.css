@@ -10,16 +10,24 @@
    VARIÁVEIS GLOBAIS
    ======================================== */
 :root {
-  --background: #17153B;
-  --foreground: #A294F9;
-  --header-bg: #2E236C;
-  --primary: #C8ACD6;
-  --primary-hover: #CDC1FF;
-  --secondary: #FFD0EC;
-  --light: #FFE6E6;
-  --text-main: #EDEBFF;
-}
+  --background: #0F0E17;
+  --header-bg: #16151F;
 
+  --primary: #725CAD;
+  --primary-hover: #8472C4;
+
+  --secondary: #E0B3D6;
+  --accent: #C77DFF;
+
+  --foreground: #B8B5D1;
+
+  --text-main: #F5F3FF;
+  --text-muted: #A3A0B8;
+
+  --border: #26243A;
+  --surface: #1C1A2B;
+  /* cards */
+}
 
 /* ========================================
    BASE
@@ -32,11 +40,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background: radial-gradient(circle at 20% 30%,
-      rgba(162, 148, 249, 0.15), transparent 40%),
-    radial-gradient(circle at 80% 70%,
-      rgba(200, 172, 214, 0.1), transparent 40%),
-    #141036;
+  background: var(--background);
   font-family: "Noto Sans JP", sans-serif;
   color: var(--text-main);
 }
@@ -55,7 +59,7 @@ body {
   align-items: center;
   padding: 20px 30px;
   background-color: var(--header-bg);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -189,7 +193,6 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -230,7 +233,7 @@ body {
 }
 
 .sub-text {
-  color: var(--foreground);
+  color: var(--text-muted);
   font-size: clamp(14px, 2.2vw, 18px);
   font-weight: 600;
   opacity: 0.9;
@@ -275,20 +278,20 @@ body {
 }
 
 .button-projects {
-  color: var(--background);
-  background-color: var(--foreground);
+  background-color: var(--primary);
+  color: var(--text-main);
 }
 
 .button-contactme {
-  color: var(--foreground);
-  border: 2px solid var(--foreground);
+  border: 1px solid var(--border);
+  color: var(--text-main);
   background-color: transparent;
 }
 
 .button-projects:hover,
 .button-contactme:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(162, 148, 249, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -316,7 +319,7 @@ body {
   aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 50px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .about-text-content {
@@ -327,11 +330,12 @@ body {
 }
 
 .about-text-content h1 {
-  font-size: clamp(36px, 4vw, 48px);
+  color: var(--primary);
+  font-size: clamp(40px, 5vw, 50px);
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
   line-height: 1.05;
-  color: var(--foreground);
+
 }
 
 .about-text-content p {
@@ -357,9 +361,9 @@ body {
 
 .tech-title {
   margin-top: 60px;
-  font-size: clamp(32px, 5vw, 48px);
+  color: var(--primary);
+  font-size: clamp(42px, 4vw, 48px);
   font-weight: 700;
-  color: var(--foreground);
   text-align: center;
 }
 
@@ -388,11 +392,51 @@ body {
 .tech-item:hover {
   background: rgba(162, 148, 249, 0.18);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(162, 148, 249, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .tech-icon {
   font-size: 18px;
+  color: var(--foreground);
+}
+
+/* ======================================== 
+   ACADEMIC SECTION 
+   ======================================== */
+.academic-section {
+  padding: 80px 8%;
+  border-left: 1px solid var(--border);
+  margin-left: 20px;
+}
+
+.academic-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 40px;
+  border-left: 2px solid var(--primary);
+}
+
+.academic-item::after {
+  content: "●";
+  position: absolute;
+  left: -7px;
+  top: 0;
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.academic-item h4 {
+  font-size: 18px;
+  color: var(--secondary);
+  margin-bottom: 5px;
+}
+
+.academic-tag {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 
@@ -483,12 +527,12 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid rgba(162, 148, 249, 0.1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .project-card:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .project-card-image {
@@ -555,6 +599,82 @@ body {
   transform: scale(1.05);
 }
 
+/* ======================================== 
+   SERVICES SECTION (FREELAS) 
+   ======================================== */
+.services-section {
+  padding: 80px 8%;
+}
+
+.service-title{
+    color: var(--primary);
+    font-size: clamp(50px, 6vw, 64px);
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.service-text {
+  color: var(--text-muted);
+  font-size: clamp(16px, 3vw, 24px);
+  font-weight: 600;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 40px;
+  border-radius: 4px;
+  /* Bordas retas = mais sério/Nippon */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background: var(--accent);
+  /* Detalhe Ada Wong */
+  transition: height 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(123, 44, 191, 0.1);
+}
+
+.service-card:hover::before {
+  height: 100%;
+}
+
+.service-card h3 {
+  color: var(--text-main);
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 
 /* ========================================
    FOOTER
@@ -601,7 +721,7 @@ body {
   background-color: var(--foreground);
   color: var(--background);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(162, 148, 249, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 

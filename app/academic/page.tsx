@@ -3,16 +3,24 @@
 import { useTranslation } from '@/contexts/TranslationContext'
 
 export default function Academic() {
-    const { t } = useTranslation()
+    const { t } = useTranslation();
 
     return (
-        <div style={{ padding: '50px', maxWidth: '600px', margin: '0 auto' }}>
-            <h1 style={{ fontSize: '36px', marginBottom: '40px', textAlign: 'center' }}>
-                {t.academic.title}
-            </h1>
-            <p style={{ textAlign: 'center', color: '#666' }}>
-                Em breve...
-            </p>
-        </div>
-    )
+        <section className="academic-section">
+            <h2 className="tech-title">{t.academic.title}</h2>
+
+            {/*
+            <div className="academic-item">
+                <span className="academic-tag">Lead Author / Research</span>
+                <h4>Instituto Tecnológico de Aeronáutica (ITA)</h4>
+                <p>Desenvolvimento de sistemas de missão crítica, focado em infraestrutura GNSS e telemetria.</p>
+            </div>
+*/}
+            <div className="academic-item">
+                <span className="academic-tag">Undergraduate</span>
+                <h4>Faculdade de Tecnologia de São José dos Campos - Prof. Jessen Vidal</h4>
+                <p>Análise e Desenvolvimento de Sistemas.</p>
+            </div>
+        </section>
+    );
 }

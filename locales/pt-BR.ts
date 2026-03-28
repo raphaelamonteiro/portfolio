@@ -36,7 +36,7 @@ export const ptBR = {
                     "Sistemas Críticos & Alta Confiabilidade",
                     "Integração de IA & Data Science",
                     "Arquitetura Limpa & SOLID",
-                    "Documentação Técnica & Rigor"
+                    "Documentação Técnica"
                 ]
             }
         ],
@@ -90,10 +90,35 @@ export const ptBR = {
         viewCode: "Ver Código"
     },
 
-
     work: {
         title: "Como Posso Ajudar?",
-        description: " Sou uma desenvolvedora fullstack apaixonada por dados, IA, segurança e infraestrutura. Adoro criar soluções elegantes e robustas, equilibrando profissionalismo com criatividade.",
+        description: "Mais do que desenvolver, busco criar soluções que ajudem seu negócio a crescer de forma estruturada e eficiente.",
+        services: [
+            {
+                items: [
+                    {
+                        title: "Sites e Aplicações Web",
+                        description: "Criação de sites modernos, rápidos e responsivos, pensados para atrair clientes e transmitir profissionalismo."
+                    },
+                    {
+                        title: "Estruturação de Sistemas",
+                        description: "Organizo e desenvolvo aplicações de forma estruturada, garantindo que seu sistema funcione bem hoje e continue eficiente no futuro."
+                    },
+                    {
+                        title: "Integrações e Automações",
+                        description: "Automatizo tarefas e conecto ferramentas para economizar tempo e tornar seus processos mais eficientes."
+                    },
+                    {
+                        title: "Dados e Otimização",
+                        description: "Uso dados para melhorar desempenho, identificar oportunidades e ajudar na tomada de decisões."
+                    },
+                    {
+                        title: "Consultoria Técnica",
+                        description: "Ajudo a melhorar sistemas existentes, trazendo mais organização, performance e clareza."
+                    }
+                ]
+            }
+        ],
     },
 
     contact: {

@@ -2,28 +2,36 @@
 
 import Loading from '@/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
+import { title } from 'process';
 
 export default function Services() {
-    const { t, isLoading } = useTranslation()
-    if (isLoading) return <Loading />
+    const { t } = useTranslation();
+
+    const servicesList = [
+        { title: "Full Stack Development", icon: "🚀" },
+        { title: "Inteligência & Dados", icon: "🧠" },
+        { title: "Sistemas de Alta Confiabilidade", icon: "🛡️" }
+    ];
 
     return (
-        <section className="min-h-screen flex items-center justify-center px-4">
+        <section className="services-section">
+            <h2 className="service-title">{t.work.title}</h2>
+            <p className="service-text">
+                {t.work.description}
+            </p>
 
-            <h1 className="text-4xl font-bold mb-4">
-                {t.work.title}
-            </h1>
-
-            <div className="flex flex-wrap justify-center gap-3">
-                {['React', 'Next.js', 'TypeScript'].map(skill => (
-                    <span
-                        key={skill}
-                        className="px-4 py-2 bg-blue-600 text-white rounded-md"
-                    >
-                        {skill}
-                    </span>
-                ))}
+            <div className="services-grid">
+                {t.work.services.map((group, groupIndex) =>
+                    group.items.map((item, index) => (
+                        <div key={`${groupIndex}-${index}`} className="service-card">
+                            <h3>{item.title}</h3>
+                            <p>{item.description}</p> {/* Reutilizando lógica de precisão */}
+                        </div>
+                    ))
+                )}
             </div>
-        </section >
-    )
+
+
+        </section>
+    );
 }
