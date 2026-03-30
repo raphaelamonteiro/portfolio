@@ -305,7 +305,7 @@ body {
 
 .about-top {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.8fr 1.2fr;
   align-items: start;
   gap: 50px;
   max-width: 1200px;
@@ -335,7 +335,6 @@ body {
   font-weight: 800;
   letter-spacing: 1px;
   line-height: 1.05;
-
 }
 
 .about-text-content p {
@@ -344,7 +343,6 @@ body {
   max-width: 80ch;
   line-height: 1.5;
 }
-
 
 /* ========================================
    TECH SECTION
