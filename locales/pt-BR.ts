@@ -64,24 +64,30 @@ export const ptBR = {
                         name: "Cozinhar e experimentar novas receitas",
                         image: "/images/hobbies/fotografia.jpg"
                     },
-                    {
-                        name: "Me expressar através de desenhos e pinturas",
-                        image: "/images/hobbies/fotografia.jpg"
-                    },
-                    {
-                        name: "Literatura gótica e ficção científica",
-                        image: "/images/hobbies/fotografia.jpg"
-                    },
-                    {
-                        name: "Passar tempo de qualidade com familiares e amigos",
-                        image: "/images/hobbies/fotografia.jpg"
-                    },
                 ]
-            },
+            }
         ]
     },
     academic: {
         title: "Acadêmico",
+        academia: [
+            {
+                items: [
+                    {
+                        title: "Graduação",
+                        course: "Análise e Desenvolvimento de Sistemas",
+                        institute: "Fatec - Prof. Jessen Vidal",
+                        date: "01/2024 - 02/2026"
+                    },
+                    {
+                        title: "Curso Técnico",
+                        course: "Desenvolvimento de Sistemas",
+                        institute: "ETEC - Machado de Assis",
+                        date: "01/2022 - 01/2023"
+                    },
+                ]
+            },
+        ]
     },
 
     projects: {
@@ -91,14 +97,14 @@ export const ptBR = {
     },
 
     work: {
-        title: "Como Posso Ajudar?",
-        description: "Mais do que desenvolver, busco criar soluções que ajudem seu negócio a crescer de forma estruturada e eficiente.",
+        title: "Soluções & Serviços",
+        subtitle: "Como posso agregar valor ao seu negócio ou projeto?",
         services: [
             {
                 items: [
                     {
-                        title: "Sites e Aplicações Web",
-                        description: "Criação de sites modernos, rápidos e responsivos, pensados para atrair clientes e transmitir profissionalismo."
+                        title: "Sites e Presença Digital",
+                        description: "Criação de sites modernos e rápidos que funcionam perfeitamente no celular. Ideal para negócios locais que querem passar profissionalismo e atrair novos clientes."
                     },
                     {
                         title: "Estruturação de Sistemas",
@@ -106,7 +112,7 @@ export const ptBR = {
                     },
                     {
                         title: "Integrações e Automações",
-                        description: "Automatizo tarefas e conecto ferramentas para economizar tempo e tornar seus processos mais eficientes."
+                        description: "Desenvolvimento de ferramentas personalizadas para organizar seu negócio, automatizar tarefas repetitivas e economizar seu tempo."
                     },
                     {
                         title: "Dados e Otimização",

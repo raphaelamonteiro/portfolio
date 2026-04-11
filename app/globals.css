@@ -672,7 +672,82 @@ body {
   font-size: 15px;
   line-height: 1.6;
 }
-
+    /* ======================================== 
+     PROJECTS SECTION
+     ======================================== */
+    .projects-section {
+      padding: 80px 8%;
+      text-align: center;
+    }
+  
+    .projects-title {
+      text-align: center;
+      color: var(--primary);
+      font-size: clamp(50px, 6vw, 64px);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+  
+    .projects-text {
+      color: var(--text-muted);
+      font-size: clamp(16px, 3vw, 24px);
+      font-weight: 600;
+      text-align: center;
+    }
+  
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+  
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 40px;
+      border-radius: 4px;
+      /* Bordas retas = mais sério/Nippon */
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 0;
+      background: var(--accent);
+      /* Detalhe Ada Wong */
+      transition: height 0.3s ease;
+    }
+  
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(123, 44, 191, 0.1);
+    }
+  
+    .service-card:hover::before {
+      height: 100%;
+    }
+  
+    .service-card h3 {
+      color: var(--text-main);
+      font-size: 22px;
+      margin-bottom: 15px;
+      font-family: "Noto Sans JP", sans-serif;
+    }
+  
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
 /* ========================================
    FOOTER

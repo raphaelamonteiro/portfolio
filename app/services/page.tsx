@@ -7,17 +7,12 @@ import { title } from 'process';
 export default function Services() {
     const { t } = useTranslation();
 
-    const servicesList = [
-        { title: "Full Stack Development", icon: "🚀" },
-        { title: "Inteligência & Dados", icon: "🧠" },
-        { title: "Sistemas de Alta Confiabilidade", icon: "🛡️" }
-    ];
 
     return (
         <section className="services-section">
             <h2 className="service-title">{t.work.title}</h2>
             <p className="service-text">
-                {t.work.description}
+                {t.work.subtitle}
             </p>
 
             <div className="services-grid">

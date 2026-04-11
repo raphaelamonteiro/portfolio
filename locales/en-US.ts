@@ -1,10 +1,10 @@
 export const enUS = {
     nav: {
         home: "Home",
-        about: "About",
-        academic: "Academia",
-        services: "Services",
-        projects: "Projects",
+        about: "Bio & Research",
+        academic: "Science",
+        services: "Solutions",
+        projects: "Portfolio",
         contact: "Contact",
         cv: "Download CV"
     },
@@ -58,6 +58,24 @@ export const enUS = {
     },
     academic: {
         title: "Academic",
+        academia: [
+            {
+                items: [
+                    {
+                        title: "Graduação",
+                        course: "Análise e Desenvolvimento de Sistemas",
+                        institute: "Fatec - Prof. Jessen Vidal",
+                        date: "01/2024 - 02/2026"
+                    },
+                    {
+                        title: "Curso Técnico",
+                        course: "Desenvolvimento de Sistemas",
+                        institute: "ETEC - Machado de Assis",
+                        date: "01/2022 - 01/2023"
+                    },
+                ]
+            },
+        ]
     },
     projects: {
         title: "My Projects",
@@ -66,8 +84,8 @@ export const enUS = {
     },
 
     work: {
-        title: "How I Can Help?",
-        description: "More than building, I focus on structuring systems that can evolve over time.",
+        title: "Solutions & Services",
+        subtitle: "How I can add value to your business or project?",
         services: [
             {
                 items: [
