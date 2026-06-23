@@ -1,10 +1,11 @@
 export const enUS = {
     nav: {
         home: "Home",
-        about: "Bio & Research",
-        academic: "Science",
-        services: "Solutions",
-        projects: "Portfolio",
+        about: "About",
+        academic: "Research",
+        services: "Services",
+        experience: "Experience",
+        projects: "Projects",
         contact: "Contact",
         cv: "Download CV"
     },
@@ -19,13 +20,11 @@ export const enUS = {
     about: {
         title: "About Me",
         paragraphs: [
-            "I am a Developer and Researcher focused on the intersection of Systems Architecture and Intelligent Computing. Currently, I work on High-Reliability projects involving Positioning Systems and Data Science.",
+            "I am a Software Engineer and Researcher focused on the intersection of Systems Architecture and Intelligent Computing, specializing in the development of high-reliability software architectures and mission-critical systems. I am particularly interested in applying software engineering best practices and data integrity principles to complex infrastructures.",
 
-            "I view software as critical infrastructure, where every decision impacts performance and integrity. My approach blends the agility of Full Stack development with the rigor of scientific research to solve complex problems.",
+            "My research focuses on the integration of Machine Learning algorithms, real-time systems, and space systems such as satellites, rovers, and rockets, as well as data analysis for information processing. I am particularly interested in the optimization of complex computational systems.",
 
-            "Whether architecting scalable applications or researching data integrity, my goal is to reduce complexity and ensure consistent results in environments where precision is non-negotiable.",
-
-            "Driven by technical excellence, I strive to build solutions that bridge advanced research with practical, high-impact software engineering."
+            "I strive to bridge cutting-edge scientific research with practical software engineering to deliver solutions with meaningful global impact."
         ],
         skills: "Specialties",
         techstack: "Tech Stack",
@@ -113,6 +112,11 @@ export const enUS = {
             }
         ],
     },
+
+    experience: {
+        title: "Professional Experience",
+    },
+
 
     contact: {
         title: "Get in Touch",

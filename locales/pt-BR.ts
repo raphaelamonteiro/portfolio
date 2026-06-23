@@ -2,30 +2,29 @@ export const ptBR = {
     nav: {
         home: "Início",
         about: "Sobre",
-        academic: "Academia",
+        academic: "Pesquisa",
         services: "Serviços",
+        experience: "Experiência",
         projects: "Projetos",
         contact: "Contato",
         cv: "Baixar Currículo"
     },
     home: {
         greeting: "< Raphaela Monteiro />",
-        role: "Desenvolvedora focada na construção de sistemas escaláveis e soluções inteligentes.",
-        sub: "Arquitetura • Performance • Automação • IA • Infraestrutura • Segurança • Dados",
-        tag: "Disponível para projetos freelance e desafios que gerem impacto real.",
+        role: "Construindo software, pesquisando sistemas inteligentes e explorando tecnologias para aplicações de alto impacto.",
+        sub: "Engenharia de Software • IA • Sistemas Inteligentes • Dados • Pesquisa • Tecnologias Espaciais",
+        tag: "Aberta a oportunidades de pesquisa, colaboração e desenvolvimento de soluções tecnológicas.",
         cta: "Ver Projetos",
         contact: "Entre em Contato"
     },
     about: {
         title: "Sobre Mim",
         paragraphs: [
-            "Sou Desenvolvedora e Pesquisadora focada na intersecção entre Arquitetura de Sistemas e Computação Inteligente. Atualmente, atuo em projetos de Alta Confiabilidade envolvendo Sistemas de Posicionamento e Ciência de Dados.",
+            "Sou Engenheira de Software e Pesquisadora com foco na intersecção entre Arquitetura de Sistemas e Computação Inteligente, atuando no desenvolvimento de arquiteturas de software de alta confiabilidade (High-Reliability) e sistemas de missão crítica. Tenho interesse na aplicação de boas práticas de engenharia de software e integridade de dados em infraestruturas complexas.",
 
-            "Encaro o software como uma infraestrutura crítica, onde cada decisão impacta o desempenho e a integridade. Minha abordagem une a agilidade do desenvolvimento Full Stack ao rigor da investigação científica para resolver problemas complexos.",
+            "Na área de pesquisa, meu foco concentra-se na integração de algoritmos de Machine Learning, sistemas de tempo real e sistemas espaciais como os de satélites, rovers e foguetes, além da análise de dados para o processamento de informações. Me interesso pela otimização de sistemas computacionais complexos.",
 
-            "Seja arquitetando aplicações escaláveis ou pesquisando integridade de dados, meu objetivo é reduzir a complexidade e garantir resultados consistentes em ambientes onde a precisão é inegociável.",
-
-            "Movida pela excelência técnica, busco construir soluções que conectem a pesquisa avançada à engenharia de software prática e de alto impacto."
+            "Busco conectar a pesquisa científica de ponta à engenharia de software prática e de alto impacto global."
         ],
         skills: "Especialidades",
         techstack: "Tecnologias",
@@ -125,6 +124,10 @@ export const ptBR = {
                 ]
             }
         ],
+    },
+
+    experience: {
+        title: "Experiência Profissional",
     },
 
     contact: {

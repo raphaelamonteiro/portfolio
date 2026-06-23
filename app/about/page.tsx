@@ -3,7 +3,7 @@
 import Loading from '@/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
 import Image from 'next/image'
-import about from '@/public/assets/about.png'
+import me from '@/public/assets/me.jpeg'
 import { techStack } from '../data/techStack'
 import HobbiesCarousel from "@/components/hobbiesCarousel";
 
@@ -17,7 +17,7 @@ export default function About() {
 
                 <div className="about-image">
                     <Image
-                        src={about}
+                        src={me}
                         alt="Raphaela Monteiro"
                         className="profile-image"
                     />

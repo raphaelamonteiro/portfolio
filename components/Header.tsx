@@ -43,6 +43,9 @@ export default function Header() {
                 <Link href="/projects" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
                     {t.nav.projects}
                 </Link>
+                <Link href="/experience" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
+                    {t.nav.experience}
+                </Link>
                 <Link href="/services" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
                     {t.nav.services}
                 </Link>
