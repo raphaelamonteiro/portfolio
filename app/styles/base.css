@@ -1,0 +1,16 @@
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+display: flex;
+flex-direction: column;
+font-family: "Noto Sans JP", sans-serif;
+background: var(--bg-page);
+color: var(--text-main);
+}
+
+.main-content {
+    flex: 1;
+}

@@ -3,7 +3,7 @@
 import Loading from '@/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
 import Image from 'next/image'
-import me from '@/public/assets/me.jpeg'
+import me from '@/public/assets/raphaela.jpg'
 import { techStack } from '../data/techStack'
 import HobbiesCarousel from "@/components/hobbiesCarousel";
 

@@ -1,0 +1,30 @@
+:root {
+    /* Atmosphere */
+    --bg-page: #0B0B12;
+    --bg-surface: #141420;
+    --bg-header: #16151F;
+
+    /* Typography */
+    --text-main: #FAFAFF;
+    --text-secondary: #D8D5E8;
+    --text-muted: #A8A4C0;
+
+    /* Brand */
+    --amethyst: #A294F9;
+    --amethyst-hover: #8978F6;
+
+    /* Soft accent */
+    --soft-lilac: #B8B5D1;
+    --moon-pink: #FFCDEA;
+    --dusty-pink: #F6B6DB;
+
+    /* UI */
+    --border-primary: #26243A;
+    --shadow-color: rgba(0, 0, 0, .25);
+
+    /* Feedback */
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --info: #3B82F6;
+}
