@@ -22,12 +22,13 @@ export default function Academic() {
                 </div>
             ))}
 
-            {/* Mantive este fixo caso ele não esteja no seu JSON de tradução ainda */}
+            {/* Mantive este fixo caso ele não esteja no seu JSON de tradução ainda 
             <div className="academic-item">
                 <span className="academic-tag">Lead Author / Research</span>
                 <h4>Instituto Tecnológico de Aeronáutica (ITA)</h4>
                 <p>Desenvolvimento de sistemas de missão crítica, focado em infraestrutura GNSS e telemetria.</p>
             </div>
+            */}
         </section>
     );
 }
