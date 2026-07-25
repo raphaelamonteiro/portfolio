@@ -4,15 +4,13 @@ export const ptBR = {
         about: "Sobre",
         academic: "Pesquisa",
         services: "Serviços",
-        experience: "Experiência",
         projects: "Projetos",
         contact: "Contato",
         cv: "Baixar Currículo"
     },
     home: {
-        greeting: "< Raphaela Monteiro />",
-        role: "Construindo software, pesquisando sistemas inteligentes e explorando tecnologias para aplicações de alto impacto.",
-        sub: "Engenharia de Software • IA • Sistemas Inteligentes • Dados • Pesquisa • Tecnologias Espaciais",
+        title: "Construindo software, explorando sistemas e investigando problemas complexos.",
+        role: "Engenharia de Software • IA • Sistemas Inteligentes • Dados • Pesquisa • Tecnologias Espaciais",
         tag: "Aberta a oportunidades de pesquisa, colaboração e desenvolvimento de soluções tecnológicas.",
         cta: "Ver Projetos",
         contact: "Entre em Contato"

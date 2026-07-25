@@ -4,15 +4,13 @@ export const enUS = {
         about: "About",
         academic: "Research",
         services: "Services",
-        experience: "Experience",
         projects: "Projects",
         contact: "Contact",
         cv: "Download CV"
     },
     home: {
-        greeting: "< Raphaela Monteiro />",
-        role: "Developer focused on building scalable systems and intelligent solutions.",
-        sub: "Architecture • Performance • Automation • AI • Infrastructure • Security • Data",
+        title: "Building software, exploring intelligent systems, and investigating complex problems.",
+        role: "Architecture • Performance • Automation • AI • Infrastructure • Security • Data",
         tag: "Available for freelance projects and high-impact technical challenges.",
         cta: "View Projects",
         contact: "Get in Touch"
