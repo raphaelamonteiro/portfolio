@@ -28,7 +28,7 @@ color: var(--text-primary);
 .navbar-link {
 text-decoration: none;
 color: var(--soft-lilac);
-font-weight: bold;
+font-weight: semibold;
 transition: all 0.3s ease;
 }
 
@@ -70,10 +70,6 @@ transform: translateY(-2px);
 }
 
 
-.button-cv:hover svg {
-transform: translateY(2px);
-}
-
 /* Hero - Home */
 .title {
 color: var(--amethyst);
@@ -93,7 +89,7 @@ display: inline-block;
 
 
 .button-projects,
-.button-contactme {
+.button-contact {
 text-decoration: none;
 border-radius: 16px;
 transition: all 0.3s ease;
@@ -105,103 +101,69 @@ background-color: var(--amethyst-hover);
 color: var(--bg-page);
 }
 
-.button-contactme {
+.button-contact {
 border: 1px solid var(--amethyst-hover);
 color: var(--amethyst-hover);
 background-color: transparent;
 }
 
 .button-projects:hover,
-.button-contactme:hover {
+.button-contact:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-/* About me */
-.about-section {
-padding: 60px 8% 100px;
-animation: fadeUp 0.8s ease-out;
-}
 
+/* About me */
 .about-top {
 display: grid;
 grid-template-columns: 0.8fr 1.2fr;
-align-items: start;
-gap: 50px;
-max-width: 1200px;
-margin: 0 auto;
-min-height: calc(100vh - 120px);
+}
+
+.title-page{
+  color: var(--dusty-pink);
+  letter-spacing: 1px;
 }
 
 .profile-image {
-width: 100%;
-max-width: 400px;
-aspect-ratio: 4 / 5;
-object-fit: cover;
-border-radius: 20px;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .about-text-content {
 max-width: 800px;
-display: flex;
 flex-direction: column;
-gap: 10px;
 }
 
 .about-text-content h1 {
-color: var(--text-primary);
-font-size: clamp(60px, 5vw, 80px);
-font-weight: 800;
+color: var(--soft-lilac);
 letter-spacing: 1px;
-line-height: 1.05;
 }
-
 .about-text-content p {
-font-size: 20px;
-opacity: 0.85;
-max-width: 80ch;
-line-height: 1.5;
+  color: var(--text-main);
 }
 
-/* ========================================
-TECH SECTION
-======================================== */
 .tech-section {
-max-width: 1200px;
 margin: 0 auto;
-display: flex;
 flex-direction: column;
-align-items: center;
-gap: 20px;
-padding: 0 5%;
 }
 
 .tech-title {
-margin-top: 60px;
 color: var(--text-primary);
-font-size: clamp(42px, 4vw, 48px);
-font-weight: 700;
-text-align: center;
 }
 
 .tech-grid {
 display: flex;
 flex-wrap: wrap;
-gap: 15px;
+gap: 6px;
 justify-content: center;
 align-items: center;
 }
 
 .tech-item {
 display: inline-flex;
-align-items: center;
-gap: 10px;
 padding: 10px 20px;
-border-radius: 800px;
 background: rgba(162, 148, 249, 0.06);
 backdrop-filter: blur(8px);
-font-size: 14px;
 letter-spacing: 0.5px;
 transition: all 0.25s ease;
 border: 1px solid rgba(162, 148, 249, 0.2);
@@ -569,12 +531,10 @@ font-size: 15px;
 line-height: 1.6;
 }
 
-/* ========================================
-FOOTER
-======================================== */
+
+/* footer */
 .footer {
 background-color: var( --bg-header);
-padding: 20px 30px;
 margin-top: 40px;
 border-top: 1px solid rgba(101, 93, 187, 0.2);
 }
@@ -583,26 +543,16 @@ border-top: 1px solid rgba(101, 93, 187, 0.2);
 max-width: 1200px;
 margin: 0 auto;
 display: flex;
-justify-content: space-between;
 align-items: center;
 }
 
 .footer-text {
 color: var(--amethyst);
-font-size: 14px;
-opacity: 0.9;
-}
-
-.footer-social {
-display: flex;
-gap: 10px;
-flex-wrap: wrap;
 }
 
 .social-link {
 color: var(--amethyst);
 text-decoration: none;
-font-size: 14px;
 font-weight: 500;
 padding: 8px 16px;
 border: 1px solid var(--amethyst);
@@ -618,9 +568,7 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 
-/* ========================================
-LOADING
-======================================== */
+/* loading */
 .loading-container {
 min-height: 100vh;
 display: flex;
@@ -639,9 +587,7 @@ animation: pulse 1.5s infinite;
 }
 
 
-/* ========================================
-RESPONSIVO - MOBILE (até 768px)
-======================================== */
+/* mobile */
 @media (max-width: 768px) {
 .header {
 padding: 15px 20px;

@@ -7,13 +7,13 @@ export default function Footer() {
     const { t } = useTranslation()
 
     return (
-        <footer className="footer">
-            <div className="footer-content">
-                <p className="footer-text">
+        <footer className="footer py-6 items-center flex-col w-full">
+            <div className="footer-content flex justify-between margin-auto max-w-6xl mx-auto px-4 justify-between">
+                <p className="footer-text text-base">
                     {t.footer.rights}
                 </p>
 
-                <div className="footer-social">
+                <div className="flex gap-2">
                     <a href="https://github.com/raphaelamonteiro" target="_blank" rel="noopener noreferrer" className="social-link">
                         GitHub
                     </a>

@@ -2,31 +2,65 @@ export const ptBR = {
     nav: {
         home: "Início",
         about: "Sobre",
-        academic: "Pesquisa",
         services: "Serviços",
         projects: "Projetos",
         contact: "Contato",
         cv: "Baixar Currículo"
     },
     home: {
-        title: "Construindo software, explorando sistemas e investigando problemas complexos.",
-        role: "Engenharia de Software • IA • Sistemas Inteligentes • Dados • Pesquisa • Tecnologias Espaciais",
-        tag: "Aberta a oportunidades de pesquisa, colaboração e desenvolvimento de soluções tecnológicas.",
-        cta: "Ver Projetos",
-        contact: "Entre em Contato"
+        title: "Construo software para problemas complexos.",
+        role: "Entre engenharia de software, sistemas inteligentes e computação aeroespacial, exploro como transformar problemas complexos em sistemas mais confiáveis e eficientes.",
+        tag: "Construo para entender. Investigo para construir melhor.",
+        cta: "Explorar meu trabalho",
+        contact: "Trabalhe comigo",
     },
     about: {
         title: "Sobre Mim",
         paragraphs: [
-            "Sou Engenheira de Software e Pesquisadora com foco na intersecção entre Arquitetura de Sistemas e Computação Inteligente, atuando no desenvolvimento de arquiteturas de software de alta confiabilidade (High-Reliability) e sistemas de missão crítica. Tenho interesse na aplicação de boas práticas de engenharia de software e integridade de dados em infraestruturas complexas.",
+            "Sou desenvolvedora de software e tenho curiosidade por sistemas complexos. Gosto de entender como diferentes áreas da computação se conectam para construir software confiável, eficiente e bem estruturado.",
 
-            "Na área de pesquisa, meu foco concentra-se na integração de algoritmos de Machine Learning, sistemas de tempo real e sistemas espaciais como os de satélites, rovers e foguetes, além da análise de dados para o processamento de informações. Me interesso pela otimização de sistemas computacionais complexos.",
+            "Meus interesses passam por arquitetura de software, sistemas inteligentes e inteligência artificial, além da computação aeroespacial como área de aplicação. Também venho aprofundando meus estudos em sistemas embarcados, programação de baixo nível e software para aplicações críticas.",
 
-            "Busco conectar a pesquisa científica de ponta à engenharia de software prática e de alto impacto global."
+            "Acredito que boas soluções nascem da combinação entre engenharia sólida, pesquisa e aprendizado contínuo. É essa curiosidade que guia meus projetos, estudos e a forma como encaro novos desafios."
         ],
-        skills: "Especialidades",
-        techstack: "Tecnologias",
+        research: "Research Interests",
+        researchMap: [
+            {
+                items: [
+                    "Software Architecture",
+                    "Intelligent Systems",
+                    "Machine Learning",
+                    "Aerospace Computing",
+                    "Embedded Systems",
+                    "Distributed Systems",
+                    "Real-Time Systems"
+                ]
+            }
+        ],
+        tech: "Tecnologias",
+        mainStack: "Principais",
+        otherStack: "Também tenho experiência com",
+
+        skills: "O que eu valorizo",
         skillsMap: [
+            {
+                items: [
+                    {
+                        title: "Pensamento crítico",
+                        description: "Entender profundamente um problema antes de buscar uma solução."
+                    },
+                    {
+                        title: "Engenharia de qualidade",
+                        description: "Código legível, arquiteturas sustentáveis e decisões que continuam fazendo sentido no futuro."
+                    },
+                    {
+                        title: "Evolução contínua",
+                        description: "Estou sempre estudando novas áreas da computação para ampliar minha forma de pensar e construir software."
+                    },
+                ],
+            }
+        ],
+        otherSkills: [
             {
                 items: [
                     "Arquitetura de Sistemas & Design Patterns",
@@ -37,16 +71,12 @@ export const ptBR = {
                 ]
             }
         ],
-        extra: "Além da tecnologia, gosto de…",
+        extra: "Quando não estou programando",
         hobbies: [
             {
                 items: [
                     {
-                        name: "Fotografia e observação de detalhes",
-                        image: "/images/hobbies/fotografia.jpg"
-                    },
-                    {
-                        name: "Xadrez e outros jogos",
+                        name: "Cozinhar e experimentar novas receitas",
                         image: "/images/hobbies/fotografia.jpg"
                     },
                     {
@@ -58,15 +88,19 @@ export const ptBR = {
                         image: "/images/hobbies/fotografia.jpg"
                     },
                     {
-                        name: "Cozinhar e experimentar novas receitas",
+                        name: "Xadrez e outros jogos",
                         image: "/images/hobbies/fotografia.jpg"
                     },
+                    {
+                        name: "Fotografia e observação de detalhes",
+                        image: "/images/hobbies/fotografia.jpg"
+                    },
+
                 ]
             }
-        ]
-    },
-    academic: {
-        title: "Acadêmico",
+        ],
+
+        academiaTitle: "Acadêmico",
         academia: [
             {
                 items: [

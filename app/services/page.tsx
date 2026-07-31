@@ -20,7 +20,7 @@ export default function Services() {
                     group.items.map((item, index) => (
                         <div key={`${groupIndex}-${index}`} className="service-card">
                             <h3>{item.title}</h3>
-                            <p>{item.description}</p> {/* Reutilizando lógica de precisão */}
+                            <p>{item.description}</p>
                         </div>
                     ))
                 )}

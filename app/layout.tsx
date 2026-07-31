@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Raphaela Monteiro - Software, Systems & Research",
-  description: "Software developer exploring the intersection of engineering, intelligent systems, and aerospace computing — building practical solutions and investigating complex problems.",
+  description: "Software developer exploring the intersection of engineering, intelligent systems, and aerospace computing, building practical solutions and investigating complex problems."
 };
 
 export default function RootLayout({

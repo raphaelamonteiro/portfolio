@@ -2,31 +2,50 @@ export const enUS = {
     nav: {
         home: "Home",
         about: "About",
-        academic: "Research",
         services: "Services",
         projects: "Projects",
         contact: "Contact",
         cv: "Download CV"
     },
     home: {
-        title: "Building software, exploring intelligent systems, and investigating complex problems.",
-        role: "Architecture • Performance • Automation • AI • Infrastructure • Security • Data",
-        tag: "Available for freelance projects and high-impact technical challenges.",
-        cta: "View Projects",
-        contact: "Get in Touch"
+        title: "I build software for complex problems.",
+        role: "At the intersection of software engineering, intelligent systems, and aerospace computing, I explore how complex problems can be transformed into more reliable and efficient systems.",
+        tag: "I build to understand. I investigate to build better.",
+        cta: "Explore my work",
+        contact: "Let's work together",
     },
     about: {
         title: "About Me",
         paragraphs: [
-            "I am a Software Engineer and Researcher focused on the intersection of Systems Architecture and Intelligent Computing, specializing in the development of high-reliability software architectures and mission-critical systems. I am particularly interested in applying software engineering best practices and data integrity principles to complex infrastructures.",
+            "I'm a software developer fascinated by complex systems. I enjoy understanding how different areas of computing connect to build reliable, efficient, and well-designed software.",
 
-            "My research focuses on the integration of Machine Learning algorithms, real-time systems, and space systems such as satellites, rovers, and rockets, as well as data analysis for information processing. I am particularly interested in the optimization of complex computational systems.",
+            "My interests include software architecture, intelligent systems, artificial intelligence, and aerospace computing as an application domain. I'm also deepening my knowledge of embedded systems, low-level programming, and software for safety-critical applications.",
 
-            "I strive to bridge cutting-edge scientific research with practical software engineering to deliver solutions with meaningful global impact."
+            "I believe the best solutions come from combining solid engineering, research, and continuous learning. That curiosity shapes the projects I build, the technologies I explore, and the way I approach every new challenge."
         ],
-        skills: "Specialties",
-        techstack: "Tech Stack",
+        tech: "Tech Stack",
+        mainStack: "Core",
+        otherStack: "Also experienced with",
+        skills: "What I Value",
         skillsMap: [
+            {
+                items: [
+                    {
+                        title: "Critical Thinking",
+                        description: "I believe every good solution starts with a deep understanding of the problem."
+                    },
+                    {
+                        title: "Quality Engineering",
+                        description: "Clean code, sustainable architectures, and technical decisions that remain valuable over time."
+                    },
+                    {
+                        title: "Continuos Learning",
+                        description: "I'm constantly exploring new areas of computing to expand the way I think and build software."
+                    },
+                ],
+            }
+        ],
+        otherSkills: [
             {
                 items: [
                     "Systems Architecture & Design Patterns",
@@ -37,7 +56,19 @@ export const enUS = {
                 ]
             }
         ],
-        extra: "Beyond technology, I enjoy…",
+        research: "Pesquisa",
+        researchMap: [
+            {
+                items: [
+                    "Arquitetura de Sistemas & Design Patterns",
+                    "Sistemas Críticos & Alta Confiabilidade",
+                    "Integração de IA & Data Science",
+                    "Arquitetura Limpa & SOLID",
+                    "Documentação Técnica"
+                ]
+            }
+        ],
+        extra: "When I'm not coding",
         hobbies: [
             {
                 items: [
@@ -51,10 +82,8 @@ export const enUS = {
                     { name: "Quality time with family and friends", image: "/images/hobbies/fotografia.jpg" }
                 ]
             }
-        ]
-    },
-    academic: {
-        title: "Academic",
+        ],
+        academiaTitle: "Acadêmico",
         academia: [
             {
                 items: [
