@@ -6,7 +6,7 @@ body {
 body {
 display: flex;
 flex-direction: column;
-font-family: "Noto Sans JP", sans-serif;
+font-family: var(--font-jetbrains), monospace;
 background: var(--bg-page);
 color: var(--text-main);
 }

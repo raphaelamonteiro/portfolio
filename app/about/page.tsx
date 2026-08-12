@@ -14,8 +14,8 @@ export default function About() {
     return (
         <section className="pt-6 px-[8%] pb-2 fade-up">
 
-            <h1 className="title-page text-center font-bold text-7xl">{t.about.title}</h1>
-            <div className="about-top w-full max-w-6xl items-center justify-center mt-8">
+            <h1 className="title-page text-left font-bold text-7xl">{t.about.title}</h1>
+            <div className="about-top w-full max-w-6xl items-center justify-center mt-12">
 
                 <div className="about-image gap-2">
                     <Image src={me} priority alt="Raphaela Monteiro" className="profile-image w-full max-w-[400px] aspect-[4/5] object-cover rounded-3xl max-w-xs" />

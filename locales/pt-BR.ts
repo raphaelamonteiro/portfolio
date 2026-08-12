@@ -15,7 +15,7 @@ export const ptBR = {
         contact: "Trabalhe comigo",
     },
     about: {
-        title: "Sobre Mim",
+        title: "Quem está por trás do código?",
         paragraphs: [
             "Sou desenvolvedora de software e tenho curiosidade por sistemas complexos. Gosto de entender como diferentes áreas da computação se conectam para construir software confiável, eficiente e bem estruturado.",
 

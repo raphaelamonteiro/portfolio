@@ -7,3 +7,15 @@
 #particles-js canvas {
     display: block;
 }
+
+/* Seleção de texto global */
+::selection {
+    background-color: var(--amethyst);
+    color: var(--bg-page);
+}
+
+/* Se quiser apenas em áreas específicas */
+.about-section ::selection {
+    background-color: var(--amethyst);
+    color: var(--text-primary);
+}

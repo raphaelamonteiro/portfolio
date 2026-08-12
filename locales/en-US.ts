@@ -15,7 +15,7 @@ export const enUS = {
         contact: "Let's work together",
     },
     about: {
-        title: "About Me",
+        title: "Who's behind the code?",
         paragraphs: [
             "I'm a software developer fascinated by complex systems. I enjoy understanding how different areas of computing connect to build reliable, efficient, and well-designed software.",
 
