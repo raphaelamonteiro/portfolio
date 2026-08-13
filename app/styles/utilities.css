@@ -10,12 +10,6 @@
 
 /* Seleção de texto global */
 ::selection {
-    background-color: var(--amethyst);
+    background-color: var(--soft-lilac);
     color: var(--bg-page);
-}
-
-/* Se quiser apenas em áreas específicas */
-.about-section ::selection {
-    background-color: var(--amethyst);
-    color: var(--text-primary);
 }

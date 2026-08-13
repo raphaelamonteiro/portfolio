@@ -15,13 +15,19 @@ export const ptBR = {
         contact: "Trabalhe comigo",
     },
     about: {
-        title: "Quem está por trás do código?",
+        title: "QUEM ESTÁ POR TRÁS DO CÓDIGO?",
         paragraphs: [
             "Sou desenvolvedora de software e tenho curiosidade por sistemas complexos. Gosto de entender como diferentes áreas da computação se conectam para construir software confiável, eficiente e bem estruturado.",
 
             "Meus interesses passam por arquitetura de software, sistemas inteligentes e inteligência artificial, além da computação aeroespacial como área de aplicação. Também venho aprofundando meus estudos em sistemas embarcados, programação de baixo nível e software para aplicações críticas.",
 
             "Acredito que boas soluções nascem da combinação entre engenharia sólida, pesquisa e aprendizado contínuo. É essa curiosidade que guia meus projetos, estudos e a forma como encaro novos desafios."
+        ],
+        "stats": [
+            { "value": "+4", "label": "anos de experiência" },
+            { "value": "10+", "label": "stacks dominadas" },
+            { "value": "8", "label": "projetos entregues" },
+            { "value": "8", "label": "projetos entregues" },
         ],
         research: "Research Interests",
         researchMap: [

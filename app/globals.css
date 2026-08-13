@@ -114,15 +114,6 @@ background-color: transparent;
 
 
 /* About me */
-.about-top {
-display: grid;
-grid-template-columns: 0.8fr 1.2fr;
-}
-
-.title-page{
-  color: var(--dusty-pink);
-  letter-spacing: 1px;
-}
 
 .profile-image {
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);

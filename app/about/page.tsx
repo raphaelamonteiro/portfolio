@@ -12,29 +12,60 @@ export default function About() {
     if (isLoading) return <Loading />
 
     return (
-        <section className="pt-6 px-[8%] pb-2 fade-up">
+        <section className="px-[6%] md:px-[8%] pt-4 pb-12">
 
-            <h1 className="title-page text-left font-bold text-7xl">{t.about.title}</h1>
-            <div className="about-top w-full max-w-6xl items-center justify-center mt-12">
+            <div className="mt-8">
+                <h1 className="text-5xl md:text-7xl font-bold text-[var(--dusty-pink)]">
+                    {t.about.title}
+                </h1>
 
-                <div className="about-image gap-2">
-                    <Image src={me} priority alt="Raphaela Monteiro" className="profile-image w-full max-w-[400px] aspect-[4/5] object-cover rounded-3xl max-w-xs" />
-                </div>
-                <div className="about-text-content gap-2 flex">
-                    <h1 className="title-about font-semibold text-5xl">Raphaela Monteiro</h1>
-                    {t.about.paragraphs.map((text, index) => (
-                        <p key={index} className="text-xl">{text}</p>
-                    ))}
-                </div>
-
+                <div className="mt-4 h-[2px] w-10 rounded-full bg-[var(--amethyst)]" />
             </div>
 
-            <div className="tech-section pt-10 flex justify-center items-center gap-2">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 lg:gap-12 items-center max-w-5xl">
+
+                <div className="flex justify-center md:justify-start">
+                    <Image src={me} priority alt="Raphaela Monteiro" className="
+                    w-[220px] md:w-[260px] aspect-[4/5] object-cover rounded-3xl
+                    border border-[var(--border)] shadow-xl"/>
+                </div>
+
+                {/* Text */}
+                <div className="max-w-2xl">
+
+                    <h2 className="mt-2 text-3xl md:text-5xl font-bold tracking-wide text-[var(--amethyst)]">
+                        Raphaela Monteiro
+                    </h2>
+
+                    <div className="mt-6 space-y-4 text-base md:text-lg leading-relaxed text-[var(--text-main)]">
+                        {t.about.paragraphs.map((text, index) => (
+                            <p key={index}>{text}</p>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-12">
+                {t.about.stats.map((stat, index) => (
+                    <div
+                        key={index}
+                        className="bg-bg-surface/50 backdrop-blur-sm border border-border rounded-2xl p-6 text-center hover:border-amethyst/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                        <div className="text-4xl md:text-5xl font-bold text-amethyst">
+                            {stat.value}
+                        </div>
+                        <div className="text-sm md:text-base text-text-muted mt-2">
+                            {stat.label}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="tech-section pt-16">
                 <h2 className="tech-title center font-bold text-4xl">{t.about.tech}</h2>
                 <h3 className="text-left font-bold text-lg mt-3">{t.about.mainStack}</h3>
                 <div className="tech-grid mt-2">
                     {mainTechStack.map((tech) => (
-                        <div key={tech.name} className="tech-item text-sm gap-2 items-center rounded-3xl px-3 py-3">
+                        <div key={tech.name} className="tech-item text-sm gap-2 rounded-3xl px-3 py-3">
                             <i className={tech.className}></i>
                             <span>{tech.name}</span>
                         </div>
@@ -44,7 +75,7 @@ export default function About() {
                 <h3 className="text-left font-bold text-lg mt-3">{t.about.otherStack}</h3>
                 <div className="tech-grid mt-2">
                     {otherTechStack.map((tech) => (
-                        <div key={tech.name} className="tech-item text-sm gap-2 items-center rounded-3xl px-3 py-3">
+                        <div key={tech.name} className="tech-item text-sm gap-2 rounded-3xl px-3 py-3">
                             <i className={tech.className}></i>
                             <span>{tech.name}</span>
                         </div>

@@ -15,13 +15,19 @@ export const enUS = {
         contact: "Let's work together",
     },
     about: {
-        title: "Who's behind the code?",
+        title: "WHO'S BEHIND THE CODE?",
         paragraphs: [
             "I'm a software developer fascinated by complex systems. I enjoy understanding how different areas of computing connect to build reliable, efficient, and well-designed software.",
 
             "My interests include software architecture, intelligent systems, artificial intelligence, and aerospace computing as an application domain. I'm also deepening my knowledge of embedded systems, low-level programming, and software for safety-critical applications.",
 
             "I believe the best solutions come from combining solid engineering, research, and continuous learning. That curiosity shapes the projects I build, the technologies I explore, and the way I approach every new challenge."
+        ],
+        "stats": [
+            { "value": "+4", "label": "anos de estudo" },
+            { "value": "10+", "label": "STACKS" },
+            { "value": "+5", "label": "projetos entregues" },
+            { "value": "2", "label": "anos de experiência" },
         ],
         tech: "Tech Stack",
         mainStack: "Core",
