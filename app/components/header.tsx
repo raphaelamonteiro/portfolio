@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import LanguageSwitcher from './LanguageSwitcher'
+import LanguageSwitcher from './language-switcher'
 import { useTranslation } from '@/contexts/TranslationContext'
 import { LuArrowBigDownDash } from "react-icons/lu";
 import { useState } from 'react';

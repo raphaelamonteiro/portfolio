@@ -5,14 +5,14 @@ import { useTranslation } from '@/contexts/TranslationContext'
 import Image from 'next/image'
 import me from '@/public/assets/raphaela.jpg'
 import { mainTechStack, otherTechStack } from '../data/techStack'
-import HobbiesCarousel from "@/app/components/hobbiesCarousel";
+import HobbiesCarousel from "@/app/components/ui/hobbies/hobby-carousel";
 
 export default function About() {
     const { t, isLoading } = useTranslation()
     if (isLoading) return <Loading />
 
     return (
-        <section className="px-[6%] md:px-[8%] pt-4 pb-12">
+        <section className="px-[6%] md:px-[10%] pt-4 pb-12 fade-up">
 
             <div className="mt-8">
                 <h1 className="text-5xl md:text-7xl font-bold text-[var(--dusty-pink)]">
@@ -25,19 +25,13 @@ export default function About() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-[320px_1fr] lg:grid-cols-[380px_1fr] gap-8 lg:gap-12 items-center max-w-6xl">
 
                 <div className="flex justify-center md:justify-start">
-                    <Image
-                        src={me}
-                        priority
-                        alt="Raphaela Monteiro"
-                        className="w-[260px]
-                sm:w-[280px]
-                md:w-[320px]
-                lg:w-[380px]
+                    <Image src={me} priority alt="Raphaela Monteiro"
+                        className="w-[260px] sm:w-[280px] md:w-[320px] lg:w-[380px]
                 aspect-[4/5] object-cover rounded-3xl border border-[var(--border)] shadow-xl"/>
                 </div>
 
                 {/* Text */}
-                <div className="max-w-2xl">
+                <div className="max-w-8xl">
 
                     <h2 className="mt-2 text-3xl md:text-5xl font-bold tracking-wide text-[var(--amethyst)]">
                         Raphaela Monteiro

@@ -82,41 +82,40 @@ export const ptBR = {
             {
                 items: [
                     {
+                        name: "Fotografia e atenção aos detalhes",
+                        image: "/hobbies/photo.png"
+                    },
+                    {
+                        name: "Jogos focados em histórias e mundos imersivos",
+                        image: "/hobbies/game.png"
+                    },
+                    {
+                        name: "Explorar filosofia, história e um pouco de tudo",
+                        image: "/hobbies/learn.png"
+                    },
+                    {
+                        name: "Viajar e descobrir novos lugares",
+                        image: "/hobbies/travel.png"
+                    },
+                    {
                         name: "Cozinhar e experimentar novas receitas",
-                        image: "/images/hobbies/cook.jpeg"
+                        image: "/hobbies/cook.png"
                     },
                     {
-                        name: "Estudar filosofia, história e um pouco de tudo",
-                        image: "/images/hobbies/filosofia.jpg"
+                        name: "Explorar e apreciar diferentes formas de arte",
+                        image: "/hobbies/art.png"
                     },
                     {
-                        name: "Conhecer novas culturas através de histórias",
-                        image: "/images/hobbies/culturas.jpg"
+                        name: "Participar da comunidade tech e conhecer novas pessoas",
+                        image: "/hobbies/events.png"
                     },
                     {
-                        name: "Jogos com histórias e mundos imersivos",
-                        image: "/hobbies/the-witcher.jpg"
-                    },
-                    {
-                        name: "Fotografia e observação de detalhes",
-                        image: "/images/hobbies/photographer.jpg"
-                    },
-                    {
-                        name: "Um bom café e momentos tranquilos",
-                        image: "/images/hobbies/coffee.jpg"
-                    },
-                    {
-                        name: "Cosplay e tudo que envolve o mundo geek",
-                        image: "/images/hobbies/cosplay.jpg"
-                    },
-                    {
-                        name: "Contribuir com a comunidade tech e conhecer pessoas",
-                        image: "/images/hobbies/tech.jpg"
+                        name: "Compartilhar conhecimento em palestras e conversas",
+                        image: "/hobbies/teach.png"
                     }
                 ]
             }
         ],
-
         academiaTitle: "Acadêmico",
         academia: [
             {

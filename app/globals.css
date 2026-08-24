@@ -51,6 +51,7 @@ width: 100%;
 }
 
 .language-switcher,
+.theme-switcher,
 .button-cv {
 border-radius: 10px;
 color: var(--amethyst);
@@ -62,6 +63,7 @@ text-decoration: none;
 }
 
 .language-switcher:hover,
+.theme-switcher:hover,
 .button-cv:hover {
 background-color: var(--amethyst);
 color: var(--bg-page);

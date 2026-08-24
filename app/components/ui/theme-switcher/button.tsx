@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 
 interface ButtonProps
@@ -14,11 +16,8 @@ export function Button({
     ...props
 }: ButtonProps) {
     const variantStyles = {
-        default:
-            "bg-primary text-primary-foreground hover:bg-primary/90",
-
-        outline:
-            "border border-border bg-background hover:bg-accent hover:text-accent-foreground",
+        default: "theme-switcher",
+        outline: "theme-switcher",
     }
 
     const sizeStyles = {
@@ -34,7 +33,7 @@ export function Button({
                 "rounded-md text-sm font-medium",
                 "transition-colors",
                 "focus-visible:outline-none",
-                "focus-visible:ring-2 focus-visible:ring-ring",
+                "focus-visible:ring-2 focus-visible:ring-[var(--amethyst)]",
                 "disabled:pointer-events-none disabled:opacity-50",
                 variantStyles[variant],
                 sizeStyles[size],

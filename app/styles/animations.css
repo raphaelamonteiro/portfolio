@@ -13,7 +13,7 @@ z-index: 101;
 .hamburger span {
 width: 25px;
 height: 3px;
-background-color: var(--amethyst);
+background-color: var(--moon-pink);
 border-radius: 3px;
 transition: all 0.3s ease;
 }
@@ -75,7 +75,7 @@ bottom: 10px !important;
 .kuromi-swiper .swiper-pagination-bullet {
 width: 8px;
 height: 8px;
-background: #7e22ce;
+background: var(--moon-pink);;
 opacity: 0.6;
 transition: all 0.3s ease;
 }
@@ -83,11 +83,8 @@ transition: all 0.3s ease;
 .kuromi-swiper .swiper-pagination-bullet-active {
 width: 24px;
 border-radius: 999px;
-background: linear-gradient(90deg,
-    #a855f7,
-    #ec4899);
+background:var(--moon-pink);
 opacity: 1;
-box-shadow: 0 0 12px rgba(236, 72, 153, 0.7);
 }
 
 @keyframes heartPop {

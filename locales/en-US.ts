@@ -79,32 +79,36 @@ export const enUS = {
             {
                 items: [
                     {
-                        name: "Photography and observing details",
-                        image: "/hobbies/photographer.jpg"
+                        name: "Photography and noticing the details",
+                        image: "/hobbies/photo.png"
                     },
                     {
                         name: "Story-driven games and immersive worlds",
-                        image: "/hobbies/the-witcher.jpg"
+                        image: "/hobbies/game.png"
                     },
                     {
-                        name: "Studying philosophy, history, and a little bit of everything",
-                        image: "/hobbies/filosofia.jpg"
+                        name: "Exploring philosophy, history, and a little bit of everything",
+                        image: "/hobbies/learn.png"
                     },
                     {
-                        name: "Discovering different cultures through stories",
-                        image: "/hobbies/culturas.jpg"
+                        name: "Traveling and discovering new places",
+                        image: "/hobbies/travel.png"
                     },
                     {
                         name: "Cooking and experimenting with new recipes",
-                        image: "/hobbies/cook.jpeg"
+                        image: "/hobbies/cook.png"
                     },
                     {
-                        name: "A good cup of coffee and a quiet moment",
-                        image: "/hobbies/coffee.jpg"
+                        name: "Exploring and appreciating art",
+                        image: "/hobbies/art.png"
                     },
                     {
-                        name: "Contributing to the tech community and meeting new people",
-                        image: "/hobbies/tech.jpg"
+                        name: "Connecting with the tech community and meeting new people",
+                        image: "/hobbies/events.png"
+                    },
+                    {
+                        name: "Sharing knowledge through talks and conversations",
+                        image: "/hobbies/teach.png"
                     }
                 ]
             }
