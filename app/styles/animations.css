@@ -1,64 +1,114 @@
 /* Hambúrguer escondido no desktop */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 101;
+display: none;
+flex-direction: column;
+gap: 5px;
+background: none;
+border: none;
+cursor: pointer;
+padding: 8px;
+z-index: 101;
 }
 
 .hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--amethyst);
-    border-radius: 3px;
-    transition: all 0.3s ease;
+width: 25px;
+height: 3px;
+background-color: var(--amethyst);
+border-radius: 3px;
+transition: all 0.3s ease;
 }
 
 .hamburger span.open:nth-child(1) {
-    transform: rotate(45deg) translate(7px, 7px);
+transform: rotate(45deg) translate(7px, 7px);
 }
 
 .hamburger span.open:nth-child(2) {
-    opacity: 0;
+opacity: 0;
 }
 
 .hamburger span.open:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+transform: rotate(-45deg) translate(7px, -7px);
 }
 
 
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+from {
+opacity: 0;
+transform: translateY(20px);
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+to {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 @keyframes pulse {
 
-    0%,
-    100% {
-        opacity: 0.5;
-    }
+0%,
+100% {
+opacity: 0.5;
+}
 
-    50% {
-        opacity: 1;
-    }
+50% {
+opacity: 1;
+}
 }
 
 .fade-up {
-    animation: fadeUp .8s ease-out;
+animation: fadeUp .8s ease-out;
 }
 
 .button-cv svg {
-    transition: transform 0.2s ease;
+transition: transform 0.2s ease;
+}
+
+
+.kuromi-swiper {
+padding: 10px 5px 55px !important;
+}
+
+.kuromi-swiper .swiper-pagination {
+bottom: 10px !important;
+}
+
+.kuromi-swiper .swiper-pagination-bullet {
+width: 8px;
+height: 8px;
+background: #7e22ce;
+opacity: 0.6;
+transition: all 0.3s ease;
+}
+
+.kuromi-swiper .swiper-pagination-bullet-active {
+width: 24px;
+border-radius: 999px;
+background: linear-gradient(90deg,
+    #a855f7,
+    #ec4899);
+opacity: 1;
+box-shadow: 0 0 12px rgba(236, 72, 153, 0.7);
+}
+
+@keyframes heartPop {
+0% {
+    transform: scale(1);
+}
+
+35% {
+    transform: scale(1.5);
+}
+
+60% {
+    transform: scale(0.85);
+}
+
+100% {
+    transform: scale(1);
+}
+}
+
+.heart-pop {
+display: inline-block;
+animation: heartPop 0.4s ease-out;
 }

@@ -1,11 +1,11 @@
 'use client'
 
-import Loading from '@/components/loading'
+import Loading from '@/app/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
 import Image from 'next/image'
 import me from '@/public/assets/raphaela.jpg'
 import { mainTechStack, otherTechStack } from '../data/techStack'
-import HobbiesCarousel from "@/components/hobbiesCarousel";
+import HobbiesCarousel from "@/app/components/hobbiesCarousel";
 
 export default function About() {
     const { t, isLoading } = useTranslation()
@@ -22,12 +22,18 @@ export default function About() {
                 <div className="mt-4 h-[2px] w-10 rounded-full bg-[var(--amethyst)]" />
             </div>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 lg:gap-12 items-center max-w-5xl">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-[320px_1fr] lg:grid-cols-[380px_1fr] gap-8 lg:gap-12 items-center max-w-6xl">
 
                 <div className="flex justify-center md:justify-start">
-                    <Image src={me} priority alt="Raphaela Monteiro" className="
-                    w-[220px] md:w-[260px] aspect-[4/5] object-cover rounded-3xl
-                    border border-[var(--border)] shadow-xl"/>
+                    <Image
+                        src={me}
+                        priority
+                        alt="Raphaela Monteiro"
+                        className="w-[260px]
+                sm:w-[280px]
+                md:w-[320px]
+                lg:w-[380px]
+                aspect-[4/5] object-cover rounded-3xl border border-[var(--border)] shadow-xl"/>
                 </div>
 
                 {/* Text */}

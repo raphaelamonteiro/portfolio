@@ -1,10 +1,10 @@
 export const ptBR = {
     nav: {
-        home: "Início",
-        about: "Sobre",
-        services: "Serviços",
-        projects: "Projetos",
-        contact: "Contato",
+        home: "INÍCIO",
+        about: "SOBRE",
+        services: "SERVIÇOS",
+        projects: "PROJETOS",
+        contact: "CONTATO",
         cv: "Baixar Currículo"
     },
     home: {
@@ -24,10 +24,10 @@ export const ptBR = {
             "Acredito que boas soluções nascem da combinação entre engenharia sólida, pesquisa e aprendizado contínuo. É essa curiosidade que guia meus projetos, estudos e a forma como encaro novos desafios."
         ],
         "stats": [
-            { "value": "+4", "label": "anos de experiência" },
-            { "value": "10+", "label": "stacks dominadas" },
-            { "value": "8", "label": "projetos entregues" },
-            { "value": "8", "label": "projetos entregues" },
+            { "value": "1.5+", "label": "Anos de Prática Dev" },
+            { "value": "15+", "label": "Tecnologias no Stack" },
+            { "value": "2", "label": "Extensões no ITA" },
+            { "value": "2", "label": "Sistemas em Produção" }
         ],
         research: "Research Interests",
         researchMap: [
@@ -83,25 +83,36 @@ export const ptBR = {
                 items: [
                     {
                         name: "Cozinhar e experimentar novas receitas",
-                        image: "/images/hobbies/fotografia.jpg"
+                        image: "/images/hobbies/cook.jpeg"
                     },
                     {
-                        name: "Gosto de estudar filosofia e história",
-                        image: "/images/hobbies/fotografia.jpg"
+                        name: "Estudar filosofia, história e um pouco de tudo",
+                        image: "/images/hobbies/filosofia.jpg"
                     },
                     {
-                        name: "Explorar novos lugares, culturas e idiomas",
-                        image: "/images/hobbies/fotografia.jpg"
+                        name: "Conhecer novas culturas através de histórias",
+                        image: "/images/hobbies/culturas.jpg"
                     },
                     {
-                        name: "Xadrez e outros jogos",
-                        image: "/images/hobbies/fotografia.jpg"
+                        name: "Jogos com histórias e mundos imersivos",
+                        image: "/hobbies/the-witcher.jpg"
                     },
                     {
                         name: "Fotografia e observação de detalhes",
-                        image: "/images/hobbies/fotografia.jpg"
+                        image: "/images/hobbies/photographer.jpg"
                     },
-
+                    {
+                        name: "Um bom café e momentos tranquilos",
+                        image: "/images/hobbies/coffee.jpg"
+                    },
+                    {
+                        name: "Cosplay e tudo que envolve o mundo geek",
+                        image: "/images/hobbies/cosplay.jpg"
+                    },
+                    {
+                        name: "Contribuir com a comunidade tech e conhecer pessoas",
+                        image: "/images/hobbies/tech.jpg"
+                    }
                 ]
             }
         ],

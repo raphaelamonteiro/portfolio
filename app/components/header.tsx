@@ -5,6 +5,7 @@ import LanguageSwitcher from './LanguageSwitcher'
 import { useTranslation } from '@/contexts/TranslationContext'
 import { LuArrowBigDownDash } from "react-icons/lu";
 import { useState } from 'react';
+import { Toggle } from './ui/theme-switcher/toggle';
 
 export default function Header() {
     const { t, locale } = useTranslation()
@@ -27,7 +28,7 @@ export default function Header() {
             </button>
 
             {/* Menu - desktop sempre visível, mobile controlado por isMenuOpen */}
-            <nav className={`navbar flex items-center gap-5 ${isMenuOpen ? "navbar-open" : ""}`}>
+            <nav className={`navbar flex items-center gap-8 text-base font-bold ${isMenuOpen ? "navbar-open" : ""}`}>
 
                 <Link href="/" className="navbar-link" onClick={() => setIsMenuOpen(false)}>
                     {t.nav.home}
@@ -51,6 +52,8 @@ export default function Header() {
                         {t.nav.cv}
                     </a>
                     <LanguageSwitcher />
+
+                    <Toggle />
                 </div>
             </nav>
         </header>

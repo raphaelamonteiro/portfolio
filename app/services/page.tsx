@@ -1,6 +1,6 @@
 'use client'
 
-import Loading from '@/components/loading'
+import Loading from '@/app/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
 import { title } from 'process';
 

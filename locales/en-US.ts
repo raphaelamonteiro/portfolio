@@ -1,10 +1,10 @@
 export const enUS = {
     nav: {
-        home: "Home",
-        about: "About",
-        services: "Services",
-        projects: "Projects",
-        contact: "Contact",
+        home: "HOME",
+        about: "ABOUT",
+        services: "SERVICES",
+        projects: "PROJECTS",
+        contact: "CONTACT",
         cv: "Download CV"
     },
     home: {
@@ -24,10 +24,10 @@ export const enUS = {
             "I believe the best solutions come from combining solid engineering, research, and continuous learning. That curiosity shapes the projects I build, the technologies I explore, and the way I approach every new challenge."
         ],
         "stats": [
-            { "value": "+4", "label": "anos de estudo" },
-            { "value": "10+", "label": "STACKS" },
-            { "value": "+5", "label": "projetos entregues" },
-            { "value": "2", "label": "anos de experiência" },
+            { "value": "5+", "label": "Projetos Principais" },
+            { "value": "100%", "label": "Foco em Backend & Dados" },
+            { "value": "15+", "label": "Tecnologias Dominadas" },
+            { "value": "B2", "label": "Inglês Intermediário" }
         ],
         tech: "Tech Stack",
         mainStack: "Core",
@@ -78,14 +78,34 @@ export const enUS = {
         hobbies: [
             {
                 items: [
-                    { name: "Photography and observing details", image: "/images/hobbies/fotografia.jpg" },
-                    { name: "Chess and strategy games", image: "/images/hobbies/fotografia.jpg" },
-                    { name: "Studying philosophy and history", image: "/images/hobbies/fotografia.jpg" },
-                    { name: "Exploring new places, cultures, and languages", image: "/images/hobbies/fotografia.jpg" },
-                    { name: "Cooking and experimenting with new recipes", image: "/images/hobbies/fotografia.jpg" },
-                    { name: "Expression through drawing and painting", image: "/images/hobbies/fotografia.jpg" },
-                    { name: "Gothic literature and science fiction", image: "/images/hobbies/fotografia.jpg" },
-                    { name: "Quality time with family and friends", image: "/images/hobbies/fotografia.jpg" }
+                    {
+                        name: "Photography and observing details",
+                        image: "/hobbies/photographer.jpg"
+                    },
+                    {
+                        name: "Story-driven games and immersive worlds",
+                        image: "/hobbies/the-witcher.jpg"
+                    },
+                    {
+                        name: "Studying philosophy, history, and a little bit of everything",
+                        image: "/hobbies/filosofia.jpg"
+                    },
+                    {
+                        name: "Discovering different cultures through stories",
+                        image: "/hobbies/culturas.jpg"
+                    },
+                    {
+                        name: "Cooking and experimenting with new recipes",
+                        image: "/hobbies/cook.jpeg"
+                    },
+                    {
+                        name: "A good cup of coffee and a quiet moment",
+                        image: "/hobbies/coffee.jpg"
+                    },
+                    {
+                        name: "Contributing to the tech community and meeting new people",
+                        image: "/hobbies/tech.jpg"
+                    }
                 ]
             }
         ],

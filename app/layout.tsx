@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Header from "@/components/header";
+import Header from "@/app/components/header";
 import { JetBrains_Mono } from "next/font/google";
 import { TranslationProvider } from "@/contexts/TranslationContext";
+import { ThemeProvider } from "./theme-provider";
+import Footer from "@/app/components/footer";
 import "./globals.css";
-import Footer from "@/components/footer";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -22,15 +23,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={jetBrainsMono.variable}>
+    <html lang="pt-BR" suppressHydrationWarning className={jetBrainsMono.variable}>
       <body>
-        <TranslationProvider>
-          <Header />
-          <main className="main-content">
-            {children}
-          </main>
-          <Footer />
-        </TranslationProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange >
+          <TranslationProvider>
+            <Header />
+            <main className="main-content">
+              {children}
+            </main>
+            <Footer />
+          </TranslationProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

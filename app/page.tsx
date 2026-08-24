@@ -1,10 +1,10 @@
 'use client'
 
-import Loading from '@/components/loading'
+import Loading from '@/app/components/loading'
 import { useTranslation } from '@/contexts/TranslationContext'
 import Link from 'next/link'
 import { useState } from 'react'
-import Stars from '@/components/stars'
+import Stars from '@/app/components/stars'
 
 export default function Home() {
   const { t, isLoading } = useTranslation()

@@ -1,30 +1,85 @@
 :root {
     /* Atmosphere */
-    --bg-page: #0B0B12;
-    --bg-surface: #141420;
-    --bg-header: #16151F;
+    --bg-page: #09080F;
+    --bg-surface: #12101A;
+    --bg-surface-soft: #181521;
+    --bg-header: #0E0C15;
 
     /* Typography */
-    --text-main: #FAFAFF;
-    --text-secondary: #D8D5E8;
-    --text-muted: #A8A4C0;
+    --text-main: #FFF8FC;
+    --text-secondary: #DDD3E2;
+    --text-muted: #918798;
 
-    /* Brand */
-    --amethyst: #A294F9;
-    --amethyst-hover: #8978F6;
+    /* Signature Purple */
+    --amethyst: #8F7CFF;
+    --amethyst-hover: #A18FFF;
+    --amethyst-deep: #6552D9;
+
+    /* Signature Pink */
+    --moon-pink: #EC7FA9;
+    --moon-pink-hover: #BE5985;
+    --dusty-pink: #F39EB6;
+    --pink-soft: #FFC0DA;
 
     /* Soft accent */
-    --soft-lilac: #B8B5D1;
-    --moon-pink: #FFCDEA;
-    --dusty-pink: #F6B6DB;
+    --soft-lilac: #9195F6;
+    --pink-soft: #FFB4D2;
+
+    /* Glow */
+    --purple-glow: rgba(143, 124, 255, 0.22);
+    --pink-glow: rgba(255, 95, 162, 0.24);
 
     /* UI */
-    --border-primary: #26243A;
-    --shadow-color: rgba(0, 0, 0, .25);
+    --border-primary: #282331;
+    --border-hover: #493B61;
+    --shadow-color: rgba(0, 0, 0, 0.45);
 
     /* Feedback */
-    --success: #22C55E;
-    --warning: #F59E0B;
-    --danger: #EF4444;
-    --info: #3B82F6;
+    --success: #36D17A;
+    --warning: #F5B84B;
+    --danger: #FF5364;
+    --info: #6D9CFF;
+}
+
+.light {
+    /* Atmosphere */
+    --bg-page: #FAF7FC;
+    --bg-surface: #FFFFFF;
+    --bg-surface-soft: #F3EDF8;
+    --bg-header: #FDFBFF;
+
+    /* Typography */
+    --text-main: #211A2B;
+    --text-secondary: #5F5368;
+    --text-muted: #8B7F94;
+
+    /* Signature Purple */
+    --amethyst: #765BEF;
+    --amethyst-hover: #6348D8;
+    --amethyst-deep: #5038B8;
+
+    /* Signature Pink */
+    --moon-pink: #D95B8B;
+    --moon-pink-hover: #BC4775;
+    --dusty-pink: #E987A8;
+    --pink-soft: #F7B6CE;
+
+    /* Soft accent */
+    --soft-lilac: #8588E8;
+    --pink-soft: #F6B3CF;
+
+    /* Glow */
+    --purple-glow: rgba(118, 91, 239, 0.16);
+    --pink-glow: rgba(217, 91, 139, 0.16);
+
+    /* UI */
+    --border-primary: #E5DDED;
+    --border-hover: #C9B8DC;
+    --shadow-color: rgba(72, 45, 95, 0.12);
+
+    /* Feedback */
+    --success: #2EAD68;
+    --warning: #D99A2B;
+    --danger: #D94A5B;
+    --info: #5D82D9;
 }
