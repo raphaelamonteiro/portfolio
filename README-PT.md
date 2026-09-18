@@ -1,7 +1,9 @@
-<h1 align="center"> Welcome to my portfolio!</h1>
+<h1 align="center"> Seja bem-vindo(a) ao meu portfolio!</h1>
 <p>
-I aim to contribute to projects involving innovation, technical challenges, and the development of solutions for complex problems.<br>
-This is a website showcasing my projects, skills, and experience in software development.
+Eu busco contribuir para projetos que envolvam inovação, desafios técnicos, e desenvolvimento de soluções para problemas complexos <br>
+
+Este website reúne meus projetos, minhas habilidades e experiências em desenvolvimento de software.
+
 </p>
 <div align="center">
 <h4>
@@ -13,7 +15,7 @@ This is a website showcasing my projects, skills, and experience in software dev
 
 </div>
 
-## 🔧 Stack
+## 🔧 Tecnologias
 ![Next.js](https://img.shields.io/badge/Next.js-9FA1FF?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-9FA1FF?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-9FA1FF?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -21,7 +23,7 @@ This is a website showcasing my projects, skills, and experience in software dev
 
 ---
 
-## 🚀 Connect & Collaborate!
+## 🚀 Se conecte & Colabore!
 
 <a href="mailto:raphaelabm.dev@gmail.com">
 <img alt="Gmail" src="https://img.shields.io/badge/Gmail-9FA1FF?style=for-the-badge&logo=gmail&logoColor=white">
@@ -37,7 +39,7 @@ This is a website showcasing my projects, skills, and experience in software dev
 
 <div align="center">
 
-⭐ Like my portfolio? Consider giving this repository a star!
+⭐Gostou do meu portfólio? Considere deixar uma estrelinha!
 
 [![Star this repo](https://img.shields.io/badge/Star_this_repo-FFD758?style=for-the-badge&logo=starship&logoColor=black)](https://github.com/raphaelamonteiro/portfolio)
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-FFD758?style=for-the-badge&logo=GitHub-Sponsors&logoColor=black)](https://github.com/sponsors/raphaelamonteiro)
