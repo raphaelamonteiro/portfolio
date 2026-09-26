@@ -15,23 +15,20 @@ export const enUS = {
         contact: "Let's work together",
     },
     about: {
+        log: "SYS_USER // OVERVIEW",
         title: "WHO'S BEHIND THE CODE?",
         paragraphs: [
             "I'm a software developer fascinated by complex systems. I enjoy understanding how different areas of computing connect to build reliable, efficient, and well-designed software.",
-
             "My interests include software architecture, intelligent systems, artificial intelligence, and aerospace computing as an application domain. I'm also deepening my knowledge of embedded systems, low-level programming, and software for safety-critical applications.",
-
             "I believe the best solutions come from combining solid engineering, research, and continuous learning. That curiosity shapes the projects I build, the technologies I explore, and the way I approach every new challenge."
         ],
-        "stats": [
-            { "value": "5+", "label": "Projetos Principais" },
-            { "value": "100%", "label": "Foco em Backend & Dados" },
-            { "value": "15+", "label": "Tecnologias Dominadas" },
-            { "value": "B2", "label": "Inglês Intermediário" }
+        stats: [
+            { value: "3+", label: "Years of Practice" },
+            { value: "5+", label: "Key Projects" },
+            { value: "15+", label: "Tech Stack" },
+            { value: "B2", label: "Upper-Intermediate English" }
         ],
-        tech: "Tech Stack",
-        mainStack: "Core",
-        otherStack: "Also experienced with",
+        tech: "TECH STACK",
         skills: "What I Value",
         skillsMap: [
             {
@@ -45,87 +42,53 @@ export const enUS = {
                         description: "Clean code, sustainable architectures, and technical decisions that remain valuable over time."
                     },
                     {
-                        title: "Continuos Learning",
+                        title: "Continuous Learning",
                         description: "I'm constantly exploring new areas of computing to expand the way I think and build software."
                     },
                 ],
             }
         ],
-        otherSkills: [
-            {
-                items: [
-                    "Systems Architecture & Design Patterns",
-                    "Mission-Critical & High-Reliability Systems",
-                    "AI Integration & Data Science",
-                    "Clean Architecture & SOLID",
-                    "Technical Documentation"
-                ]
-            }
-        ],
-        research: "Pesquisa",
+        research: "Research Interests",
         researchMap: [
             {
                 items: [
-                    "Arquitetura de Sistemas & Design Patterns",
-                    "Sistemas Críticos & Alta Confiabilidade",
-                    "Integração de IA & Data Science",
-                    "Arquitetura Limpa & SOLID",
-                    "Documentação Técnica"
+                    "Software Architecture",
+                    "Critical Systems",
+                    "Intelligent Systems",
+                    "Aerospace Computing",
+                    "Embedded Systems",
+                    "Artificial Intelligence"
                 ]
             }
         ],
-        extra: "When I'm not coding",
+        extra: "WHEN I'M NOT CODING:",
         hobbies: [
             {
                 items: [
-                    {
-                        name: "Photography and noticing the details",
-                        image: "/hobbies/photo.png"
-                    },
-                    {
-                        name: "Story-driven games and immersive worlds",
-                        image: "/hobbies/game.png"
-                    },
-                    {
-                        name: "Exploring philosophy, history, and a little bit of everything",
-                        image: "/hobbies/learn.png"
-                    },
-                    {
-                        name: "Traveling and discovering new places",
-                        image: "/hobbies/travel.png"
-                    },
-                    {
-                        name: "Cooking and experimenting with new recipes",
-                        image: "/hobbies/cook.png"
-                    },
-                    {
-                        name: "Exploring and appreciating art",
-                        image: "/hobbies/art.png"
-                    },
-                    {
-                        name: "Connecting with the tech community and meeting new people",
-                        image: "/hobbies/events.png"
-                    },
-                    {
-                        name: "Sharing knowledge through talks and conversations",
-                        image: "/hobbies/teach.png"
-                    }
+                    { name: "Photography and noticing the details", image: "/hobbies/photo.png" },
+                    { name: "Story-driven games and immersive worlds", image: "/hobbies/game.png" },
+                    { name: "Exploring philosophy, history, and a little bit of everything", image: "/hobbies/learn.png" },
+                    { name: "Traveling and discovering new places", image: "/hobbies/travel.png" },
+                    { name: "Cooking and experimenting with new recipes", image: "/hobbies/cook.png" },
+                    { name: "Exploring and appreciating art", image: "/hobbies/art.png" },
+                    { name: "Connecting with the tech community and meeting new people", image: "/hobbies/events.png" },
+                    { name: "Sharing knowledge through talks and conversations", image: "/hobbies/teach.png" }
                 ]
             }
         ],
-        academiaTitle: "Acadêmico",
+        academiaTitle: "Education",
         academia: [
             {
                 items: [
                     {
-                        title: "Graduação",
-                        course: "Análise e Desenvolvimento de Sistemas",
+                        title: "Graduation Degree",
+                        course: "Systems Analysis and Development",
                         institute: "Fatec - Prof. Jessen Vidal",
                         date: "01/2024 - 02/2026"
                     },
                     {
-                        title: "Curso Técnico",
-                        course: "Desenvolvimento de Sistemas",
+                        title: "Technical Degree",
+                        course: "Systems Development",
                         institute: "ETEC - Machado de Assis",
                         date: "01/2022 - 01/2023"
                     },

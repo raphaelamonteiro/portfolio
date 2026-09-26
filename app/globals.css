@@ -7,7 +7,6 @@
 @import "./styles/animations.css";
 @import "./styles/utilities.css";
 
-
 /* Header-Navbar */
 .header {
 background: var(--bg-header);
@@ -137,6 +136,7 @@ letter-spacing: 1px;
 .tech-section {
 margin: 0 auto;
 flex-direction: column;
+justify-content: center;
 }
 
 .tech-title {
@@ -147,8 +147,6 @@ color: var(--text-primary);
 display: flex;
 flex-wrap: wrap;
 gap: 6px;
-justify-content: center;
-align-items: center;
 }
 
 .tech-item {
@@ -527,7 +525,7 @@ line-height: 1.6;
 /* footer */
 .footer {
 background-color: var( --bg-header);
-margin-top: 40px;
+margin-top: 20px;
 border-top: 1px solid rgba(101, 93, 187, 0.2);
 }
 

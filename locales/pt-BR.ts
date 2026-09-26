@@ -15,108 +15,68 @@ export const ptBR = {
         contact: "Trabalhe comigo",
     },
     about: {
+        log: "SYS_USER // VISAO_GERAL",
         title: "QUEM ESTÁ POR TRÁS DO CÓDIGO?",
         paragraphs: [
             "Sou desenvolvedora de software e tenho curiosidade por sistemas complexos. Gosto de entender como diferentes áreas da computação se conectam para construir software confiável, eficiente e bem estruturado.",
-
             "Meus interesses passam por arquitetura de software, sistemas inteligentes e inteligência artificial, além da computação aeroespacial como área de aplicação. Também venho aprofundando meus estudos em sistemas embarcados, programação de baixo nível e software para aplicações críticas.",
-
             "Acredito que boas soluções nascem da combinação entre engenharia sólida, pesquisa e aprendizado contínuo. É essa curiosidade que guia meus projetos, estudos e a forma como encaro novos desafios."
         ],
-        "stats": [
-            { "value": "1.5+", "label": "Anos de Prática Dev" },
-            { "value": "15+", "label": "Tecnologias no Stack" },
-            { "value": "2", "label": "Extensões no ITA" },
-            { "value": "2", "label": "Sistemas em Produção" }
+        stats: [
+            { value: "3+", label: "Anos de Prática Dev" },
+            { value: "5+", label: "Projetos Principais" },
+            { value: "15+", label: "Tecnologias no Stack" },
+            { value: "B2", label: "Inglês Intermediário-Avançado" }
         ],
-        research: "Research Interests",
-        researchMap: [
-            {
-                items: [
-                    "Software Architecture",
-                    "Intelligent Systems",
-                    "Machine Learning",
-                    "Aerospace Computing",
-                    "Embedded Systems",
-                    "Distributed Systems",
-                    "Real-Time Systems"
-                ]
-            }
-        ],
-        tech: "Tecnologias",
-        mainStack: "Principais",
-        otherStack: "Também tenho experiência com",
-
+        tech: "TECNOLOGIAS",
         skills: "O que eu valorizo",
         skillsMap: [
             {
                 items: [
                     {
-                        title: "Pensamento crítico",
+                        title: "Pensamento Crítico",
                         description: "Entender profundamente um problema antes de buscar uma solução."
                     },
                     {
-                        title: "Engenharia de qualidade",
+                        title: "Engenharia de Qualidade",
                         description: "Código legível, arquiteturas sustentáveis e decisões que continuam fazendo sentido no futuro."
                     },
                     {
-                        title: "Evolução contínua",
+                        title: "Evolução Contínua",
                         description: "Estou sempre estudando novas áreas da computação para ampliar minha forma de pensar e construir software."
                     },
                 ],
             }
         ],
-        otherSkills: [
+        research: "Interesses de Pesquisa",
+        researchMap: [
             {
                 items: [
-                    "Arquitetura de Sistemas & Design Patterns",
-                    "Sistemas Críticos & Alta Confiabilidade",
-                    "Integração de IA & Data Science",
-                    "Arquitetura Limpa & SOLID",
-                    "Documentação Técnica"
+                    "Arquitetura de Software",
+                    "Sistemas Críticos",
+                    "Sistemas Inteligentes",
+                    "Computação Aeroespacial",
+                    "Sistemas Embarcados",
+                    "Inteligência Artificial"
                 ]
             }
         ],
-        extra: "Quando não estou programando",
+        extra: "QUANDO NÃO ESTOU PROGRAMANDO:",
         hobbies: [
             {
                 items: [
-                    {
-                        name: "Fotografia e atenção aos detalhes",
-                        image: "/hobbies/photo.png"
-                    },
-                    {
-                        name: "Jogos focados em histórias e mundos imersivos",
-                        image: "/hobbies/game.png"
-                    },
-                    {
-                        name: "Explorar filosofia, história e um pouco de tudo",
-                        image: "/hobbies/learn.png"
-                    },
-                    {
-                        name: "Viajar e descobrir novos lugares",
-                        image: "/hobbies/travel.png"
-                    },
-                    {
-                        name: "Cozinhar e experimentar novas receitas",
-                        image: "/hobbies/cook.png"
-                    },
-                    {
-                        name: "Explorar e apreciar diferentes formas de arte",
-                        image: "/hobbies/art.png"
-                    },
-                    {
-                        name: "Participar da comunidade tech e conhecer novas pessoas",
-                        image: "/hobbies/events.png"
-                    },
-                    {
-                        name: "Compartilhar conhecimento em palestras e conversas",
-                        image: "/hobbies/teach.png"
-                    }
+                    { name: "Fotografia e atenção aos detalhes", image: "/hobbies/photo.png" },
+                    { name: "Jogos focados em histórias e mundos imersivos", image: "/hobbies/game.png" },
+                    { name: "Explorar filosofia, história e um pouco de tudo", image: "/hobbies/learn.png" },
+                    { name: "Viajar e descobrir novos lugares", image: "/hobbies/travel.png" },
+                    { name: "Cozinhar e experimentar novas receitas", image: "/hobbies/cook.png" },
+                    { name: "Explorar e apreciar diferentes formas de arte", image: "/hobbies/art.png" },
+                    { name: "Participar da comunidade tech e conhecer novas pessoas", image: "/hobbies/events.png" },
+                    { name: "Compartilhar conhecimento em palestras e conversas", image: "/hobbies/teach.png" }
                 ]
             }
         ],
-        academiaTitle: "Acadêmico",
+        academiaTitle: "Formação Acadêmica",
         academia: [
             {
                 items: [
@@ -136,7 +96,6 @@ export const ptBR = {
             },
         ]
     },
-
     projects: {
         title: "Meus Projetos",
         viewProject: "Ver Projeto",

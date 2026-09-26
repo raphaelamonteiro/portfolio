@@ -9,18 +9,18 @@ export default function Footer() {
     return (
         <footer className="footer py-6 items-center flex-col w-full">
             <div className="footer-content flex justify-between margin-auto max-w-6xl mx-auto px-4 justify-between">
-                <p className="footer-text text-base">
+                <p className="footer-text text-sm">
                     {t.footer.rights}
                 </p>
 
                 <div className="flex gap-2">
-                    <a href="https://github.com/raphaelamonteiro" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://github.com/raphaelamonteiro" target="_blank" rel="noopener noreferrer" className="text-sm social-link">
                         GitHub
                     </a>
-                    <a href="https://linkedin.com/in/raphaelamonteiro" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="https://linkedin.com/in/raphaelamonteiro" target="_blank" rel="noopener noreferrer" className="text-sm social-link">
                         LinkedIn
                     </a>
-                    <a href="mailto:raphaelabm.dev@gmail.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                    <a href="mailto:raphaelabm.dev@gmail.com" target="_blank" rel="noopener noreferrer" className="text-sm social-link">
                         E-mail
                     </a>
                 </div>
