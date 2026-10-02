@@ -22,7 +22,7 @@ export default function AboutHero() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 pt-4">
                     <div className="lg:col-span-5 flex justify-center">
                         <div className="relative w-[260px] sm:w-[320px] aspect-[4/5] rounded-lg overflow-hidden">
-                            <Image src="/assets/raphaela.jpg" alt="Raphaela Monteiro"
+                            <Image src="/assets/raphaela.png" alt="Raphaela Monteiro"
                                 fill priority sizes="(max-width: 640px) 260px, 320px"
                                 className="object-cover" />
                         </div>
