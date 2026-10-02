@@ -1,45 +1,39 @@
-'use client'
+'use client';
 
-import Loading from '@/app/components/loading'
-import { useTranslation } from '@/contexts/TranslationContext'
-import Link from 'next/link'
-import { useState } from 'react'
-import Stars from '@/app/components/stars'
+import { useTranslation } from '@/app/providers';
+import Link from 'next/link';
 
 export default function Home() {
-  const { t, isLoading } = useTranslation()
-
-  if (isLoading) return <Loading />
+  const { t } = useTranslation();
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4">
-      <Stars />
-      <div
-        className="gap-2 w-full max-w-6xl fade-up">
-        <h2 className="title font-bold text-6xl">
+    <section className="min-h-[calc(100vh-120px)] flex flex-col items-center justify-center px-4 py-16">
+      <div className="w-full max-w-6xl fade-up">
+        <h1 className="font-bold text-5xl sm:text-6xl text-amethyst leading-tight">
           {t.home.title}
-        </h2>
+        </h1>
 
-        <div className="role-tag-container pt-4 gap-10">
-          <h3 className="role pb-4 text-lg font-semibold">
+        <div className="flex flex-col gap-6 pt-6">
+          <p className="text-bone text-lg leading-relaxed max-w-3xl">
             {t.home.role}
-          </h3>
+          </p>
 
-          <span className="tag text-base font-semibold px-4 py-2">
+          <span className="inline-block self-start text-sm px-4 py-2 bg-dusty/10 border border-dusty/40 text-dusty rounded-full">
             {t.home.tag}
           </span>
         </div>
 
-        <div
-          className="flex flex-wrap gap-4 mt-6 text-2xl font-bold">
-          <Link href="/projects" className="button-projects px-6 py-4">
-            {t.home.cta}
+        <div className="flex flex-wrap gap-3 mt-10">
+          <Link href="/projects"
+            className="text-sm font-medium px-5 py-3 bg-amethyst text-void rounded-md hover:bg-amethyst/80 transition-colors">
+            {t.home.cta} →
           </Link>
-          <Link href="/contact" className="button-contact px-6 py-4">
+          <Link href="/services"
+            className="text-sm font-medium px-5 py-3 border border-ash/30 text-ash rounded-md hover:border-bone hover:text-bone transition-colors">
             {t.home.contact}
           </Link>
         </div>
       </div>
     </section>
-  )
+  );
 }

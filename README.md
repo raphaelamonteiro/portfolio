@@ -14,6 +14,7 @@ This is a website showcasing my projects, skills, and experience in software dev
 </div>
 
 ## 🔧 Stack
+
 ![Next.js](https://img.shields.io/badge/Next.js-9FA1FF?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-9FA1FF?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-9FA1FF?style=for-the-badge&logo=tailwind-css&logoColor=white)

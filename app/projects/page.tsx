@@ -1,17 +1,16 @@
-'use client'
+'use client';
 
-import { useTranslation } from '@/contexts/TranslationContext'
+import { useTranslation } from '@/app/providers';
 
 export default function Projects() {
-    const { t } = useTranslation()
+    const { t } = useTranslation();
 
     return (
-        <section className="projects-section">
-            <h2 className="projects-title">{t.projects.title}</h2>
-
-            <p style={{ textAlign: 'center', color: '#666' }}>
-                Em breve...
-            </p>
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-up">
+            <h1 className="text-4xl font-bold text-moon uppercase tracking-widest mb-12">
+                {t.projects.title}
+            </h1>
+            <p className="text-ash">Em construção.</p>
         </section>
-    )
+    );
 }
