@@ -48,3 +48,10 @@ body {
 .fade-up {
   animation: fadeUp 0.8s ease-out;
 }
+
+
+/* Seleção de texto */
+::selection {
+  background-color: var(--color-lilac);
+  color: var(--color-void);
+}
