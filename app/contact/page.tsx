@@ -1,18 +1,16 @@
-'use client'
+'use client';
 
-import { useTranslation } from '@/contexts/TranslationContext'
+import { useTranslation } from '@/app/providers';
 
 export default function Contact() {
-    const { t } = useTranslation()
+    const { t } = useTranslation();
 
     return (
-        <div style={{ padding: '50px', maxWidth: '600px', margin: '0 auto' }}>
-            <h1 style={{ fontSize: '36px', marginBottom: '40px', textAlign: 'center' }}>
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-up">
+            <h1 className="text-4xl font-bold text-moon uppercase tracking-widest mb-12">
                 {t.contact.title}
             </h1>
-            <p style={{ textAlign: 'center', color: '#666' }}>
-                Em breve...
-            </p>
-        </div>
-    )
+            <p className="text-ash">Em construção.</p>
+        </section>
+    );
 }

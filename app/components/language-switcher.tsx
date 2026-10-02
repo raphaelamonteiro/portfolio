@@ -1,14 +1,17 @@
-'use client'
+'use client';
 
-import { useTranslation } from '@/contexts/TranslationContext'
+import { useTranslation } from '@/app/providers';
 
 export default function LanguageSwitcher() {
-    const { locale, changeLocale } = useTranslation()
+    const { locale, setLocale } = useTranslation();
 
     return (
-        <button className="language-switcher py-2 px-4 text-base"
-            onClick={() => changeLocale(locale === 'pt-BR' ? 'en-US' : 'pt-BR')}>
-            {locale === 'pt-BR' ? 'EN - US' : 'PT - BR'}
+        <button
+            className="text-sm text-ash hover:text-bone transition-colors font-mono"
+            onClick={() => setLocale(locale === 'pt' ? 'en' : 'pt')}
+            aria-label="Switch language"
+        >
+            {locale === 'pt' ? 'EN' : 'PT'}
         </button>
-    )
+    );
 }

@@ -1,32 +1,16 @@
-'use client'
+'use client';
 
-import Loading from '@/app/components/loading'
-import { useTranslation } from '@/contexts/TranslationContext'
-import { title } from 'process';
+import { useTranslation } from '@/app/providers';
 
 export default function Services() {
     const { t } = useTranslation();
 
-
     return (
-        <section className="services-section">
-            <h2 className="service-title">{t.work.title}</h2>
-            <p className="service-text">
-                {t.work.subtitle}
-            </p>
-
-            <div className="services-grid">
-                {t.work.services.map((group, groupIndex) =>
-                    group.items.map((item, index) => (
-                        <div key={`${groupIndex}-${index}`} className="service-card">
-                            <h3>{item.title}</h3>
-                            <p>{item.description}</p>
-                        </div>
-                    ))
-                )}
-            </div>
-
-
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 fade-up">
+            <h1 className="text-4xl font-bold text-moon uppercase tracking-widest mb-12">
+                {t.work.title}
+            </h1>
+            <p className="text-ash">Em construção.</p>
         </section>
     );
 }
