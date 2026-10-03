@@ -19,7 +19,8 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 bg-void/80 backdrop-blur-md">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
+            <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+
                 <Link href="/" className="text-base font-bold text-bone hover:text-amethyst transition-colors">
                     Raphaela Monteiro
                 </Link>
