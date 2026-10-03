@@ -1,16 +1,16 @@
 'use client';
 
-import { useTheme } from 'next-themes';
+import { useTheme } from '@/app/theme-provider';
 import { useEffect, useState } from 'react';
 
 export function ThemeToggle() {
-    const { resolvedTheme, setTheme } = useTheme();
+    const { resolved, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => setMounted(true), []);
     if (!mounted) return <div className="w-5 h-5" />;
 
-    const isDark = resolvedTheme === 'dark';
+    const isDark = resolved === 'dark';
 
     return (
         <button

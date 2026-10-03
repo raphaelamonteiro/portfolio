@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 @import "tailwindcss";
 
-
 @theme {
   --color-void: #09080F;
   --color-surface: #12101A;
@@ -12,25 +11,23 @@
   --color-dusty: #F39EB6;
   --color-lilac: #9195F6;
 
-  --font-mono:"Inconsolata",
-    monospace;
+  --font-mono: "Inconsolata", ui-monospace, monospace;
 }
 
 body {
-  font-variation-settings: "MONO" 1;
   background-color: var(--color-void);
   color: var(--color-bone);
 }
 
 .light {
-  --color-void: #E8E1F0;
-  --color-surface: #F1EBF6;
-  --color-bone: #241C2D;
-  --color-ash: #7C7086;
-  --color-amethyst: #765BEF;
-  --color-moon: #D95B8B;
-  --color-dusty: #D9789B;
-  --color-lilac: #777BE5;
+  --color-void: #F5F3F7;
+  --color-surface: #FFFFFF;
+  --color-bone: #15121C;
+  --color-ash: #6B6575;
+  --color-amethyst: #6B4FDB;
+  --color-moon: #C43D6B;
+  --color-dusty: #B85A7A;
+  --color-lilac: #5E5AE0;
 }
 
 @keyframes fadeUp {
@@ -47,4 +44,9 @@ body {
 
 .fade-up {
   animation: fadeUp 0.8s ease-out;
+}
+
+::selection {
+  background-color: var(--color-lilac);
+  color: var(--color-void);
 }

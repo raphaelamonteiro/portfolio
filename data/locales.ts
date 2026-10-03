@@ -8,6 +8,7 @@ export type Dict = {
     home: {
         title: string; role: string; tag: string;
         cta: string; contact: string;
+        status: string;
     };
     about: {
         log: string;
@@ -41,6 +42,7 @@ const en: Dict = {
         tag: "I build to understand. I investigate to build better.",
         cta: "Explore my work",
         contact: "Let's work together",
+        status: "Software Developer"
     },
     about: {
         log: "SYS_USER // OVERVIEW",
@@ -127,6 +129,7 @@ const pt: Dict = {
         tag: "Construo para entender. Investigo para construir melhor.",
         cta: "Explorar meu trabalho",
         contact: "Trabalhe comigo",
+        status: "Desenvolvedora de Software",
     },
     about: {
         log: "SYS_USER // VISAO_GERAL",
@@ -137,9 +140,9 @@ const pt: Dict = {
             "Acredito que boas soluções nascem da combinação entre engenharia sólida, pesquisa e aprendizado contínuo. É essa curiosidade que guia meus projetos, estudos e a forma como encaro novos desafios.",
         ],
         stats: [
-            { value: "3+", label: "Anos de Prática Dev" },
-            { value: "5+", label: "Projetos Principais" },
-            { value: "15+", label: "Tecnologias no Stack" },
+            { value: "3+", label: "Anos de Prática" },
+            { value: "5+", label: "Projetos" },
+            { value: "15+", label: "Tecnologias" },
             { value: "B2", label: "Inglês Intermediário-Avançado" },
         ],
         tech: "TECNOLOGIAS",
