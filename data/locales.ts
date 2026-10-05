@@ -25,7 +25,24 @@ export type Dict = {
         academiaTitle: string;
         academia: { title: string; course: string; institute: string; date: string }[];
     };
-    projects: { title: string; viewProject: string; viewCode: string };
+    projects: {
+        title: string;
+        subtitle: string;
+        viewProject: string;
+        viewCode: string;
+        filters: {
+            all: string;
+            web: string;
+            systems: string;
+            ai: string;
+            research: string;
+        };
+        status: {
+            active: string;
+            completed: string;
+            wip: string;
+        };
+    };
     work: { title: string; subtitle: string; services: { title: string; description: string }[] };
     contact: { title: string; name: string; email: string; message: string; send: string };
     footer: { rights: string };
@@ -94,9 +111,22 @@ const en: Dict = {
         ],
     },
     projects: {
-        title: "My Projects",
-        viewProject: "View Project",
-        viewCode: "View Code",
+        title: "Selected Work",
+        subtitle: "A few things I've built, broken, and rebuilt.",
+        viewProject: "Live",
+        viewCode: "Code",
+        filters: {
+            all: "All",
+            web: "Web",
+            systems: "Systems",
+            ai: "AI",
+            research: "Research",
+        },
+        status: {
+            active: "Active",
+            completed: "Completed",
+            wip: "In Progress",
+        },
     },
     work: {
         title: "Solutions & Services",
@@ -181,9 +211,22 @@ const pt: Dict = {
         ],
     },
     projects: {
-        title: "Meus Projetos",
-        viewProject: "Ver Projeto",
-        viewCode: "Ver Código",
+        title: "Trabalhos Selecionados",
+        subtitle: "Algumas coisas que construí, quebrei e reconstruí.",
+        viewProject: "Ver",
+        viewCode: "Código",
+        filters: {
+            all: "Todos",
+            web: "Web",
+            systems: "Sistemas",
+            ai: "IA",
+            research: "Pesquisa",
+        },
+        status: {
+            active: "Ativo",
+            completed: "Concluído",
+            wip: "Em andamento",
+        },
     },
     work: {
         title: "Soluções & Serviços",
