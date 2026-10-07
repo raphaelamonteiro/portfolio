@@ -1,5 +1,3 @@
-// data/locales.ts
-
 export type Dict = {
     nav: {
         home: string; about: string; services: string;
@@ -30,12 +28,14 @@ export type Dict = {
         subtitle: string;
         viewProject: string;
         viewCode: string;
+        readCase: string;
         filters: {
             all: string;
-            web: string;
             systems: string;
             ai: string;
             research: string;
+            web: string;
+            personal: string;
         };
         status: {
             active: string;
@@ -115,17 +115,19 @@ const en: Dict = {
         subtitle: "A few things I've built, broken, and rebuilt.",
         viewProject: "Live",
         viewCode: "Code",
+        readCase: "Read case study",
         filters: {
             all: "All",
-            web: "Web",
             systems: "Systems",
             ai: "AI",
             research: "Research",
+            web: "Web",
+            personal: "Personal",
         },
         status: {
             active: "Active",
             completed: "Completed",
-            wip: "In Progress",
+            wip: "In progress",
         },
     },
     work: {
@@ -215,12 +217,14 @@ const pt: Dict = {
         subtitle: "Algumas coisas que construí, quebrei e reconstruí.",
         viewProject: "Ver",
         viewCode: "Código",
+        readCase: "Ler estudo de caso",
         filters: {
             all: "Todos",
-            web: "Web",
             systems: "Sistemas",
             ai: "IA",
             research: "Pesquisa",
+            web: "Web",
+            personal: "Pessoais",
         },
         status: {
             active: "Ativo",

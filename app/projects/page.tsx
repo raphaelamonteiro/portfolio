@@ -31,7 +31,7 @@ export default function Projects() {
 
             {/* Filters */}
             <div className="flex flex-wrap gap-2 pt-4 border-t border-lilac/20">
-                {(['all', 'web', 'systems', 'ai', 'research'] as const).map((cat) => (
+                {(['all', 'systems', 'ai', 'research', 'web', 'personal'] as const).map((cat) => (
                     <button
                         key={cat}
                         onClick={() => setFilter(cat)}
@@ -57,7 +57,7 @@ export default function Projects() {
 
             {filtered.length === 0 && (
                 <p className="text-ash text-sm text-center py-12">
-                    Nenhum projeto nessa categoria ainda.
+                    {locale === 'pt' ? 'Nenhum projeto nessa categoria ainda.' : 'No projects in this category yet.'}
                 </p>
             )}
         </section>
@@ -67,70 +67,91 @@ export default function Projects() {
 function ProjectCard({ project: p, locale }: { project: Project; locale: 'en' | 'pt' }) {
     const { t } = useTranslation();
 
+    const Wrapper = p.hasCaseStudy
+        ? ({ children }: { children: React.ReactNode }) => (
+            <Link href={`/projects/${p.slug}`} className="block">{children}</Link>
+        )
+        : ({ children }: { children: React.ReactNode }) => <>{children}</>;
+
     return (
-        <article className="group p-6 bg-surface border border-lilac/20 rounded-lg
-                        hover:border-amethyst/40 transition-colors flex flex-col">
+        <Wrapper>
+            <article className="group p-6 bg-surface border border-lilac/20 rounded-lg
+                          hover:border-amethyst/40 transition-colors flex flex-col h-full">
 
-            {/* Top row: year + status */}
-            <div className="flex items-center justify-between text-[10px] uppercase tracking-widest mb-4">
-                <span className="text-amethyst/60">{p.year}</span>
-                <span className={`
-          px-2 py-0.5 rounded-full border
-          ${p.status === 'active' ? 'text-emerald-400 border-emerald-400/30' : ''}
-          ${p.status === 'completed' ? 'text-ash border-lilac/20' : ''}
-          ${p.status === 'wip' ? 'text-dusty border-dusty/30' : ''}
-        `}>
-                    {t.projects.status[p.status]}
-                </span>
-            </div>
+                {/* Top row: year + status + featured */}
+                <div className="flex items-center justify-between text-[10px] uppercase tracking-widest mb-4">
+                    <span className="text-amethyst/60">{p.year}</span>
+                    <div className="flex items-center gap-2">
+                        {p.featured && (
+                            <span className="px-2 py-0.5 rounded-full border border-amethyst/40 text-amethyst">
+                                ★ Featured
+                            </span>
+                        )}
+                        <span className={`
+              px-2 py-0.5 rounded-full border
+              ${p.status === 'active' ? 'text-emerald-400 border-emerald-400/30' : ''}
+              ${p.status === 'completed' ? 'text-ash border-lilac/20' : ''}
+              ${p.status === 'wip' ? 'text-dusty border-dusty/30' : ''}
+            `}>
+                            {t.projects.status[p.status]}
+                        </span>
+                    </div>
+                </div>
 
-            {/* Title + description */}
-            <h2 className="text-xl font-bold text-bone mb-2 group-hover:text-amethyst transition-colors">
-                {p.title}
-            </h2>
+                {/* Title + subtitle */}
+                <h2 className="text-xl font-bold text-bone mb-2 group-hover:text-amethyst transition-colors">
+                    {p.title}
+                </h2>
 
-            <p className="text-sm text-ash leading-relaxed mb-4">
-                {p.description[locale]}
-            </p>
+                <p className="text-sm text-ash leading-relaxed mb-4">
+                    {p.subtitle[locale]}
+                </p>
 
-            {/* Highlights (opcional) */}
-            {p.highlights && p.highlights.length > 0 && (
-                <ul className="space-y-1 mb-4">
-                    {p.highlights.map((h, i) => (
-                        <li key={i} className="text-xs text-ash flex items-start gap-2">
-                            <span className="text-amethyst/60 mt-[3px]">▸</span>
-                            <span>{h}</span>
-                        </li>
+                {/* Highlights */}
+                {p.highlights && p.highlights[locale].length > 0 && (
+                    <ul className="space-y-1 mb-4">
+                        {p.highlights[locale].map((h, i) => (
+                            <li key={i} className="text-xs text-ash flex items-start gap-2">
+                                <span className="text-amethyst/60 mt-[3px]">▸</span>
+                                <span>{h}</span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+
+                {/* Stack */}
+                <div className="flex flex-wrap gap-1.5 mb-5">
+                    {p.stack.map((s) => (
+                        <span key={s}
+                            className="text-[10px] px-2 py-1 bg-void/50 border border-lilac/20 rounded text-ash">
+                            {s}
+                        </span>
                     ))}
-                </ul>
-            )}
+                </div>
 
-            {/* Stack */}
-            <div className="flex flex-wrap gap-1.5 mb-5">
-                {p.stack.map((s) => (
-                    <span key={s}
-                        className="text-[10px] px-2 py-1 bg-void/50 border border-lilac/20
-                           rounded text-ash">
-                        {s}
-                    </span>
-                ))}
-            </div>
-
-            {/* Links */}
-            <div className="flex items-center gap-4 mt-auto pt-4 border-t border-lilac/20">
-                {p.repoUrl && (
-                    <a href={p.repoUrl} target="_blank" rel="noopener noreferrer"
-                        className="text-xs text-ash hover:text-bone transition-colors">
-                        ↗ {t.projects.viewCode}
-                    </a>
-                )}
-                {p.liveUrl && (
-                    <a href={p.liveUrl} target="_blank" rel="noopener noreferrer"
-                        className="text-xs text-amethyst hover:text-amethyst/80 transition-colors">
-                        ↗ {t.projects.viewProject}
-                    </a>
-                )}
-            </div>
-        </article>
+                {/* Footer */}
+                <div className="flex items-center gap-4 mt-auto pt-4 border-t border-lilac/20">
+                    {p.hasCaseStudy && (
+                        <span className="text-xs text-amethyst">
+                            {t.projects.readCase} →
+                        </span>
+                    )}
+                    {p.links?.repo && (
+                        <a href={p.links.repo} target="_blank" rel="noopener noreferrer"
+                            className="text-xs text-ash hover:text-bone transition-colors"
+                            onClick={(e) => e.stopPropagation()}>
+                            ↗ {t.projects.viewCode}
+                        </a>
+                    )}
+                    {p.links?.live && (
+                        <a href={p.links.live} target="_blank" rel="noopener noreferrer"
+                            className="text-xs text-ash hover:text-bone transition-colors"
+                            onClick={(e) => e.stopPropagation()}>
+                            ↗ {t.projects.viewProject}
+                        </a>
+                    )}
+                </div>
+            </article>
+        </Wrapper>
     );
 }
