@@ -43,14 +43,14 @@ export const projects: Project[] = [
         title: 'SPRB-BD',
         subtitle: {
             en: 'Brazilian Regional PNT system — a reference architecture for sovereign navigation infrastructure.',
-            pt: 'Sistema de Posicionamento Regional Brasileiro — arquitetura de referência para infraestrutura soberana de navegação.',
+            pt: 'Sistema de Posicionamento Regional Brasileiro — arquitetura de referência para um sistema de posicionamento regional brasileiro.',
         },
         year: '2026',
         category: 'systems',
         status: 'active',
         featured: true,
         hasCaseStudy: true,
-        stack: ['Java', 'Spring', 'Apache Spark', 'Postgres', 'REST', 'Scrum'],
+        stack: ['Python', 'FastAPI', 'Apache Spark', 'Postgres', 'React'],
         role: {
             en: 'Architecture, implementation, validation, and paper',
             pt: 'Arquitetura, implementação, validação e artigo',
@@ -418,7 +418,7 @@ export const projects: Project[] = [
             en: 'A digital first-hug for new Catholics.',
             pt: 'Um primeiro abraço digital para novos católicos.',
         },
-        year: '2025',
+        year: '2026',
         category: 'personal',
         status: 'wip',
         featured: false,
@@ -435,7 +435,34 @@ export const projects: Project[] = [
     },
 
     // ─────────────────────────────────────────────
-    // 08. Polaris  (card only)
+    // 08. Vitral  (card only)
+    // ─────────────────────────────────────────────
+    {
+        slug: 'vitral',
+        title: 'Vitral',
+        subtitle: {
+            en: 'An independent digital magazine and bilingual publication curating high fashion through the lens of dark elegance. We provide an intellectual space where garment craftsmanship meets gothic literature and avant-garde art.',
+            pt: 'Revista digital independente e publicação bilíngue que curate alta moda pela lente da elegância obscura. Um espaço intelectual onde o ofício da costura encontra a literatura gótica e a arte de vanguarda.',
+        },
+        year: '2026',
+        category: 'personal',
+        status: 'wip',
+        featured: false,
+        hasCaseStudy: false,
+        stack: ['Ruby', 'Rails', 'Postgres', 'C'],
+        role: {
+            en: 'Founder & editor-in-chief & developer',
+            pt: 'Fundadora & editora chefe & desenvolvedora',
+        },
+        description: {
+            en: 'VITRAL is not a generalist magazine. We are a bilingual, high-fashion publication dedicated to the intellectual curation of dark elegance. We merge couture, gothic literature, and global mythology to celebrate fashion as an art form for the mind.',
+            pt: 'VITRAL não é uma revista generalista. Somos uma publicação bilíngue de alta moda dedicada à curadoria intelectual da elegância obscura. Unimos alta costura, literatura gótica e mitologia global para celebrar a moda como forma de arte para a mente.',
+        },
+    },
+
+
+    // ─────────────────────────────────────────────
+    // 09. Polaris  (card only)
     // ─────────────────────────────────────────────
     {
         slug: 'polaris',
@@ -444,7 +471,7 @@ export const projects: Project[] = [
             en: 'Personal productivity tracker.',
             pt: 'Rastreador pessoal de produtividade.',
         },
-        year: '2025',
+        year: '2026',
         category: 'personal',
         status: 'wip',
         featured: false,
