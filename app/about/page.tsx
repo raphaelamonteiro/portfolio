@@ -18,7 +18,7 @@ export default function About() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {a.academia.map((item) => (
                         <div key={item.course}
-                            className="p-5 bg-surface border border-lilac/20 rounded-lg space-y-3
+                            className="p-6 bg-surface border border-lilac/20 rounded-lg space-y-3
                             hover:border-lilac/40 transition-colors">
                             <div className="flex justify-between items-start">
                                 <span className="text-[10px] text-amethyst uppercase tracking-widest">
@@ -41,7 +41,7 @@ export default function About() {
                         {mainTechStack.map((tech) => (
                             <span key={tech.name}
                                 className="px-3 py-1.5 bg-amethyst/10 border border-amethyst/30
-                               rounded-md text-xs text-amethyst">
+                               rounded-full text-xs text-amethyst">
                                 {tech.name}
                             </span>
                         ))}
@@ -49,7 +49,7 @@ export default function About() {
                     <div className="flex flex-wrap gap-2 pt-4 border-t border-lilac/20">
                         {otherTechStack.map((tech) => (
                             <span key={tech.name}
-                                className="px-3 py-1.5 border border-lilac/20 rounded-md text-xs text-ash
+                                className="px-3 py-1.5 border border-lilac/20 rounded-full text-xs text-ash
                                hover:text-bone hover:border-lilac/40 transition-colors">
                                 {tech.name}
                             </span>
@@ -64,8 +64,8 @@ export default function About() {
                 <div className="flex flex-wrap gap-2">
                     {a.researchMap.map((item) => (
                         <span key={item}
-                            className="px-4 py-2 bg-moon/10 border border-moon/30 rounded-full
-                             text-xs text-moon">
+                            className="px-4 py-2 bg-amethyst/10 border border-amethyst/30 rounded-full
+                             text-xs text-amethyst">
                             {item}
                         </span>
                     ))}
@@ -78,7 +78,7 @@ export default function About() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {a.skillsMap.map((item) => (
                         <div key={item.title}
-                            className="p-5 bg-surface border border-lilac/20 rounded-lg space-y-2
+                            className="p-6 bg-surface border border-lilac/20 rounded-lg space-y-2
                             hover:border-amethyst/40 transition-colors">
                             <h3 className="text-base font-bold text-bone">{item.title}</h3>
                             <p className="text-sm text-ash leading-relaxed">{item.description}</p>
@@ -93,8 +93,8 @@ export default function About() {
                 <ul className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                     {a.hobbies.map((h) => (
                         <li key={h.name}
-                            className="border border-lilac/20 rounded-lg p-3
-                           hover:border-moon/40 transition-colors">
+                            className="p-3 bg-surface border border-lilac/20 rounded-lg
+                           hover:border-amethyst/40 transition-colors">
                             <span className="text-[10px] text-amethyst uppercase tracking-widest">// hobby</span>
                             <p className="text-sm text-bone mt-2">{h.name}</p>
                         </li>
@@ -105,10 +105,11 @@ export default function About() {
     );
 }
 
-function SectionHeader({ index, title, small }: { index: string; title: string; small?: boolean }) {
+function SectionHeader({ index, title, label, small }: { index: string; title: string; label?: string; small?: boolean }) {
     return (
-        <div className="flex items-baseline gap-4">
+        <div className="flex items-baseline gap-3">
             <span className="text-xs text-amethyst/60 tracking-widest">{index}</span>
+            <span className="text-xs text-ash tracking-widest uppercase">{label ? `// ${label}` : '//'}</span>
             <h2 className={`font-bold text-bone uppercase tracking-widest ${small ? 'text-lg' : 'text-xl'}`}>
                 {title}
             </h2>

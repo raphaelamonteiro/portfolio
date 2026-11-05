@@ -11,7 +11,6 @@ export type Project = {
     year: string;
     category: ProjectCategory;
     status: ProjectStatus;
-    featured: boolean;
     hasCaseStudy: boolean;
     stack: string[];
     role: Bilingual;
@@ -48,7 +47,6 @@ export const projects: Project[] = [
         year: '2026',
         category: 'systems',
         status: 'active',
-        featured: true,
         hasCaseStudy: true,
         stack: ['Python', 'FastAPI', 'Apache Spark', 'Postgres', 'React'],
         role: {
@@ -119,7 +117,6 @@ export const projects: Project[] = [
         year: '2025',
         category: 'ai',
         status: 'wip',
-        featured: true,
         hasCaseStudy: true,
         stack: ['Java', 'Spring', 'Python', 'gRPC', 'Vue', 'Tailwind', 'LangGraph', 'Docker', 'Postgres'],
         role: {
@@ -187,7 +184,6 @@ export const projects: Project[] = [
         year: '2025',
         category: 'research',
         status: 'completed',
-        featured: true,
         hasCaseStudy: true,
         stack: ['Python', 'Prophet', 'React', 'TypeScript', 'NestJS', 'Postgres'],
         role: {
@@ -255,7 +251,7 @@ export const projects: Project[] = [
         year: '2024',
         category: 'systems',
         status: 'completed',
-        featured: true,
+
         hasCaseStudy: true,
         stack: ['AWS EC2', 'WireGuard', 'HAProxy', 'Nginx', 'Docker', 'PHP', 'React', 'Postgres'],
         role: {
@@ -323,7 +319,7 @@ export const projects: Project[] = [
         year: '2025',
         category: 'web',
         status: 'completed',
-        featured: true,
+
         hasCaseStudy: true,
         stack: ['React Native', 'Next.js', 'NestJS', 'Socket.io', 'Prisma', 'Postgres', 'MongoDB', 'Docker', 'Expo'],
         role: {
@@ -391,7 +387,7 @@ export const projects: Project[] = [
         year: '2025',
         category: 'ai',
         status: 'completed',
-        featured: false,
+
         hasCaseStudy: false,
         stack: ['Ollama', 'Python', 'FastAPI', 'Postgres', 'React', 'Node', 'TypeScript'],
         role: {
@@ -421,7 +417,7 @@ export const projects: Project[] = [
         year: '2026',
         category: 'personal',
         status: 'wip',
-        featured: false,
+
         hasCaseStudy: false,
         stack: ['Next.js', 'TypeScript'],
         role: {
@@ -447,7 +443,7 @@ export const projects: Project[] = [
         year: '2026',
         category: 'personal',
         status: 'wip',
-        featured: false,
+
         hasCaseStudy: false,
         stack: ['Ruby', 'Rails', 'Postgres', 'C'],
         role: {
@@ -474,7 +470,7 @@ export const projects: Project[] = [
         year: '2026',
         category: 'personal',
         status: 'wip',
-        featured: false,
+
         hasCaseStudy: false,
         stack: ['Python'],
         role: {
@@ -493,9 +489,6 @@ export function getProject(slug: string): Project | undefined {
     return projects.find((p) => p.slug === slug);
 }
 
-export function getFeaturedProjects(): Project[] {
-    return projects.filter((p) => p.featured);
-}
 
 export function getProjectsByCategory(category: ProjectCategory): Project[] {
     return projects.filter((p) => p.category === category);

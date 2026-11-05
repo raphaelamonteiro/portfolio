@@ -14,11 +14,11 @@ type Ctx = {
 const ThemeCtx = createContext<Ctx | null>(null);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-    const [theme, setThemeState] = useState<Theme>('system');
+    const [theme, setThemeState] = useState<Theme>('dark');
     const [resolved, setResolved] = useState<Resolved>('dark');
 
     useEffect(() => {
-        const stored = (localStorage.getItem('theme') as Theme | null) ?? 'system';
+        const stored = (localStorage.getItem('theme') as Theme | null) ?? 'dark';
         setThemeState(stored);
     }, []);
 
@@ -29,6 +29,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
             const next: Resolved =
                 theme === 'system' ? (mq.matches ? 'dark' : 'light') : theme;
             setResolved(next);
+            document.documentElement.classList.toggle('dark', next === 'dark');
             document.documentElement.classList.toggle('light', next === 'light');
             document.documentElement.style.colorScheme = next;
         };

@@ -8,14 +8,14 @@ export default function AboutHero() {
     const a = t.about;
 
     return (
-        <section className="space-y-12">
+        <section className="space-y-16">
             <div className="relative border-l-2 border-amethyst/40 pl-6 space-y-6">
                 <div className="flex items-center gap-3 text-xs font-mono text-amethyst/80 tracking-widest uppercase">
-                    <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="flex h-2 w-2 rounded-full bg-amethyst animate-pulse" />
                     <span>{a.log}</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-dusty uppercase">
+                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-bone uppercase">
                     {a.title}
                 </h1>
 
@@ -45,7 +45,7 @@ export default function AboutHero() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 {a.stats.map((s) => (
                     <div key={s.label}
-                        className="p-4 sm:p-5 bg-surface/40 border border-lilac/30 rounded-lg hover:border-amethyst/60 transition">
+                        className="p-6 bg-surface border border-lilac/20 rounded-lg hover:border-amethyst/40 transition-colors">
                         <div className="text-2xl sm:text-4xl font-extrabold font-mono text-amethyst tracking-tight">
                             {s.value}
                         </div>

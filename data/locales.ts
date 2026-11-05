@@ -7,6 +7,7 @@ export type Dict = {
         title: string; role: string; tag: string;
         cta: string; contact: string;
         status: string;
+        location: string;
     };
     about: {
         log: string;
@@ -43,7 +44,7 @@ export type Dict = {
             wip: string;
         };
     };
-    work: { title: string; subtitle: string; services: { title: string; description: string }[] };
+    work: { title: string; subtitle: string; services: { title: string; description: string }[]; emailCta: string; emailNote: string };
     contact: { title: string; name: string; email: string; message: string; send: string };
     footer: { rights: string };
 };
@@ -59,7 +60,8 @@ const en: Dict = {
         tag: "I build to understand. I investigate to build better.",
         cta: "Explore my work",
         contact: "Let's work together",
-        status: "Software Developer"
+        status: "Software Developer",
+        location: "Caçapava, SP · Remote · Worldwide",
     },
     about: {
         log: "SYS_USER // OVERVIEW",
@@ -140,6 +142,8 @@ const en: Dict = {
             { title: "Automation & Data", description: "Solutions that leverage automation and data processing to optimize workflows and support decision-making." },
             { title: "Technical Consulting", description: "Analysis and guidance to improve the structure, performance, and organization of existing projects." },
         ],
+        emailCta: "Send an email",
+        emailNote: "I respond within 48 business hours",
     },
     contact: {
         title: "Get in Touch",
@@ -162,6 +166,7 @@ const pt: Dict = {
         cta: "Explorar meu trabalho",
         contact: "Trabalhe comigo",
         status: "Desenvolvedora de Software",
+        location: "Caçapava, SP · Remoto · Global",
     },
     about: {
         log: "SYS_USER // VISAO_GERAL",
@@ -242,6 +247,8 @@ const pt: Dict = {
             { title: "Dados e Otimização", description: "Uso dados para melhorar desempenho, identificar oportunidades e ajudar na tomada de decisões." },
             { title: "Consultoria Técnica", description: "Ajudo a melhorar sistemas existentes, trazendo mais organização, performance e clareza." },
         ],
+        emailCta: "Enviar e-mail",
+        emailNote: "Respondo em até 48 horas úteis",
     },
     contact: {
         title: "Entre em Contato",

@@ -16,7 +16,7 @@ export default function Projects() {
         : projects.filter((p) => p.category === filter);
 
     return (
-        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12 fade-up">
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16 fade-up">
 
             {/* Header */}
             <div className="space-y-3">
@@ -78,20 +78,15 @@ function ProjectCard({ project: p, locale }: { project: Project; locale: 'en' | 
             <article className="group p-6 bg-surface border border-lilac/20 rounded-lg
                           hover:border-amethyst/40 transition-colors flex flex-col h-full">
 
-                {/* Top row: year + status + featured */}
+                {/* Top row: year + status */}
                 <div className="flex items-center justify-between text-[10px] uppercase tracking-widest mb-4">
                     <span className="text-amethyst/60">{p.year}</span>
                     <div className="flex items-center gap-2">
-                        {p.featured && (
-                            <span className="px-2 py-0.5 rounded-full border border-amethyst/40 text-amethyst">
-                                ★ Featured
-                            </span>
-                        )}
                         <span className={`
               px-2 py-0.5 rounded-full border
               ${p.status === 'active' ? 'text-emerald-400 border-emerald-400/30' : ''}
               ${p.status === 'completed' ? 'text-ash border-lilac/20' : ''}
-              ${p.status === 'wip' ? 'text-dusty border-dusty/30' : ''}
+              ${p.status === 'wip' ? 'text-lilac border-lilac/30' : ''}
             `}>
                             {t.projects.status[p.status]}
                         </span>
@@ -123,7 +118,7 @@ function ProjectCard({ project: p, locale }: { project: Project; locale: 'en' | 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                     {p.stack.map((s) => (
                         <span key={s}
-                            className="text-[10px] px-2 py-1 bg-void/50 border border-lilac/20 rounded text-ash">
+                            className="text-[10px] px-2 py-1 bg-void/50 border border-lilac/20 rounded-full text-ash">
                             {s}
                         </span>
                     ))}

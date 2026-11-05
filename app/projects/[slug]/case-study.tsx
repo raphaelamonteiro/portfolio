@@ -10,7 +10,7 @@ export default function CaseStudy({ project }: { project: Project }) {
     if (!cs) return null;
 
     return (
-        <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12 fade-up">
+        <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16 fade-up">
 
             {/* Back */}
             <Link href="/projects"
@@ -25,7 +25,7 @@ export default function CaseStudy({ project }: { project: Project }) {
                     <span>//</span>
                     <span>{project.category}</span>
                     <span>//</span>
-                    <span className={project.status === 'wip' ? 'text-dusty' : 'text-emerald-400'}>
+                    <span className={project.status === 'wip' ? 'text-lilac' : 'text-emerald-400'}>
                         ● {t.projects.status[project.status]}
                     </span>
                 </div>
@@ -42,7 +42,7 @@ export default function CaseStudy({ project }: { project: Project }) {
                 <div className="flex flex-wrap gap-2 pt-2">
                     {project.stack.map((s) => (
                         <span key={s}
-                            className="text-[10px] px-2 py-1 border border-lilac/20 rounded text-ash">
+                            className="text-[10px] px-2 py-1 border border-lilac/20 rounded-full text-ash">
                             {s}
                         </span>
                     ))}
@@ -102,7 +102,7 @@ export default function CaseStudy({ project }: { project: Project }) {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
     return (
         <section className="space-y-3 pt-8 border-t border-lilac/20">
-            <h2 className="text-xs text-amethyst uppercase tracking-widest">{title}</h2>
+            <h2 className="text-xs text-amethyst uppercase tracking-widest">// {title}</h2>
             <p className="text-base text-bone leading-relaxed">{children}</p>
         </section>
     );
