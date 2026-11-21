@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.8.0] — 2026-11-21
+### Added
+- Comprehensive SEO and Metadata implementation:
+  - Root metadataBase configured to `https://raphaelamonteiro.vercel.app`.
+  - OpenGraph and Twitter card metadata for both the root site and individual case studies.
+  - Server-side `generateMetadata` on `app/projects/[slug]/page.tsx` for dynamic title and description extraction.
+  - Robots indexing tags and author metadata.
+- Clean contact fallback panel in `app/contact/page.tsx` eliminating all deprecated color tokens.
+### Changed
+- Complete audit and cleanup: zero `rounded-lg` cards, zero `text-moon` or `text-dusty` in production pages.
+**Full task:** [task-08-seo-metadata.md](./tasks/task-08-seo-metadata.md)
+
 ## [0.7.0] — 2026-11-21
 ### Added
 - Case Study page "Mission Dossier" refactor:
