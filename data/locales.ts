@@ -60,7 +60,7 @@ const en: Dict = {
         tag: "I build to understand. I investigate to build better.",
         cta: "Explore my work",
         contact: "Let's work together",
-        status: "Software Developer",
+        status: "Software Developer @ Wave Concept · Open to collaborations",
         location: "Caçapava, SP · Remote · Worldwide",
     },
     about: {
@@ -165,7 +165,7 @@ const pt: Dict = {
         tag: "Construo para entender. Investigo para construir melhor.",
         cta: "Explorar meu trabalho",
         contact: "Trabalhe comigo",
-        status: "Desenvolvedora de Software",
+        status: "Dev @ Wave Concept · Aberta a colaborações",
         location: "Caçapava, SP · Remoto · Global",
     },
     about: {

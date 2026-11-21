@@ -3,56 +3,102 @@
 import { useTranslation } from '@/app/providers';
 import Image from 'next/image';
 
+function CornerBrackets() {
+  return (
+    <>
+      <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-lilac/40 pointer-events-none" />
+      <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-lilac/40 pointer-events-none" />
+      <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-lilac/40 pointer-events-none" />
+      <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-lilac/40 pointer-events-none" />
+    </>
+  );
+}
+
 export default function AboutHero() {
-    const { t } = useTranslation();
-    const a = t.about;
+  const { t } = useTranslation();
+  const a = t.about;
 
-    return (
-        <section className="space-y-16">
-            <div className="relative border-l-2 border-amethyst/40 pl-6 space-y-6">
-                <div className="flex items-center gap-3 text-xs font-mono text-amethyst/80 tracking-widest uppercase">
-                    <span className="flex h-2 w-2 rounded-full bg-amethyst animate-pulse" />
-                    <span>{a.log}</span>
-                </div>
+  return (
+    <section className="space-y-8">
+      {/* PANEL 001 — ABOUT HERO */}
+      <div className="relative p-6 sm:p-10 lg:p-12 bg-surface/40 border border-lilac border-t border-t-bone/20 rounded-sm overflow-hidden">
+        <CornerBrackets />
 
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-bone uppercase">
-                    {a.title}
-                </h1>
+        {/* Top Header Row */}
+        <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-4 border-b border-lilac relative z-10 mb-8">
+          <span className="text-ash">001 // ABOUT</span>
+          <div className="flex items-center gap-2 text-ash">
+            <span className="flex h-2 w-2 rounded-full bg-amethyst animate-pulse" />
+            <span>{t.home.status}</span>
+          </div>
+        </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 pt-4">
-                    <div className="lg:col-span-5 flex justify-center">
-                        <div className="relative w-[260px] sm:w-[320px] aspect-[4/5] rounded-lg overflow-hidden">
-                            <Image src="/assets/raphaela.png" alt="Raphaela Monteiro"
-                                fill priority sizes="(max-width: 640px) 260px, 320px"
-                                className="object-cover" />
-                        </div>
-                    </div>
-
-                    <div className="lg:col-span-7 space-y-3">
-                        <div className="inline-block px-4 py-2 text-sm rounded-md bg-amethyst/10 text-amethyst border border-amethyst/20 font-mono">
-                            $ whoami
-                        </div>
-                        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-wide text-amethyst">
-                            Raphaela Monteiro
-                        </h2>
-                        <div className="space-y-4 text-base text-bone leading-relaxed pt-2">
-                            {a.paragraphs.map((text, i) => <p key={i}>{text}</p>)}
-                        </div>
-                    </div>
-                </div>
+        {/* 2-Column Desktop Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+          {/* Left Column (lg:col-span-7) */}
+          <div className="lg:col-span-7 space-y-6">
+            <div className="inline-block px-3 py-1 text-xs rounded-sm bg-void/60 border border-lilac text-amethyst font-mono">
+              $ whoami
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                {a.stats.map((s) => (
-                    <div key={s.label}
-                        className="p-6 bg-surface border border-lilac/20 rounded-lg hover:border-amethyst/40 transition-colors">
-                        <div className="text-2xl sm:text-4xl font-extrabold font-mono text-amethyst tracking-tight">
-                            {s.value}
-                        </div>
-                        <div className="text-xs text-ash mt-1 font-medium">{s.label}</div>
-                    </div>
-                ))}
+            <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.0] tracking-tight bg-[linear-gradient(180deg,#C9B5E0_0%,#C9B5E0_48%,#433D8B_52%,#17153B_100%)] bg-clip-text text-transparent">
+              {a.title}
+            </h1>
+
+            <hr className="border-lilac max-w-xl" />
+
+            <div className="space-y-4 text-ash text-sm sm:text-base leading-relaxed max-w-2xl font-mono">
+              {a.paragraphs.map((text, i) => (
+                <p key={i}>{text}</p>
+              ))}
             </div>
-        </section>
-    );
+          </div>
+
+          {/* Right Column (lg:col-span-5): Portrait Panel */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Radial glow behind portrait */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-4 bg-amethyst/15 rounded-full blur-2xl pointer-events-none"
+              />
+
+              <div className="relative p-3 bg-surface border border-lilac rounded-sm shadow-xl">
+                <CornerBrackets />
+                <div className="relative w-[260px] sm:w-[300px] aspect-[4/5] rounded-sm overflow-hidden bg-void">
+                  <Image
+                    src="/assets/raphaela.png"
+                    alt="Raphaela Monteiro"
+                    fill
+                    priority
+                    sizes="(max-width: 640px) 260px, 300px"
+                    className="object-cover grayscale hover:grayscale-0 transition-all duration-500 cursor-crosshair"
+                  />
+                </div>
+                <div className="pt-2 flex items-center justify-between text-[9px] font-mono text-ash tracking-widest uppercase">
+                  <span>SYS_ID // RM-2026</span>
+                  <span>100% NOMINAL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* STATS: 4-column grid */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {a.stats.map((s) => (
+          <div
+            key={s.label}
+            className="relative p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between"
+          >
+            <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-mono text-amethyst tracking-tight">
+              {s.value}
+            </div>
+            <div className="text-xs text-ash font-mono mt-2">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

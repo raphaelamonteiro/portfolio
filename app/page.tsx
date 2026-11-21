@@ -23,22 +23,20 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen px-4 sm:px-6 lg:px-8 py-8 lg:py-12 space-y-8 overflow-hidden max-w-7xl mx-auto">
-      {/* Background Subtle Grid Pattern (64px) */}
+      {/* Background Dot Matrix Pattern (32px, tactical radar screen feel) */}
       <div
         aria-hidden="true"
-        className="fixed inset-0 opacity-[0.03] pointer-events-none"
+        className="fixed inset-0 opacity-[0.05] pointer-events-none"
         style={{
-          backgroundImage: `
-            linear-gradient(var(--color-bone) 1px, transparent 1px),
-            linear-gradient(90deg, var(--color-bone) 1px, transparent 1px)`,
-          backgroundSize: '64px 64px',
+          backgroundImage: 'radial-gradient(var(--color-bone) 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
         }}
       />
 
       {/* ───────────────────────────────────────────────────────────── */}
       {/* PANEL 001 — HERO (Full-width, Sharp Chrome H1, Kitsune 9-Tails)*/}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[80vh] flex flex-col justify-between p-6 sm:p-10 lg:p-12 bg-surface/40 border border-lilac/10 rounded-sm overflow-hidden fade-up">
+      <section className="relative min-h-[80vh] flex flex-col justify-between p-6 sm:p-10 lg:p-12 bg-surface/40 border border-lilac border-t border-t-bone/20 rounded-sm overflow-hidden fade-up">
         <CornerBrackets />
 
         {/* Subtle radial glow behind the Kitsune motif */}
@@ -56,14 +54,14 @@ export default function Home() {
         >
           <defs>
             <linearGradient id="kitsune-tail-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#8F7CFF" stopOpacity="0.8" />
-              <stop offset="45%" stopColor="#9195F6" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#918798" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="#483AA0" stopOpacity="0.8" />
+              <stop offset="45%" stopColor="#412B6B" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#433D8B" stopOpacity="0.1" />
             </linearGradient>
             <linearGradient id="kitsune-accent-grad" x1="100%" y1="100%" x2="0%" y2="0%">
-              <stop offset="0%" stopColor="#8F7CFF" stopOpacity="0.9" />
-              <stop offset="60%" stopColor="#9195F6" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#FFF8FC" stopOpacity="0.0" />
+              <stop offset="0%" stopColor="#483AA0" stopOpacity="0.9" />
+              <stop offset="60%" stopColor="#412B6B" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#C9B5E0" stopOpacity="0.0" />
             </linearGradient>
           </defs>
 
@@ -79,16 +77,16 @@ export default function Home() {
           <path d="M 380 430 C 420 380, 470 330, 480 290 C 490 240, 485 270, 465 305 C 450 330, 420 330, 405 310" stroke="url(#kitsune-tail-grad)" strokeWidth="1.5" strokeLinecap="round" />
 
           {/* Geometric root node (HUD detail) */}
-          <circle cx="380" cy="430" r="3" fill="#8F7CFF" opacity="0.6" />
-          <circle cx="380" cy="430" r="8" stroke="#8F7CFF" strokeWidth="0.8" opacity="0.3" strokeDasharray="2 2" />
+          <circle cx="380" cy="430" r="3" fill="#483AA0" opacity="0.6" />
+          <circle cx="380" cy="430" r="8" stroke="#483AA0" strokeWidth="0.8" opacity="0.3" strokeDasharray="2 2" />
         </svg>
 
-        {/* Top Header Row with lore status: Available · [coffee] · [00:00:00] */}
-        <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-4 border-b border-lilac/10 relative z-10">
+        {/* Top Header Row with status: {t.home.status} · [coffee] · [00:00:00] */}
+        <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-4 border-b border-lilac relative z-10">
           <span className="text-ash">001 // HOME</span>
           <div className="flex items-center gap-2 text-ash">
-            <span className="flex h-2 w-2 rounded-full bg-lilac animate-pulse" />
-            <span>Available for projects</span>
+            <span className="flex h-2 w-2 rounded-full bg-amethyst animate-pulse" />
+            <span>{t.home.status}</span>
             <span className="text-ash/40">·</span>
             <span className="text-ash/60 text-[9px] font-mono lowercase">[coffee]</span>
             <span className="text-ash/40">·</span>
@@ -98,11 +96,11 @@ export default function Home() {
 
         {/* Center: Massive Chrome Title + Role with sharp horizon metallic sheen */}
         <div className="my-auto py-12 lg:py-16 relative z-10 max-w-4xl">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] tracking-tight bg-[linear-gradient(180deg,#FFF8FC_0%,#FFF8FC_48%,#918798_52%,#332D47_100%)] bg-clip-text text-transparent">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] tracking-tight bg-[linear-gradient(180deg,#C9B5E0_0%,#C9B5E0_48%,#433D8B_52%,#17153B_100%)] bg-clip-text text-transparent">
             {t.home.title}
           </h1>
 
-          <hr className="border-lilac/10 my-6 max-w-xl" />
+          <hr className="border-lilac my-6 max-w-xl" />
 
           <p className="text-ash text-base sm:text-lg leading-relaxed max-w-2xl">
             {t.home.role}
@@ -110,7 +108,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Row: Location & CTAs */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-6 border-t border-lilac/10 relative z-10">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-6 border-t border-lilac relative z-10">
           <div className="text-ash text-xs font-mono tracking-wider">
             {t.home.location}
           </div>
@@ -119,7 +117,7 @@ export default function Home() {
             {/* ONE amethyst moment for Panel 001 */}
             <Link
               href="/projects"
-              className="text-sm font-medium px-5 py-2.5 bg-amethyst text-void rounded-sm hover:bg-amethyst/80 transition-colors"
+              className="text-sm font-medium px-5 py-2.5 bg-amethyst text-bone rounded-sm hover:opacity-90 transition-opacity"
             >
               {t.home.cta} →
             </Link>
@@ -138,12 +136,12 @@ export default function Home() {
       {/* ───────────────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* PANEL 002 (col-span-12 md:col-span-8) — STACK */}
-        <article className="relative md:col-span-8 p-6 bg-surface/50 border border-lilac/10 rounded-sm flex flex-col justify-between">
+        <article className="relative md:col-span-8 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
           <CornerBrackets />
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac/10">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
               {/* ONE amethyst moment for Panel 002 */}
-              <span className="text-amethyst">002</span>
+              <span className="text-amethyst font-bold">002</span>
               <span className="text-ash">$ tech-stack --list</span>
             </div>
 
@@ -151,7 +149,7 @@ export default function Home() {
               {allTechs.map((tech) => (
                 <div
                   key={tech.name}
-                  className="px-2.5 py-1.5 bg-void/50 border border-lilac/10 rounded-sm text-bone font-mono text-[11px] flex items-center justify-between hover:border-lilac/30 transition-colors"
+                  className="px-2.5 py-1.5 bg-void/50 border border-lilac rounded-sm text-bone font-mono text-[11px] flex items-center justify-between hover:border-amethyst transition-colors"
                 >
                   <span>{tech.name}</span>
                   <span className="text-ash/40 text-[9px]">//</span>
@@ -162,23 +160,23 @@ export default function Home() {
         </article>
 
         {/* PANEL 003 (col-span-12 md:col-span-4) — SYSTEM STATUS */}
-        <article className="relative md:col-span-4 p-6 bg-surface/50 border border-lilac/10 rounded-sm flex flex-col justify-between">
+        <article className="relative md:col-span-4 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac/10">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
               <span className="text-ash">003</span>
               <span className="text-ash">SYS_STATUS // ONLINE</span>
             </div>
 
             <ul className="pt-4 space-y-3 font-mono text-xs">
-              <li className="flex items-center justify-between border-b border-lilac/5 pb-2">
+              <li className="flex items-center justify-between border-b border-lilac/50 pb-2">
                 <span className="text-ash">Education</span>
                 <span className="text-bone">FATEC (2024–2026)</span>
               </li>
-              <li className="flex items-center justify-between border-b border-lilac/5 pb-2">
+              <li className="flex items-center justify-between border-b border-lilac/50 pb-2">
                 <span className="text-ash">Research</span>
                 <span className="text-bone">PNT · ITA</span>
               </li>
-              <li className="flex items-center justify-between border-b border-lilac/5 pb-2">
+              <li className="flex items-center justify-between border-b border-lilac/50 pb-2">
                 <span className="text-ash">Location</span>
                 <span className="text-bone">Caçapava, SP</span>
               </li>
@@ -192,10 +190,10 @@ export default function Home() {
         </article>
 
         {/* PANEL 004 (col-span-12) — PROJECTS PREVIEW */}
-        <article className="relative col-span-12 p-6 bg-surface/50 border border-lilac/10 rounded-sm">
-          <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac/10">
+        <article className="relative col-span-12 p-6 bg-surface/50 border border-lilac rounded-sm">
+          <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
             {/* ONE amethyst moment for Panel 004 */}
-            <span className="text-amethyst">004</span>
+            <span className="text-amethyst font-bold">004</span>
             <span className="text-ash">$ ls projects/</span>
           </div>
 
@@ -204,7 +202,7 @@ export default function Home() {
               <Link
                 key={p.slug}
                 href={p.hasCaseStudy ? `/projects/${p.slug}` : '/projects'}
-                className="group p-4 bg-void/40 border border-lilac/10 hover:border-lilac/30 rounded-sm transition-colors flex flex-col justify-between"
+                className="group p-4 bg-void/40 border border-lilac hover:border-amethyst rounded-sm transition-colors flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between text-[10px] font-mono tracking-widest text-ash mb-2">
@@ -214,19 +212,19 @@ export default function Home() {
                       {idx === 0 ? (
                         <span className="flex h-1.5 w-1.5 rounded-full bg-[#C9A961] shadow-[0_0_6px_#C9A961]" />
                       ) : (
-                        <span className="flex h-1.5 w-1.5 rounded-full bg-lilac/60" />
+                        <span className="flex h-1.5 w-1.5 rounded-full bg-lilac" />
                       )}
                       <span className="uppercase text-[9px]">{p.status}</span>
                     </span>
                   </div>
-                  <h3 className="text-bone font-bold text-sm group-hover:text-amethyst transition-colors">
+                  <h3 className="text-bone font-bold text-sm group-hover:text-bone transition-colors">
                     {p.title}
                   </h3>
                   <p className="text-ash text-xs mt-1 line-clamp-2 leading-relaxed">
                     {p.subtitle[locale]}
                   </p>
                 </div>
-                <div className="mt-4 pt-2 border-t border-lilac/5 flex items-center justify-between text-[10px] text-ash font-mono">
+                <div className="mt-4 pt-2 border-t border-lilac/40 flex items-center justify-between text-[10px] text-ash font-mono">
                   <span className="uppercase">{p.category}</span>
                   <span className="text-bone group-hover:translate-x-0.5 transition-transform">→</span>
                 </div>
@@ -236,9 +234,9 @@ export default function Home() {
         </article>
 
         {/* PANEL 005 (col-span-12 md:col-span-6) — LATEST LOG */}
-        <article className="relative md:col-span-6 p-6 bg-surface/50 border border-lilac/10 rounded-sm flex flex-col justify-between">
+        <article className="relative md:col-span-6 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac/10">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
               <span className="text-ash">005</span>
               <span className="text-ash">$ cat /var/log/activity.log</span>
             </div>
@@ -262,10 +260,10 @@ export default function Home() {
         </article>
 
         {/* PANEL 006 (col-span-12 md:col-span-6) — CONTACT */}
-        <article className="relative md:col-span-6 p-6 bg-surface/50 border border-lilac/10 rounded-sm flex flex-col justify-between">
+        <article className="relative md:col-span-6 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
           <CornerBrackets />
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac/10">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
               <span className="text-ash">006</span>
               <span className="text-ash">$ contact --send</span>
             </div>
@@ -278,7 +276,7 @@ export default function Home() {
                 {/* ONE amethyst moment for Panel 006 */}
                 <a
                   href="mailto:raphaelabm.dev@gmail.com"
-                  className="inline-block text-xs font-medium px-4 py-2 bg-amethyst text-void rounded-sm hover:bg-amethyst/80 transition-colors font-mono"
+                  className="inline-block text-xs font-medium px-4 py-2 bg-amethyst text-bone rounded-sm hover:opacity-90 transition-opacity font-mono"
                 >
                   {t.work.emailCta} →
                 </a>
