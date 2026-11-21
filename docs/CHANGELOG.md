@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.7.0] — 2026-11-21
+### Added
+- Case Study page "Mission Dossier" refactor:
+  - Tactical radar dot matrix background and terminal navigation (`$ cd ../projects`).
+  - Panel 001 (Dossier Header): `001 // DOSSIER` header, chrome horizon metallic H1, monospace subtitle, terminal bracket tags `[ Tech ]`, and terminal link buttons (`[ GITHUB ]`, `[ PAPER ]`).
+  - Panels 002-008: Two-column `DossierSection` layout (`lg:col-span-3` section title in amethyst, `lg:col-span-9` text and assets).
+  - Special SVG Architecture Diagram for SPRB-BD illustrating the 4-layer reference architecture (`[ PRESENTATION ] -> [ APPLICATION ] -> [ PERSISTENCE ] -> [ ANALYSIS ]`) with Aerospace Terminal palette strokes and fill.
+### Changed
+- Replaced all legacy case study cards with sharp `rounded-sm` geometry and `border-lilac`.
+**Full task:** [task-07-case-study.md](./tasks/task-07-case-study.md)
+
 ## [0.6.0] — 2026-11-21
 ### Added
 - Services page "The Uplink" layout refactor:
