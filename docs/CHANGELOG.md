@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.6.0] — 2026-11-21
+### Added
+- Services page "The Uplink" layout refactor:
+  - Panel 001 (Header): `001 // SERVICES` and `$ uplink --init` metadata, chrome horizon metallic H1, and intro paragraph without technical jargon.
+  - Panel 002 (Capabilities Grid): 2-column bento grid of 6 services (`SVC_001` - `SVC_006`) tailored for small business owners and partners.
+  - Panel 003 (CTA Uplink): Full-width panel with corner brackets, subtle radial glow, direct `mailto:raphaelabm.dev@gmail.com` CTA, response commitment notice, and secondary link to archive.
+### Changed
+- Strictly email-first conversion (no WhatsApp or phone CTAs).
+- Enforced single amethyst moment per card (`SVC_00X` index) and sharp `rounded-sm` geometry throughout.
+**Full task:** [task-06-services-page.md](./tasks/task-06-services-page.md)
+
 ## [0.5.0] — 2026-11-21
 ### Added
 - Projects page Mission Control layout refactor:

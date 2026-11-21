@@ -44,7 +44,15 @@ export type Dict = {
             wip: string;
         };
     };
-    work: { title: string; subtitle: string; services: { title: string; description: string }[]; emailCta: string; emailNote: string };
+    work: {
+        title: string;
+        subtitle: string;
+        intro: string;
+        contactCta: string;
+        emailCta: string;
+        emailNote: string;
+        services: { title: string; description: string }[];
+    };
     contact: { title: string; name: string; email: string; message: string; send: string };
     footer: { rights: string };
 };
@@ -135,12 +143,15 @@ const en: Dict = {
     work: {
         title: "Solutions & Services",
         subtitle: "How I can add value to your business or project?",
+        intro: "Engineering practical software solutions for businesses and teams. From responsive web applications to process automation and system modernization — built with precision, clarity, and reliability.",
+        contactCta: "Let's build something reliable together.",
         services: [
-            { title: "Web Applications", description: "Development of modern and responsive applications with a focus on performance, scalability, and user experience." },
-            { title: "System Architecture", description: "Design and structuring of applications using best practices such as Clean Architecture and design patterns, ensuring maintainability." },
-            { title: "APIs & Integrations", description: "Building and integrating APIs to connect systems, automate processes, and structure efficient data flows." },
-            { title: "Automation & Data", description: "Solutions that leverage automation and data processing to optimize workflows and support decision-making." },
-            { title: "Technical Consulting", description: "Analysis and guidance to improve the structure, performance, and organization of existing projects." },
+            { title: "Web Applications & Interfaces", description: "Modern, responsive websites and web applications built for speed, clean user experience, and mobile reliability." },
+            { title: "System Architecture & Refactoring", description: "Designing and structuring software with maintainable patterns, clean code, and reliable foundations that last." },
+            { title: "APIs & Integrations", description: "Building robust APIs and connecting third-party services, payment providers, and internal tools seamlessly." },
+            { title: "Process Automation", description: "Custom automation to streamline repetitive operations, eliminate human error, and save valuable team hours." },
+            { title: "Data Pipelines & Processing", description: "Structuring, cleaning, and transforming business data to optimize operations and support strategic decisions." },
+            { title: "Technical Consulting & Auditing", description: "Detailed analysis and guidance to modernize existing systems, improve performance, and resolve bottlenecks." },
         ],
         emailCta: "Send an email",
         emailNote: "I respond within 48 business hours",
@@ -240,12 +251,15 @@ const pt: Dict = {
     work: {
         title: "Soluções & Serviços",
         subtitle: "Como posso agregar valor ao seu negócio ou projeto?",
+        intro: "Soluções de engenharia e software para empresas e equipes. De aplicações web modernas a automação de processos e modernização de sistemas — com foco em clareza, estabilidade e retorno prático.",
+        contactCta: "Vamos construir algo confiável juntos.",
         services: [
-            { title: "Sites e Presença Digital", description: "Criação de sites modernos e rápidos que funcionam perfeitamente no celular. Ideal para negócios locais que querem passar profissionalismo e atrair novos clientes." },
-            { title: "Estruturação de Sistemas", description: "Organizo e desenvolvo aplicações de forma estruturada, garantindo que seu sistema funcione bem hoje e continue eficiente no futuro." },
-            { title: "Integrações e Automações", description: "Desenvolvimento de ferramentas personalizadas para organizar seu negócio, automatizar tarefas repetitivas e economizar seu tempo." },
-            { title: "Dados e Otimização", description: "Uso dados para melhorar desempenho, identificar oportunidades e ajudar na tomada de decisões." },
-            { title: "Consultoria Técnica", description: "Ajudo a melhorar sistemas existentes, trazendo mais organização, performance e clareza." },
+            { title: "Sites & Aplicações Web", description: "Criação de sites modernos e rápidos que funcionam perfeitamente no celular. Ideal para negócios que buscam passar credibilidade e atrair novos clientes." },
+            { title: "Estruturação & Refatoração de Sistemas", description: "Organização e modernização de software de forma estruturada, garantindo código limpo e arquitetura sustentável para o futuro." },
+            { title: "APIs & Integrações", description: "Desenvolvimento de APIs e integração entre sistemas, meios de pagamento e ferramentas externas sem atrito." },
+            { title: "Automação de Processos", description: "Ferramentas personalizadas para automatizar tarefas repetitivas, organizar fluxos operacionais e economizar tempo." },
+            { title: "Dados & Otimização", description: "Estruturação e processamento de dados para melhorar desempenho operacional, identificar gargalos e apoiar decisões." },
+            { title: "Consultoria & Diagnóstico Técnico", description: "Avaliação técnica de sistemas existentes, trazendo mais organização, velocidade e clareza para o seu produto." },
         ],
         emailCta: "Enviar e-mail",
         emailNote: "Respondo em até 48 horas úteis",
