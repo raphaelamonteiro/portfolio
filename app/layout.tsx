@@ -53,7 +53,18 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className="font-mono">
+      <body className="font-mono relative min-h-screen">
+        {/* Background "Aurora" (Cyber-Dashboard Ambient Glow) */}
+        <div
+          aria-hidden="true"
+          className="fixed inset-0 pointer-events-none z-[-1]"
+          style={{
+            background: `
+              radial-gradient(circle at 15% 50%, rgba(143, 124, 255, 0.15), transparent 40%),
+              radial-gradient(circle at 85% 30%, rgba(67, 61, 139, 0.2), transparent 50%)
+            `,
+          }}
+        />
         <ThemeProvider>
           <TranslationProvider>
             <Header />

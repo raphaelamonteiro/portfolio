@@ -2,13 +2,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-void: #17153B;
-  --color-surface: #2E236C;
-  --color-bone: #C9B5E0;
-  --color-ash: #433D8B;
-  --color-amethyst: #483AA0;
-  --color-lilac: #412B6B;
-  --color-navy: #00105B;
+  --color-void: #09080F;
+  --color-surface: #12101A;
+  --color-bone: #FFF8FC;
+  --color-ash: #9E94A8;
+  --color-amethyst: #8F7CFF;
+  --color-lilac: #2A1B40;
+  --color-navy: #0C081A;
   --color-gold: #C9A961;
 
   --font-mono: "Inconsolata", ui-monospace, monospace;
@@ -20,14 +20,12 @@ body {
 }
 
 .light {
-  --color-void: #F5F3F7;
-  --color-surface: #FFFFFF;
-  --color-bone: #15121C;
-  --color-ash: #6B6575;
-  --color-amethyst: #6B4FDB;
-  --color-moon: #C43D6B;
-  --color-dusty: #B85A7A;
-  --color-lilac: #5E5AE0;
+  --color-void:     #F4F2F8; /* Off-white background */
+  --color-surface:  #FFFFFF; /* Pure white cards */
+  --color-bone:     #1A1525; /* Deep purple-black text */
+  --color-ash:      #6B6575; /* Muted purple-grey text */
+  --color-amethyst: #6B4FDB; /* Darker purple for contrast */
+  --color-lilac:    #D1C4E9; /* Soft light purple borders */
 }
 
 @keyframes fadeUp {
@@ -44,6 +42,15 @@ body {
 
 .fade-up {
   animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 ::selection {

@@ -6,11 +6,34 @@ import Link from 'next/link';
 function CornerBrackets() {
   return (
     <>
-      <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-lilac/40 pointer-events-none" />
-      <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-lilac/40 pointer-events-none" />
-      <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-lilac/40 pointer-events-none" />
-      <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-lilac/40 pointer-events-none" />
+      <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-amethyst/50 pointer-events-none" />
+      <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-amethyst/50 pointer-events-none" />
+      <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-amethyst/50 pointer-events-none" />
+      <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amethyst/50 pointer-events-none" />
     </>
+  );
+}
+
+function CommitGrid() {
+  return (
+    <div className="flex gap-[3px] h-8 items-end opacity-40 pointer-events-none absolute bottom-4 right-4">
+      {[0, 1, 2].map((col) => (
+        <div key={col} className="flex flex-col gap-[3px]">
+          {[0, 1, 2, 3, 4, 5, 6].map((row) => {
+            const isActive = (col + row) % 3 === 0;
+            const isMedium = (col + row) % 2 === 0;
+            return (
+              <div
+                key={row}
+                className={`w-[6px] h-[6px] rounded-[1px] ${
+                  isActive ? 'bg-amethyst' : isMedium ? 'bg-amethyst/50' : 'bg-white/5'
+                }`}
+              />
+            );
+          })}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -32,20 +55,31 @@ export default function Services() {
       {/* ───────────────────────────────────────────────────────────── */}
       {/* PANEL 001 — HEADER (The Uplink)                               */}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section className="relative p-6 sm:p-10 lg:p-12 bg-surface/40 border border-lilac border-t border-t-bone/20 rounded-sm overflow-hidden fade-up">
+      <section className="relative p-6 sm:p-10 lg:p-12 bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm overflow-hidden fade-up">
         <CornerBrackets />
 
         {/* Top Header Row */}
-        <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-4 border-b border-lilac mb-8">
+        <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-4 border-b border-white/10 mb-8">
           <span className="text-ash">001 // SERVICES</span>
           <span className="text-ash font-mono">$ uplink --init</span>
         </div>
 
-        <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.0] tracking-tight bg-[linear-gradient(180deg,#C9B5E0_0%,#C9B5E0_48%,#433D8B_52%,#17153B_100%)] bg-clip-text text-transparent">
-          {t.work.title}
+        <h1 className="font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.0] tracking-tight text-bone drop-shadow-[0_0_15px_rgba(143,124,255,0.4)]">
+          {(() => {
+            const words = t.work.title.split(' ');
+            const last = words.pop();
+            return (
+              <>
+                {words.join(' ')}{' '}
+                <span className="text-amethyst drop-shadow-[0_0_20px_rgba(143,124,255,0.8)]">
+                  {last}
+                </span>
+              </>
+            );
+          })()}
         </h1>
 
-        <hr className="border-lilac max-w-xl my-6" />
+        <hr className="border-white/10 max-w-xl my-6" />
 
         <p className="text-ash max-w-2xl font-mono text-sm sm:text-base leading-relaxed">
           {t.work.intro}
@@ -71,27 +105,28 @@ export default function Services() {
             return (
               <article
                 key={svc.title}
-                className="bg-surface/40 border border-lilac hover:border-amethyst/40 rounded-sm p-6 relative flex flex-col justify-between transition-colors"
+                className="bg-surface/80 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm p-6 relative flex flex-col justify-between overflow-hidden"
               >
+                <CommitGrid />
                 <div>
-                  <div className="flex items-center justify-between text-[10px] font-mono tracking-[0.2em] uppercase">
+                  <div className="flex items-center justify-between text-[10px] font-mono tracking-[0.2em] uppercase relative z-10">
                     <span className="text-amethyst/60">{indexStr}</span>
                     <span className="text-ash/60 font-mono">◇</span>
                   </div>
 
-                  <h2 className="text-bone font-bold text-lg mt-4 mb-2">
+                  <h2 className="text-bone font-bold text-lg mt-4 mb-2 relative z-10">
                     {svc.title}
                   </h2>
 
-                  <hr className="border-lilac/20 mb-3" />
+                  <hr className="border-white/10 mb-3 relative z-10" />
 
-                  <p className="text-ash text-xs font-mono leading-relaxed">
+                  <p className="text-ash text-xs font-mono leading-relaxed relative z-10">
                     {svc.description}
                   </p>
                 </div>
 
-                <div className="pt-4 mt-6 border-t border-lilac/10 flex items-center justify-between text-[9px] font-mono text-ash/60 uppercase tracking-widest">
-                  <span>STATUS // DISPONÍVEL</span>
+                <div className="pt-4 mt-6 border-t border-white/10 flex items-center justify-between text-[9px] font-mono text-ash/60 uppercase tracking-widest relative z-10">
+                  <span>DISPONIBILIDADE // ATIVA</span>
                   <span>SPEC: PRODUCTION</span>
                 </div>
               </article>
@@ -103,7 +138,7 @@ export default function Services() {
       {/* ───────────────────────────────────────────────────────────── */}
       {/* PANEL 003 — CTA PANEL (Email First)                           */}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section className="relative bg-navy/20 border border-amethyst/30 rounded-sm p-8 sm:p-12 text-center overflow-hidden fade-up">
+      <section className="relative bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm p-8 sm:p-12 text-center overflow-hidden fade-up">
         <CornerBrackets />
 
         {/* Subtle amethyst glow behind text */}

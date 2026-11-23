@@ -3,16 +3,40 @@
 import { useTranslation } from '@/app/providers';
 import { mainTechStack, otherTechStack } from '@/data/tech-stack';
 import { projects } from '@/data/projects';
+import { TerminalLog } from '@/app/components/terminal-log';
 import Link from 'next/link';
 
 function CornerBrackets() {
   return (
     <>
-      <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-lilac/40 pointer-events-none" />
-      <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-lilac/40 pointer-events-none" />
-      <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-lilac/40 pointer-events-none" />
-      <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-lilac/40 pointer-events-none" />
+      <span className="absolute top-0 left-0 w-2 h-2 border-t border-l border-amethyst/50 pointer-events-none" />
+      <span className="absolute top-0 right-0 w-2 h-2 border-t border-r border-amethyst/50 pointer-events-none" />
+      <span className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-amethyst/50 pointer-events-none" />
+      <span className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-amethyst/50 pointer-events-none" />
     </>
+  );
+}
+
+function CommitGrid() {
+  return (
+    <div className="flex gap-[3px] h-8 items-end opacity-40 pointer-events-none absolute bottom-4 right-4">
+      {[0, 1, 2].map((col) => (
+        <div key={col} className="flex flex-col gap-[3px]">
+          {[0, 1, 2, 3, 4, 5, 6].map((row) => {
+            const isActive = (col + row) % 3 === 0;
+            const isMedium = (col + row) % 2 === 0;
+            return (
+              <div
+                key={row}
+                className={`w-[6px] h-[6px] rounded-[1px] ${
+                  isActive ? 'bg-amethyst' : isMedium ? 'bg-amethyst/50' : 'bg-white/5'
+                }`}
+              />
+            );
+          })}
+        </div>
+      ))}
+    </div>
   );
 }
 
@@ -36,8 +60,33 @@ export default function Home() {
       {/* ───────────────────────────────────────────────────────────── */}
       {/* PANEL 001 — HERO (Full-width, Sharp Chrome H1, Kitsune 9-Tails)*/}
       {/* ───────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[80vh] flex flex-col justify-between p-6 sm:p-10 lg:p-12 bg-surface/40 border border-lilac border-t border-t-bone/20 rounded-sm overflow-hidden fade-up">
+      <section className="relative min-h-[80vh] flex flex-col justify-between p-6 sm:p-10 lg:p-12 bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm overflow-hidden fade-up">
         <CornerBrackets />
+
+        {/* Hero Telemetry: Vertical text on left edge (Cockpit HUD feel) */}
+        <div
+          className="hidden lg:flex flex-col absolute left-4 top-1/2 -translate-y-1/2 text-[9px] font-mono text-ash/40 uppercase tracking-[0.3em] gap-6 pointer-events-none z-10"
+          style={{ writingMode: 'vertical-rl' }}
+        >
+          <span>SYS_INIT: OK</span>
+          <span>MEM_ALLOC: 4.2GB</span>
+          <span>NET_UPLINK: SECURE</span>
+          <span>CPU_LOAD: 12%</span>
+        </div>
+
+        {/* Radar Circle SVG behind the text (HUD upgrade) */}
+        <svg
+          className="absolute w-[600px] h-[600px] pointer-events-none opacity-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          viewBox="0 0 200 200"
+          fill="none"
+          stroke="var(--color-amethyst)"
+        >
+          <circle cx="100" cy="100" r="90" strokeWidth="0.5" strokeDasharray="4 4" />
+          <circle cx="100" cy="100" r="60" strokeWidth="0.5" />
+          <circle cx="100" cy="100" r="30" strokeWidth="0.5" />
+          <line x1="100" y1="0" x2="100" y2="200" strokeWidth="0.5" />
+          <line x1="0" y1="100" x2="200" y2="100" strokeWidth="0.5" />
+        </svg>
 
         {/* Subtle radial glow behind the Kitsune motif */}
         <div
@@ -45,10 +94,10 @@ export default function Home() {
           className="hidden lg:block absolute -right-20 top-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full bg-amethyst/15 blur-3xl pointer-events-none"
         />
 
-        {/* Kitsune (9 tails) abstract SVG (Bayonetta elegance, <2KB, opacity-40) */}
+        {/* Kitsune (9 tails) abstract SVG (Enhanced with drop-shadow glow and opacity-60) */}
         <svg
           aria-hidden="true"
-          className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-[380px] h-[380px] xl:w-[480px] xl:h-[480px] opacity-40 pointer-events-none select-none"
+          className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 w-[380px] h-[380px] xl:w-[480px] xl:h-[480px] opacity-60 drop-shadow-[0_0_25px_rgba(143,124,255,0.5)] pointer-events-none select-none"
           viewBox="0 0 500 500"
           fill="none"
         >
@@ -78,29 +127,51 @@ export default function Home() {
 
           {/* Geometric root node (HUD detail) */}
           <circle cx="380" cy="430" r="3" fill="#483AA0" opacity="0.6" />
-          <circle cx="380" cy="430" r="8" stroke="#483AA0" strokeWidth="0.8" opacity="0.3" strokeDasharray="2 2" />
         </svg>
 
-        {/* Top Header Row with status: {t.home.status} · [coffee] · [00:00:00] */}
-        <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-4 border-b border-lilac relative z-10">
+        {/* Top Row: Panel ID, Status Line & System Load */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-4 border-b border-white/10 relative z-10 gap-3">
           <span className="text-ash">001 // HOME</span>
-          <div className="flex items-center gap-2 text-ash">
-            <span className="flex h-2 w-2 rounded-full bg-amethyst animate-pulse" />
-            <span>{t.home.status}</span>
-            <span className="text-ash/40">·</span>
-            <span className="text-ash/60 text-[9px] font-mono lowercase">[coffee]</span>
-            <span className="text-ash/40">·</span>
-            <span className="text-ash/60 text-[9px] font-mono">[00:00:00]</span>
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-2 text-ash">
+              {/* Primary Accent Pulse Dot */}
+              <span className="flex h-2 w-2 rounded-full bg-amethyst animate-pulse" />
+              <span>{t.home.status}</span>
+              <span className="inline-block w-1.5 h-2.5 bg-amethyst animate-[blink_1s_step-end_infinite]" />
+              <span className="text-ash/60 text-[9px] font-mono">[coffee]</span>
+              <span className="text-ash/60 text-[9px] font-mono">·</span>
+              <span className="text-ash/60 text-[9px] font-mono">[00:00:00]</span>
+            </div>
+
+            {/* System Load bar (dynamic pulse animation) */}
+            <div className="flex items-center gap-2 text-[10px] font-mono text-ash">
+              <span>SYS.LOAD</span>
+              <div className="w-24 h-1.5 bg-white/10 rounded-full overflow-hidden">
+                <div className="w-[65%] h-full bg-amethyst animate-pulse"></div>
+              </div>
+              <span className="text-amethyst font-bold animate-pulse">65%</span>
+            </div>
           </div>
         </div>
 
-        {/* Center: Massive Chrome Title + Role with sharp horizon metallic sheen */}
+        {/* Center: Massive H1 Title + Role with neon glow */}
         <div className="my-auto py-12 lg:py-16 relative z-10 max-w-4xl">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] tracking-tight bg-[linear-gradient(180deg,#C9B5E0_0%,#C9B5E0_48%,#433D8B_52%,#17153B_100%)] bg-clip-text text-transparent">
-            {t.home.title}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] tracking-tight text-bone drop-shadow-[0_0_15px_rgba(143,124,255,0.4)]">
+            {(() => {
+              const words = t.home.title.split(' ');
+              const last = words.pop();
+              return (
+                <>
+                  {words.join(' ')}{' '}
+                  <span className="text-amethyst drop-shadow-[0_0_20px_rgba(143,124,255,0.8)]">
+                    {last}
+                  </span>
+                </>
+              );
+            })()}
           </h1>
 
-          <hr className="border-lilac my-6 max-w-xl" />
+          <hr className="border-white/10 my-6 max-w-xl" />
 
           <p className="text-ash text-base sm:text-lg leading-relaxed max-w-2xl">
             {t.home.role}
@@ -108,7 +179,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Row: Location & CTAs */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-6 border-t border-lilac relative z-10">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-6 border-t border-white/10 relative z-10">
           <div className="text-ash text-xs font-mono tracking-wider">
             {t.home.location}
           </div>
@@ -136,20 +207,21 @@ export default function Home() {
       {/* ───────────────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
         {/* PANEL 002 (col-span-12 md:col-span-8) — STACK */}
-        <article className="relative md:col-span-8 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
+        <article className="relative md:col-span-8 p-6 bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm flex flex-col justify-between overflow-hidden">
           <CornerBrackets />
+          <CommitGrid />
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-white/10">
               {/* ONE amethyst moment for Panel 002 */}
               <span className="text-amethyst font-bold">002</span>
               <span className="text-ash">$ tech-stack --list</span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 pt-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 pt-4 relative z-10">
               {allTechs.map((tech) => (
                 <div
                   key={tech.name}
-                  className="px-2.5 py-1.5 bg-void/50 border border-lilac rounded-sm text-bone font-mono text-[11px] flex items-center justify-between hover:border-amethyst transition-colors"
+                  className="px-2.5 py-1.5 bg-void/50 border border-white/10 rounded-sm text-bone font-mono text-[11px] flex items-center justify-between hover:border-amethyst transition-colors"
                 >
                   <span>{tech.name}</span>
                   <span className="text-ash/40 text-[9px]">//</span>
@@ -159,24 +231,25 @@ export default function Home() {
           </div>
         </article>
 
-        {/* PANEL 003 (col-span-12 md:col-span-4) — SYSTEM STATUS */}
-        <article className="relative md:col-span-4 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
+        {/* PANEL 003 (col-span-12 md:col-span-4) — SYSTEM STATUS (NOW) */}
+        <article className="relative md:col-span-4 p-6 bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm flex flex-col justify-between overflow-hidden">
+          <CommitGrid />
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-white/10">
               <span className="text-ash">003</span>
               <span className="text-ash">SYS_STATUS // ONLINE</span>
             </div>
 
-            <ul className="pt-4 space-y-3 font-mono text-xs">
-              <li className="flex items-center justify-between border-b border-lilac/50 pb-2">
+            <ul className="pt-4 space-y-3 font-mono text-xs relative z-10">
+              <li className="flex items-center justify-between border-b border-white/10 pb-2">
                 <span className="text-ash">Education</span>
                 <span className="text-bone">FATEC (2024–2026)</span>
               </li>
-              <li className="flex items-center justify-between border-b border-lilac/50 pb-2">
+              <li className="flex items-center justify-between border-b border-white/10 pb-2">
                 <span className="text-ash">Research</span>
                 <span className="text-bone">PNT · ITA</span>
               </li>
-              <li className="flex items-center justify-between border-b border-lilac/50 pb-2">
+              <li className="flex items-center justify-between border-b border-white/10 pb-2">
                 <span className="text-ash">Location</span>
                 <span className="text-bone">Caçapava, SP</span>
               </li>
@@ -190,8 +263,8 @@ export default function Home() {
         </article>
 
         {/* PANEL 004 (col-span-12) — PROJECTS PREVIEW */}
-        <article className="relative col-span-12 p-6 bg-surface/50 border border-lilac rounded-sm">
-          <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
+        <article className="relative col-span-12 p-6 bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm">
+          <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-white/10">
             {/* ONE amethyst moment for Panel 004 */}
             <span className="text-amethyst font-bold">004</span>
             <span className="text-ash">$ ls projects/</span>
@@ -202,7 +275,7 @@ export default function Home() {
               <Link
                 key={p.slug}
                 href={p.hasCaseStudy ? `/projects/${p.slug}` : '/projects'}
-                className="group p-4 bg-void/40 border border-lilac hover:border-amethyst rounded-sm transition-colors flex flex-col justify-between"
+                className="group p-4 bg-surface/80 backdrop-blur-md border border-white/10 hover:border-amethyst/50 rounded-sm transition-colors duration-200 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between text-[10px] font-mono tracking-widest text-ash mb-2">
@@ -224,7 +297,7 @@ export default function Home() {
                     {p.subtitle[locale]}
                   </p>
                 </div>
-                <div className="mt-4 pt-2 border-t border-lilac/40 flex items-center justify-between text-[10px] text-ash font-mono">
+                <div className="mt-4 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-ash font-mono">
                   <span className="uppercase">{p.category}</span>
                   <span className="text-bone group-hover:translate-x-0.5 transition-transform">→</span>
                 </div>
@@ -233,42 +306,30 @@ export default function Home() {
           </div>
         </article>
 
-        {/* PANEL 005 (col-span-12 md:col-span-6) — LATEST LOG */}
-        <article className="relative md:col-span-6 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
+        {/* PANEL 005 (col-span-12 md:col-span-6) — LATEST LOG (Dynamic Terminal Log) */}
+        <article className="relative md:col-span-6 p-6 bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm flex flex-col justify-between overflow-hidden">
+          <CommitGrid />
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-white/10">
               <span className="text-ash">005</span>
               <span className="text-ash">$ cat /var/log/activity.log</span>
             </div>
 
-            {/* Terminal log output (bone/ash, no amethyst) */}
-            <div className="pt-4 space-y-2 font-mono text-[11px] leading-relaxed text-ash">
-              <p>
-                <span className="text-ash/60">[2026-01-01 00:00:00]</span>{' '}
-                <span className="text-bone">thesis initialized:</span> PNT reference architecture
-              </p>
-              <p>
-                <span className="text-ash/60">[2026-01-01 00:00:00]</span>{' '}
-                <span className="text-bone">sprint 3 completed:</span> 137 tests passing
-              </p>
-              <p>
-                <span className="text-ash/60">[2026-01-01 00:00:00]</span>{' '}
-                <span className="text-bone">new project added:</span> camplana
-              </p>
-            </div>
+            <TerminalLog />
           </div>
         </article>
 
         {/* PANEL 006 (col-span-12 md:col-span-6) — CONTACT */}
-        <article className="relative md:col-span-6 p-6 bg-surface/50 border border-lilac rounded-sm flex flex-col justify-between">
+        <article className="relative md:col-span-6 p-6 bg-surface/60 backdrop-blur-md border border-white/10 shadow-[inset_0_0_20px_rgba(143,124,255,0.05)] hover:border-amethyst/50 hover:shadow-[0_0_30px_rgba(143,124,255,0.15)] transition-colors duration-200 rounded-sm flex flex-col justify-between overflow-hidden">
           <CornerBrackets />
+          <CommitGrid />
           <div>
-            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-lilac">
+            <div className="flex items-center justify-between text-[10px] tracking-[0.2em] uppercase font-mono pb-3 border-b border-white/10">
               <span className="text-ash">006</span>
               <span className="text-ash">$ contact --send</span>
             </div>
 
-            <div className="pt-4 space-y-4">
+            <div className="pt-4 space-y-4 relative z-10">
               <p className="text-bone text-sm leading-relaxed">
                 Open to collaborations, research, and freelance.
               </p>

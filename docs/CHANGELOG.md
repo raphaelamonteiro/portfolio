@@ -5,6 +5,68 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.9.9] — 2026-11-23
+### Added
+- LaTeX academic paper layout on Case Study page (`app/projects/[slug]/case-study.tsx`):
+  - 2-column justified text layout on desktop (`columns-1 lg:columns-2 gap-8 text-justify font-mono leading-relaxed`).
+  - Large bold section headings placed directly above the column text.
+  - Distinct abstract block styling (`bg-void/30 p-6 border border-lilac/50`) simulating academic publication formatting.
+  - Architecture diagram updated to break across columns cleanly with `break-inside-avoid column-span-all my-8`.
+- In `app/projects/page.tsx`, added stretched background SVG line-chart texture (`absolute inset-0 w-full h-full z-0 opacity-[0.05] pointer-events-none`) with all content placed cleanly in `relative z-10` to eliminate text overlap.
+### Changed
+- Performance Fix for theme switching:
+  - Replaced generic `transition-all duration-500` with `transition-colors duration-200` across all glassmorphic panels and cards.
+  - Reduced `backdrop-blur-xl` to `backdrop-blur-md` across all pages, cutting GPU composite overhead and eliminating theme switch lag.
+- Terminal Log refinements (`app/components/terminal-log.tsx`):
+  - Updated rotation interval to 3 seconds.
+  - Made cursor blink smoothly (`animate-[blink_1s_ease-in-out_infinite]`).
+  - Added fixed minimum height and truncation to prevent layout shifts.
+**Full task:** [task-09.9-latex-paper-layout-performance.md](./tasks/task-09.9-latex-paper-layout-performance.md)
+
+## [0.9.8] — 2026-11-23
+### Added
+- Created `<TerminalLog />` client component (`app/components/terminal-log.tsx`) with dynamic rotating system event messages every 2.5s and blinking cursor, replacing static text in Panel 005.
+- Added `@keyframes blink` in `app/globals.css` with blinking cursor accents on hero status and terminal logs.
+- Added animated throbbing `SYS.LOAD [65%]` telemetry status bar to Hero in `app/page.tsx`.
+### Fixed
+- Fixed Light Theme contrast in `app/globals.css` (`.light` variable mappings: `--color-void: #F4F2F8`, `--color-surface: #FFFFFF`, `--color-bone: #1A1525`, `--color-ash: #6B6575`, `--color-amethyst: #6B4FDB`, `--color-lilac: #D1C4E9`).
+- Replaced hardcoded `#12101A` dark hexes with dynamic semantic `bg-surface/60` and `bg-surface/80` across all pages (`app/page.tsx`, `app/about/page.tsx`, `app/about/components/about-hero.tsx`, `app/projects/page.tsx`, `app/projects/[slug]/case-study.tsx`, `app/services/page.tsx`), enabling crisp contrast and readability in both light and dark modes while maintaining glassmorphic `backdrop-blur-xl`.
+**Full task:** [task-09.8-light-theme-hud-animations.md](./tasks/task-09.8-light-theme-hud-animations.md)
+
+## [0.9.7] — 2026-11-23
+### Added
+- Mini GitHub Commit Grid HUD component (3x7 matrix of contribution activity) replacing generic line charts across `app/page.tsx` and `app/services/page.tsx`.
+- Hero Telemetry in `app/page.tsx`:
+  - Vertical telemetry sidebar (`SYS_INIT: OK`, `MEM_ALLOC: 4.2GB`, `NET_UPLINK: SECURE`, `CPU_LOAD: 12%`).
+  - System load indicator bar (`SYS.LOAD [65%]`) in the hero status row.
+- Enhanced Kitsune abstract SVG with `drop-shadow-[0_0_25px_rgba(143,124,255,0.5)]` and `opacity-60`.
+### Removed
+- Removed generic line-chart SVGs from all pages.
+**Full task:** [task-09.7-commit-grid-telemetry.md](./tasks/task-09.7-commit-grid-telemetry.md)
+
+## [0.9.0] — 2026-11-21
+### Added
+- Fixed ambient "Aurora" background to `app/layout.tsx` with cyber-dashboard multi-radial purples.
+- Subtle neon purple drop-shadows on all primary headings (`drop-shadow-[0_0_15px_rgba(143,124,255,0.4)]`).
+- Glowing amethyst neon highlights on the emphasis/last words of H1s (`drop-shadow-[0_0_20px_rgba(143,124,255,0.8)]`).
+### Changed
+- Replaced the disappearing chrome horizon gradient with solid bone white typography and cyber neon glow for high contrast and readability across all screens.
+**Full task:** [task-09-game-hud-neon.md](./tasks/task-09-game-hud-neon.md)
+
+## [0.8.1] — 2026-11-21
+### Changed
+- Contrast and Palette fix ("Deep Space Black"):
+  - `--color-void`: `#09080F` (True deep black background).
+  - `--color-surface`: `#12101A` (Dark purple-black cards).
+  - `--color-bone`: `#FFF8FC` (Crisp white for primary text).
+  - `--color-ash`: `#9E94A8` (Highly readable gray-purple for secondary text).
+  - `--color-amethyst`: `#8F7CFF` (Vibrant purple accent).
+  - `--color-lilac`: `#2A1B40` (Deeper purple borders for subtle contour lines without visual noise).
+  - `--color-navy`: `#0C081A` (Deep background purple).
+- Updated metallic horizon chrome H1 gradient across all pages to match `#FFF8FC` / `#9E94A8` / `#09080F`.
+- Updated status line: "Open to research & collaborations" (EN) / "Aberta a pesquisa & colaborações" (PT).
+**Full task:** [task-08.5-palette-fix.md](./tasks/task-08.5-palette-fix.md)
+
 ## [0.8.0] — 2026-11-21
 ### Added
 - Comprehensive SEO and Metadata implementation:
